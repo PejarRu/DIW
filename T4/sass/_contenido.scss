@@ -1,8 +1,5 @@
 /* IMPORTs */
 @import "mixin";
-@import "compass/utilities/sprites";
-@import "../images/*.png";
-
 /* PLACEHOLDERs */
 %button-block{
     box-sizing: border-box;
@@ -19,15 +16,18 @@
     padding: 5px 10px;
     border: 1px solid transparent;
 }
-
+//import "compass";
+//PASO NUMERO 5: ???
 div#contenido{
-    padding: 30px 20px;
-    .col-left{
-        box-sizing: border-box;
-        width: 30%;
-        float: left;
-        padding: 10px;
-           .login{
+        padding: 30px 20px;
+        .col-left{
+            box-sizing: border-box;
+            width: 30%;
+            float: left;
+            padding: 10px;
+            .login{
+                background-color: if($theme == light, darken($colorFondo, 10%), lighten($colorFondo, 20%));
+                color: #eee;
                 input{
                     @extend %input-block;
                 }
@@ -35,10 +35,10 @@ div#contenido{
                     @extend %button-block;
                 }
             }
-        @include redimensionar(small){
-            float: none;
-            width: 100%;   
-        }
+            @include redimensionar(small){
+                float: none;
+                width: 100%;   
+            }
         }
         .col-right{
             box-sizing: border-box;
@@ -61,21 +61,8 @@ div#contenido{
                 background-color: lighten($color: $colorFondo, $amount: 20%);
             }
         }
-    @include redimensionar(medium){
-        padding: 10px 20px;
+        @include redimensionar(medium){
+            padding: 10px 20px;
+        }
     }
-}
     
-$icons: sprite-map("../images/*.png");
-
-i {
-    background: $icons;
-    display: inline-block;
-}
-
-@each $i in sprite_names($icons) {
-    .icon-#{$i} {
-        background-position: sprite-position($icons, $i);
-        @include sprite-dimensions($icons, $i);
-    }
-}
