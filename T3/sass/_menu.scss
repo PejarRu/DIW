@@ -1,0 +1,77 @@
+/* IMPORTS */
+@import "mixin";
+@import "compass/utilities/sprites";
+/* ETIQUETAS SECUNDARIAS */
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 100%;
+    ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    }
+    > ul {
+        @include colorear;
+        height: 32px;
+        width: 100%;
+    }
+    a{
+        @include colorear;
+        text-decoration: none;
+        padding: 7px 20px;
+        text-align: center;
+        cursor: pointer;
+        display:block;
+        width: 160px;
+
+        &:hover{
+            @include colorearHover;
+            @include animar(iluminar, 0.4s);
+        }
+    }
+    @include redimensionar(medium){
+        display: none
+    }
+}
+
+li{
+    &>a.categoria{
+        @include transicionar(padding, 0.5s, ease-out);
+    }
+    &.categoria{
+        float: left;
+        >a{
+            padding: 10px 20px;
+            &:hover{
+                padding: 10px 20px;
+            }
+        }
+        ul.categoria{
+            height: 100px;
+        }
+    }
+}
+
+ul{
+    &.submenu{
+        position: absolute;
+        overflow: hidden;
+        height: 0px;
+        @include transicionar(height, 0.5s);
+    }
+}
+/*
+COMO Compass.app esta desactualizado, y no funciona debidamente,
+este paso queda sin explicar debidamente en los apuntes,
+por tanto he copiado todo lo que he podido pero lo dejare sin implementar
+$icons :(contact, menu, news, studies);
+i{
+    @each $i in sprite-names($icons) {
+        .icon-#($i){
+            background-position: sprite-position($icons, $i);
+            @include sprite-dimensions($icons, $i);
+        }   
+    }
+}
+*/

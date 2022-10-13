@@ -1,0 +1,32 @@
+/* VARIABLES*/
+$colorTexto : #eee;
+$colorTextoHover : #fff;
+$colorFondo : #666;
+$colorFondoHover : #888;
+
+/* IMPORTS */
+@import "menu.scss";
+@import "contenido.scss";
+
+/* ETIQUETAS PRINCIPALES*/
+body{
+    padding: 0;
+    margin: 0;
+} 
+header{
+    font-family: Georgia,'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px #aaa;
+    background-color: #eee;
+    padding: 12px 30px;
+    font-weight: bold;
+    font-size: 1.8em;
+    
+}
+footer{
+    @include boxSizing(border-box);
+    @include colorear;
+    position: absolute;
+    padding: 5px;
+    width: 100%;
+    bottom: 0;
+}
