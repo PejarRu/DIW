@@ -8,6 +8,8 @@ $colorFondoHover : lighten($colorFondo, 10%);
 /* IMPORTS */
 @import "menu";
 @import "contenido";
+@import "compass/utilities/sprites";
+@import "../images/*.png";
 
 /* ETIQUETAS PRINCIPALES*/
 body{ 
