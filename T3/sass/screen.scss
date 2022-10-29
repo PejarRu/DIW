@@ -1,3 +1,8 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
 /* VARIABLES*/
 $colorTexto : #eee;
 $colorFondo : #15a;
@@ -8,40 +13,40 @@ $colorFondoHover : lighten($colorFondo, 10%);
 /* IMPORTS */
 @import "menu";
 @import "contenido";
-@import "compass/utilities/sprites";
-@import "../images/*.png";
 
 /* ETIQUETAS PRINCIPALES*/
-body{ 
+body{  
     padding: 0;
     margin: 0;
 } 
 header{
-    font-family: Georgia,'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 2px #aaa;
-    background-color: #eee;
     padding: 12px 30px;
-    font-weight: bold;
+    color: #444;
     font-size: 1.8em;
-    
+    background-color: #eee;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 footer{
     @include boxSizing(border-box);
     @include colorear;
     position: fixed;
-    padding: 5px;
     width: 100%;
+    padding: 5px;
     bottom: 0;
 }
 
 /* KEYFRAMES */
 @keyframes iluminar {
-    from { 
-        background-color: #666;
-        color: #eee; 
+    from {
+        background-color: #15a;
+        color: #eee;
     }
-    to { 
-        background-color: #888;
+
+    to {
+        background-color: #166cd8;
         color: #fff;
     }
 }
+    

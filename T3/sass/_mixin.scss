@@ -10,11 +10,11 @@
 }
 
 @mixin transicionar($propiedad, $duracion, $timing: linear){
-    transition: $propiedad $duracion, $timing;
-    -webkit-transition: $propiedad $duracion, $timing;
-    -moz-transition: $propiedad $duracion, $timing;
-    -ms-transition: $propiedad $duracion, $timing;
-    -o-transition: $propiedad $duracion, $timing;
+    transition: $propiedad $duracion $timing;
+    -webkit-transition: $propiedad $duracion $timing;
+    -moz-transition: $propiedad $duracion $timing;
+    -ms-transition: $propiedad $duracion $timing;
+    -o-transition: $propiedad $duracion $timing;
 }
 
 @mixin animar($nombre, $duracion, $timing: linear){
