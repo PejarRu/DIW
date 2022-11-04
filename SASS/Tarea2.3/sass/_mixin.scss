@@ -1,0 +1,52 @@
+/* MIXINS */
+@mixin colorear{
+    color: $colorTexto;
+    background-color: $colorFondo;
+}
+
+@mixin colorearHover{
+    color: $colorTextoHover;
+    background-color: $colorFondoHover;
+}
+
+@mixin transicionar($propiedad, $duracion, $timing: linear){
+    transition: $propiedad $duracion $timing;
+    -webkit-transition: $propiedad $duracion $timing;
+    -moz-transition: $propiedad $duracion $timing;
+    -ms-transition: $propiedad $duracion $timing;
+    -o-transition: $propiedad $duracion $timing;
+}
+
+@mixin animar($nombre, $duracion, $timing: linear){
+    animation: $nombre $duracion $timing;
+    -webkit-animation: $nombre $duracion $timing;
+}
+
+@mixin boxSizing($valor){
+    box-sizing: $valor;
+    -webkit-box-sizing: $valor;
+    -moz-box-sizing: $valor;
+}
+
+//Este mixin lo hehecho por iniciativa propia
+@mixin bordear($borde){
+    border-radius: $borde;
+    -webkit-border-radius: $borde;
+    -moz-border-radius: $borde;
+    -ms-border-radius: $borde;
+    -o-border-radius: $borde;
+}
+
+@mixin redimensionar ($size){
+    @if $size == small{
+        //Ancho maximo 800px
+        @media (max-width:800px) {   
+            @content;
+        }
+    }@else if $size == medium{
+        //ancho maximo 1020px
+        @media (max-width:1024px) {   
+            @content;
+        }
+    }
+}

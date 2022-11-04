@@ -1,0 +1,83 @@
+/* IMPORTS */
+@import "mixin";
+
+/* ETIQUETAS SECUNDARIAS */
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 100%;
+
+    @include redimensionar(medium) {
+        display: none
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    >ul {
+        @include colorear;
+        height: 32px;
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: center;
+        padding: 7px 20px;
+        @include colorear;
+        cursor: pointer;
+        display: block;
+        width: 160px;
+
+        &:hover {
+            @include animar(iluminar, 0.4s);
+            @include colorearHover;
+        }
+    }
+
+
+    li {
+        &.categoria {
+            float: left;
+
+            &:hover {
+                >a {
+                    padding: 10px 20px;
+                }
+
+                ul.submenu {
+                    height: 100px;
+                }
+            }
+        }
+
+        &.categoria>a {
+            @include transicionar(padding, 0.4s, ease-out);
+        }
+
+        ul {
+            &.submenu {
+                @include transicionar(height, 0.5s, ease-out);
+                position: absolute;
+                overflow: hidden;
+                height: 0px;
+            }
+        }
+    }
+}
+//ICONOS
+@import "compass/utilities/sprites";
+$icons: sprite-map("../images/*.png");
+i {
+    background: $icons; 
+    display: inline-block;
+}
+@each $i in sprite-names($icons) {
+    .icon-#{$i} {
+        background-position: sprite-position($icons, $i);
+        @include sprite-dimensions($icons, $i);
+    }
+}

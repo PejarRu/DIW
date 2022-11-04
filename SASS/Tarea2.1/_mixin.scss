@@ -1,0 +1,29 @@
+/* MIXINS */
+@mixin colorear{
+    color: $colorTexto;
+    background-color: $colorFondo;
+}
+
+@mixin colorearHover{
+    color: $colorTextoHover;
+    background-color: $colorFondoHover;
+}
+
+@mixin transicionar($propiedad, $duracion, $timing: linear){
+    transition: $propiedad $duracion, $timing;
+    -webkit-transition: $propiedad $duracion, $timing;
+    -moz-transition: $propiedad $duracion, $timing;
+    -ms-transition: $propiedad $duracion, $timing;
+    -o-transition: $propiedad $duracion, $timing;
+}
+
+@mixin animar($nombre, $duracion, $timing: linear){
+    animation: $nombre $duracion $timing;
+    -webkit-animation: $nombre $duracion $timing;
+}
+
+@mixin boxSizing($valor){
+    box-sizing: $valor;
+    -webkit-box-sizing: $valor;
+    -moz-box-sizing: $valor;
+}
