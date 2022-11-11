@@ -1,0 +1,76 @@
+/* IMPORTS */
+@import "mixin"
+
+/* ETIQUETAS SECUNDARIAS */
+nav#desktop 
+    font-family: Arial, Helvetica, sans-serif
+    position: absolute
+    width: 100%
+    @include redimensionar(medium) 
+        display: none
+    ul 
+        list-style-type: none
+        padding: 0
+        margin: 0
+    > ul 
+        @include colorear
+        height: 32px
+        width: 100%
+    a 
+        text-decoration: none
+        text-align: center
+        padding: 7px 20px
+        @include colorear
+        cursor: pointer
+        display: block
+        width: 160px
+        &:hover 
+            @include animar(iluminar, 0.4s)
+            @include colorearHover
+    li 
+        &.categoria 
+            float: left
+            > a 
+                @include transicionar(padding, 0.4s, ease-out)
+            &:hover 
+                > a 
+                    padding: 10px 20px
+                ul.submenu 
+                    height: 100px
+            ul 
+                &.submenu 
+                    @include transicionar(height, 0.5s, ease-out)
+                    position: absolute
+                    overflow: hidden
+                    height: 0px
+
+/* ETIQUETAS SECUNDARIAS */
+nav#mobile 
+    display: none
+    float: right
+    @include redimensionar(medium) 
+        display: block
+    ul 
+        margin: 0px
+        height: 0px
+        overflow: hidden
+        list-style-type: none
+        position: absolute
+        right: 10px
+        top: 40px
+        a 
+            text-decoration: none
+            text-align: center
+            padding: 7px 20px
+            @include colorear
+            cursor: pointer
+            display: block
+            width: 160px
+            font-size:  0.6em
+            font-weight: normal
+            &:hover 
+                @include animar(iluminar, 0.4s)
+                @include colorearHover
+    &:hover
+        ul  
+            height: auto
