@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi centro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Inserta aquí el CSS de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Inserta aquí el CSS de bootstrap -->
+    <style>
+        h1 .icon {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .icon-news {
+            background: url("icons/news.png");
+        }
+
+        .icon-studies {
+            background: url("icons/studies.png");
+        }
+
+        .icon-contact {
+            background: url("icons/contact.png");
+        }
+
+        footer.footer {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            position: fixed;
+            bottom: 0px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inserta aquí el div container-fluid para que ocupe toda la página-->
+    <div id="contenido" class="w-100 container-fluid p-0">
+        <div class="bg-primary row ">
+            <!-- Nav tabs -->
+            <nav class=" navbar col-lg-12 ">
+                <a href="" >
+                    <li style="padding-left: 20px;" 
+                    class="nav-item navbar-brand text-white float-left">
+                        Mi Insituto
+                    </li>
+                </a>
+                <ul class=" nav nav-tabs float-right">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white ">Nuestro centro</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Enseñanzas</a>
+                        <ul class="dropdown-menu">
+                             <a class="dropdown-item" href="#">Administración y gestión</li></a>
+                             <a class="dropdown-item" href="#">Informática y comunicaciones</li></a>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">Alumnado</a>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Calendario escolar</a>
+                            <a class="dropdown-item" href="#">Servicios</a>
+                            <a class="dropdown-item" href="#">Documentos</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Profesodaro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Moodle</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Inserta el menú, debes tener en cuenta que el menú deberá ocupar todo el ancho de la pantalla siempre, el color que usaremos será 
+            el de la clase bg-primary -->
+        </div>
+        <div class="row p-20">
+
+        </div>
+        <!-- Inserta otra fila aquí, y dale un padding de 20px -->
+        <div>
+            <!-- El login será de tamaño 3 mientras que la resolución no sea xs que pasará a ocupar toda la pantalla -->
+            <div></div>
+            <!-- El contenido será de tamaño 9 mientras que la resolución no sea xs que pasará a ocupar toda la pantalla -->
+            <div>
+                <!-- Importante, este contenido será realizado en forma collapse/accordion toggle item, donde por defecto se verá al principio sólo 
+                la información de novedades, pero si pinchamos sobre cualquier item (novedades, estudios ofertados o contacto se desplegará
+                y nos mostrará su contenido o lo ocultará-->
+                <h1><i class="icon icon-news"></i> Novedades</h1>
+                <p>
+                    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit..."
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper
+                    mauris nisl, ac euismod erat dictum vel. Nunc lobortis, lectus vitae
+                    pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                    nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis
+                    scelerisque at. Praesent finibus nulla sit amet tortor varius, non
+                    elementum purus viverra. Suspendisse quis ipsum orci. Praesent
+                    gravida turpis felis, eu blandit magna egestas nec. Duis vulputate
+                    ornare nisi eu ultricies. Aliquam blandit luctus enim eget pharetra.
+                    Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim,
+                    ut consectetur tortor orci et leo. In vitae magna in velit dapibus
+                    sollicitudin. Nam vitae dui convallis, tempor lacus et, placerat
+                    nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna
+                    euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices
+                    urna. Nullam at massa rhoncus, malesuada massa eu, vulputate quam.
+                    Ut vel rutrum justo. Donec quis lorem quam. 
+                </p>
+                <h1><i class="icon icon-studies"></i> Estudios ofertados</h1>
+                <p>
+                    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit..."
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper
+                    mauris nisl, ac euismod erat dictum vel. Nunc lobortis, lectus vitae
+                    pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                    nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis
+                    scelerisque at. Praesent finibus nulla sit amet tortor varius, non
+                    elementum purus viverra. Suspendisse quis ipsum orci. Praesent
+                    gravida turpis felis, eu blandit magna egestas nec. Duis vulputate
+                    ornare nisi eu ultricies. Aliquam blandit luctus enim eget pharetra.
+                    Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim,
+                    ut consectetur tortor orci et leo. In vitae magna in velit dapibus
+                    sollicitudin. Nam vitae dui convallis, tempor lacus et, placerat
+                    nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna
+                    euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices
+                    urna. Nullam at massa rhoncus, malesuada massa eu, vulputate quam.
+                    Ut vel rutrum justo. Donec quis lorem quam.
+                </p>
+                <h1><i class="icon icon-contact"></i> Contactar</h1>
+                <p>
+                    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit..."
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper
+                    mauris nisl, ac euismod erat dictum vel. Nunc lobortis, lectus vitae
+                    pulvinar pellentesque, eros sapien posuere lacus, et eleifend risus
+                    nisi vel arcu. Sed porttitor eros lorem, ac pulvinar turpis
+                    scelerisque at. Praesent finibus nulla sit amet tortor varius, non
+                    elementum purus viverra. Suspendisse quis ipsum orci. Praesent
+                    gravida turpis felis, eu blandit magna egestas nec. Duis vulputate
+                    ornare nisi eu ultricies. Aliquam blandit luctus enim eget pharetra.
+                    Sed eleifend, tellus sed auctor condimentum, justo urna mollis enim,
+                    ut consectetur tortor orci et leo. In vitae magna in velit dapibus
+                    sollicitudin. Nam vitae dui convallis, tempor lacus et, placerat
+                    nibh. Vivamus vehicula, nunc lacinia venenatis tempor, purus magna
+                    euismod diam, a volutpat lacus ligula nec ante. Cras eget ultrices
+                    urna. Nullam at massa rhoncus, malesuada massa eu, vulputate quam.
+                    Ut vel rutrum justo. Donec quis lorem quam.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer w-100 bg-primary text-white">
+        Curso Cefire - Diseño de interfaces web: Bootstrap, Sass y compass
+    </footer>
+
+    <!-- Inserta aquí los JS -->
+</body>
+
+</html>
