@@ -4,3 +4,29 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+$darkMain : #202e48;
+$darkSecondary : #30456b;
+
+$accesoryColor: #0b6298;
+
+$lightPrimary : #1b9eee;
+$lightSecondary : #0f81c7;
+
+$white: #ffffff;
+$black: #000000;
+
+
+@font-face {
+    font-family: Unbouded;
+    src: url(../fonts/Unbouded/static/Unbounded-Regular.ttf);    
+}
+
+
+
+*,body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}

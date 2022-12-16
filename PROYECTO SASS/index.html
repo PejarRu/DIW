@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="author" content="Antons Berzins" />
     <meta
       name="description"
       content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022"
     />
-    <meta name="author" content="Antons Berzins" />
     <meta name="contact" content="berzinsanton@gmail.com" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="/css/screen.css"
+      href="css/style.css"
       media="screen, projection"
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      href="/css/print.css"
-      media="print"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!--[if IE]>
-      <link
-        href="/stylesheets/ie.css"
-        media="screen, projection"
-        rel="stylesheet"
-        type="text/css"
-      />
-    <![endif]-->
     <title>ChainHouse - Practica SASS</title>
   </head>
   <body>
@@ -38,41 +24,41 @@
       <div class="header">
         <img src="img/logo-min.png" alt="logotipo" width="100px" />
         <a href="index.html" class="brand">
-          <h2>ChainHouse</h2>
+          <h2 class="nav_title">ChainHouse</h2>
         </a>
         <!-- NAV START -->
-        <nav>
+        <nav >
           <ul class="nav__wrapper">
-            <li class="nav__item">
+            <li >
               <a href="index.html">Inicio</a>
             </li>
-            <li class="nav__item">
-              <a href="buy-properties.html">Propiedades</a>
-              <ul class="submenu">
-                <li class="nav__item">
+            <li >
+              <a class='dropdown-arrow' href="buy-properties.html">Propiedades</a>
+              <ul class="sub-menu">
+                <li >
                   <a href="favourites.html">Mis Favoritos</a>
                 </li>
-                <li class="nav__item">
-                  <a href="buy-properties.html">Comprar</a>
+                <li >
+                  <a class='dropdown-arrow' href="buy-properties.html">Comprar</a>
 
                   <ul class="submenu">
-                    <li class="nav__item">
+                    <li >
                       <a href="buy-properties.html">Adquisicion total</a>
                     </li>
-                    <li class="nav__item">
+                    <li >
                       <a href="buy-properties.html">Adquisicion parcial</a>
                     </li>
                   </ul>
                 </li>
 
-                <li class="nav__item">
-                  <a href="rent-properties.html"
+                <li >
+                  <a class='dropdown-arrow' href="rent-properties.html"
                     >Alquiler
                     <ul class="submenu">
-                      <li class="nav__item">
+                      <li >
                         <a href="rent-properties.html">Viviendas</a>
                       </li>
-                      <li class="nav__item">
+                      <li >
                         <a href="rent-properties.html">Locales</a>
                       </li>
                     </ul>
@@ -80,8 +66,8 @@
                 </li>
               </ul>
             </li>
-            <li class="nav__item"><a href="about.html">Sobre nosotros</a></li>
-            <li class="nav__item"><a href="contact.html">Contacto</a></li>
+            <li ><a href="about.html">Sobre nosotros</a></li>
+            <li ><a href="contact.html">Contacto</a></li>
           </ul>
           <div class="buscador">
             <form action="#">
@@ -107,12 +93,16 @@
           grid-template-areas:
             '. . .'
             '. . .'
-            '. . .';">
+            '. . .';
+        "
+      >
         <div>a1</div>
         <div>a2</div>
         <div>a3</div>
         <div>a4</div>
-        <div><a href="buy-properties.html"><button>Ver propiedades</button></a></div>
+        <div>
+          <a href="buy-properties.html"><button>Ver propiedades</button></a>
+        </div>
         <div>a6</div>
         <div>a7</div>
         <div>a8</div>
