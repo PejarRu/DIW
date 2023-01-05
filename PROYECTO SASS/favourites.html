@@ -1,98 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="author" content="Antons Berzins" />
     <meta
       name="description"
       content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022"
     />
-    <meta name="author" content="Antons Berzins" />
     <meta name="contact" content="berzinsanton@gmail.com" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="/css/screen.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="css/style.css"
       media="screen, projection"
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      href="/css/print.css"
-      media="print"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!--[if IE]>
-      <link
-        href="/stylesheets/ie.css"
-        media="screen, projection"
-        rel="stylesheet"
-        type="text/css"
-      />
-    <![endif]-->
     <title>ChainHouse - Practica SASS</title>
   </head>
   <body>
     <!-- HEADER START -->
-    <header class="site-header">
-      <div class="header">
-        <img src="img/logo-min.png" alt="logotipo" width="100px" />
-        <a href="index.html" class="brand">
-          <h2>ChainHouse</h2>
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img
+            class="logo-min"
+            src="img/logo-min.png"
+            alt="logotipo-min"
+            width="100px"
+          />
+          <img
+            class="logo-full"
+            src="img/logo.png"
+            alt="logotipo-full"
+            width="100px"
+          />
+        </div>
+        <a href="index.html">
+          <h2 class="brand_title" data-text="ChainHouse">
+            <span class="load"></span>
+
+            ChainHouse
+            <span class="underline"></span>
+          </h2>
         </a>
-        <!-- NAV START -->
-        <nav>
-          <ul class="nav__wrapper">
-            <li class="nav__item">
-              <a href="index.html">Inicio</a>
-            </li>
-            <li class="nav__item">
-              <a href="buy-properties.html">Propiedades</a>
-              <ul class="submenu">
-                <li class="nav__item">
-                  <a href="favourites.html">Mis Favoritos</a>
-                </li>
-                <li class="nav__item">
-                  <a href="buy-properties.html">Comprar</a>
-
-                  <ul class="submenu">
-                    <li class="nav__item">
-                      <a href="buy-properties.html">Adquisicion total</a>
-                    </li>
-                    <li class="nav__item">
-                      <a href="buy-properties.html">Adquisicion parcial</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav__item">
-                  <a href="rent-properties.html"
-                    >Alquiler
-                    <ul class="submenu">
-                      <li class="nav__item">
-                        <a href="rent-properties.html">Viviendas</a>
-                      </li>
-                      <li class="nav__item">
-                        <a href="rent-properties.html">Locales</a>
-                      </li>
-                    </ul>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__item"><a href="about.html">Sobre nosotros</a></li>
-            <li class="nav__item"><a href="contact.html">Contacto</a></li>
-          </ul>
-          <div></div>
-          <div class="buscador">
-            <form action="#">
-              <input type="text" placeholder="Buscar" />
-              <button type="submit">O</button>
-            </form>
-          </div>
-        </nav>
-        <!-- NAV END -->
+        <div class="buscador">
+          <form action="#">
+            <input type="text" placeholder="Buscar" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
       </div>
+
+      <!-- NAV START -->
+      <nav class="nav">
+        <div class="button-menu"></div>
+        <ul class="menu">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="submenu">
+            <a class="dropdown-arrow" href="buy-properties.html">Propiedades</a>
+            <ul>
+              <li>
+                <a href="favourites.html">Mis Favoritos</a>
+              </li>
+
+              <li class="submenu">
+                <a class="dropdown-arrow" href="rent-properties.html">
+                  Alquiler
+                </a>
+                <ul>
+                  <li>
+                    <a href="rent-properties.html">Viviendas</a>
+                  </li>
+                  <li>
+                    <a href="rent-properties.html">Locales</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="submenu">
+                <a class="dropdown-arrow" href="buy-properties.html">Comprar</a>
+                <ul>
+                  <li>
+                    <a href="buy-properties.html">Adquisicion total</a>
+                  </li>
+                  <li>
+                    <a href="buy-properties.html">Adquisicion parcial</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html">Sobre nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- NAV END -->
     </header>
     <!-- HEADER END -->
 
@@ -114,111 +122,88 @@
 
     <!-- FOOTER START -->
     <footer>
-      <!-- SECCION: SOCIAL MEDIA START-->
-      <section>
-        <!-- IZQUIERDA START -->
-        <div>
-          <span>Siguenos enlas redes sociales:</span>
-        </div>
-        <!-- IZQUIERDA END -->
+      <!-- SECCION: ENLACES START -->
+      <section class="footer">
+        <div class="social">
+          <!-- GRID COLUMNA 1:CONTENIDO -->
+          <h6 class="section-title">Redes Sociales</h6>
+          <i class="icon-search"></i>
+          <!-- IZQUIERDA END -->
 
-        <!-- DERECHA START -->
-        <div>
-          <a href="">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <!-- DERECHA END -->
-      </section>
-      <!-- SECCION: SOCIAL MEDIA END -->
-
-      <!-- SECCION: ENLACES  -->
-      <section class="">
-        <div>
-          <!-- GRID FILA -->
-          <div>
-            <!-- GRID COLUMNA 1 -->
-            <div>
-              <!-- CONTENTO -->
-              <h6>ChainHouse</h6>
-              <hr />
-              <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-              </p>
-            </div>
-            <!-- GRID COLUMNA 1 -->
-
-            <!-- GRID COLUMNA 2 -->
-            <div>
-              <!-- ENLACES -->
-              <h6>Propiedades</h6>
-              <hr />
-              <p>
-                <a href="#!" class="text-white">alquiler viviendas</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">alquiler oficinas</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">viviendas propias</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">viviendas para inverison</a>
-              </p>
-            </div>
-            <!-- GRID COLUMNA 2 -->
-
-            <!-- GRID COLUMNA 3 -->
-            <div>
-              <!-- ENLACES -->
-              <h6 class="text-uppercase fw-bold">enlaces interesantes</h6>
-              <hr />
-              <p>
-                <a href="#!" class="text-white">mi cuenta</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">ser afiliado</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">trabaja con nosotros</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">ayuda</a>
-              </p>
-            </div>
-            <!-- GRID COLUMNA 3 -->
-
-            <!-- GRID COLUMNA 4 -->
-            <div>
-              <!-- ENLACES -->
-              <h6 class="text-uppercase fw-bold">Contacto</h6>
-              <hr />
-              <p><i class="fas fa-home mr-3"></i> Madrid, MD 10012, ES</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 34 234 567 88</p>
-              <p><i class="fas fa-print mr-3"></i> + 34 234 567 89</p>
-              <a href="contacto.html">enviar mensaje</a>
-            </div>
-            <!-- GRID COLUMNA 4 -->
+          <!-- DERECHA START -->
+          <div class="menu">
+            <span>Siguenos en las redes sociales: <br /></span>
+            <a href="">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-google"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-github"></i>
+            </a>
           </div>
-          <!-- GRIF FILA -->
         </div>
-      </section>
-      <!-- SECCION: ENLACES  -->
+        <!-- GRID COLUMNA 1 -->
 
+        <!-- GRID COLUMNA 2: -->
+        <div class="product">
+          <h6 class="section-title">Propiedades</h6>
+          <i class="icon-house"></i>
+          <div class="menu">
+            <a href="#!" class="text-white"><p>alquiler viviendas</p></a>
+            <a href="#!" class="text-white"><p>alquiler oficinas</p></a>
+            <a href="#!" class="text-white"><p>viviendas propias</p></a>
+            <a href="#!" class="text-white"><p>viviendas para inverison</p></a>
+          </div>
+        </div>
+        <!-- GRID COLUMNA 2 -->
+
+        <!-- GRID COLUMNA 3 -->
+        <div class="links">
+          <!-- ENLACES -->
+          <h6 class="section-title">Enlaces interesantes</h6>
+          <i class="icon-enlace"></i>
+          <div class="menu">
+            <a href="#!" class="text-white">
+              <p>mi cuenta</p>
+            </a>
+            <a href="#!" class="text-white">
+              <p>ser afiliado</p>
+            </a>
+            <a href="#!" class="text-white">
+              <p>trabaja con nosotros</p>
+            </a>
+            <a href="#!" class="text-white">
+              <p>ayuda</p>
+            </a>
+          </div>
+        </div>
+        <!-- GRID COLUMNA 3 -->
+
+        <!-- GRID COLUMNA 4 -->
+        <div class="contact">
+          <!-- ENLACES -->
+          <h6 class="section-title">Contacto</h6>
+          <i class="icon-mail"></i>
+          <div class="menu">
+            <p><i class="fa fa-home mr-3"></i>Madrid, MD 10012, ES</p>
+            <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
+            <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
+            <p>
+              <a href="contacto.html">enviar mensaje</a>
+            </p>
+          </div>
+        </div>
+        <!-- GRID COLUMNA 4 -->
+      </section>
+      <!-- SECCION: ENLACES END -->
       <!-- DERECHOS AUTOR START -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="author">
         © 2022 Copyright:
         <a href="">Berzins Antons</a>
       </div>

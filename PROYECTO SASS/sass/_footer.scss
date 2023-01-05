@@ -1,1 +1,193 @@
+  footer {
+      background-color: $darkSecondary;
+      position: relative;
+      bottom: 0;
+      width: 100%;
 
+      * {
+          color: $white;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+          ::first-letter {
+              text-transform: uppercase;
+          }
+      }
+
+      section.footer {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          text-align: center;
+          position: relative;
+          background-color: $darkPrimary;
+          width: 100%;
+
+          @include redimensionar(medium) {
+              flex-wrap: wrap;
+
+              transform-style: preserve-3d;
+              background-color: transparent;
+
+
+              >div {
+                  @include transicionar(all);
+
+                  width: 50%;
+                  height: 260px;
+                  vertical-align: center;
+
+                  &.social {
+                      background: contain no-repeat;
+                  }
+
+                  &.product {
+                      background-position: 0, 1500px;
+                  }
+
+                  &.links {
+                      background-position: 0, 1500px;
+                  }
+
+                  &.contact {
+                      background-position: 0, 1500px;
+                  }
+
+                  &:hover {
+                      background: $accesoryColor1;
+                      transform: scale(1.03) rotateY(180deg);
+                      box-shadow: -1px 1px 10px cadetblue;
+                      border: none;
+
+                      .section-title {
+                          display: none;
+                      }
+
+                      .menu {
+                          display: block;
+                          transform: rotateY(180deg);
+                          position: relative;
+                          top: 20%;
+                      }
+
+                      >i[class*="icon"] {
+                          opacity: 0;
+                      }
+                  }
+
+                  .section-title {
+                      height: 10%;
+                      box-sizing: content-box;
+                      position: relative;
+                      top: 30%;
+
+                  }
+
+                  .menu {
+                      display: none;
+                  }
+
+                  /*
+                  >i[class*="icon"] {
+                      display: block;
+                      position: absolute;
+                      transform: scale(0.1);
+                    &.icon-mail{
+                        left: -25%;
+                        top: -25%;
+                    }              
+                  }
+                  */
+              }
+
+          }
+
+          @include redimensionar(small) {
+              display: block;
+              @include transicionar(overflow);
+
+              >div {
+                  width: 100%;
+
+                  &:hover {
+                      transform: rotateX(180deg);
+                      .menu,
+                      h6.section-title {
+                        position: static;
+
+                          display: block;
+                          transform: rotateX(180deg);
+                      }
+                  }
+                  h6 {
+                      border-bottom: 1px $lightGray solid;
+                      letter-spacing: 4px;
+
+                      @include transicionar(letter-spacing, 0.2s, ease-in-out);
+                      &:hover {
+                          letter-spacing: 10px;
+                      }
+                  }
+
+                  >i[class*="icon"] {
+                      display: none;
+                  }
+              }
+          }
+
+          >div {
+              flex-grow: 1;
+              padding: 1em;
+              background-color: $accesoryColor1;
+              border-bottom: 3px solid $darkPrimary;
+              border-right: 5px solid $darkPrimary;
+              &.contact{
+                p {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    a{
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+              }
+              h6 {
+                  display: block;
+                  font-size: large;
+                  text-transform: uppercase;
+                  padding: 5px;
+                  margin: 25px;
+                  white-space: nowrap;
+
+              }
+              p {
+                  padding: 0.5em;
+                  text-transform: capitalize;
+                  &:hover {
+                      text-decoration: underline;
+                  }
+                  
+              }
+
+              i {
+                  margin: 0 15px;
+              }
+              .menu {
+                  margin-top: 10px;
+
+              }
+
+              >i {
+                  display: none;
+              }
+          }
+      }
+
+      .author {
+          background-color: $darkPrimary;
+      }
+
+
+  }

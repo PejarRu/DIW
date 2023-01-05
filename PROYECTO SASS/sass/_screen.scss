@@ -5,28 +5,43 @@
 
 @import "compass/reset";
 
-$darkMain : #202e48;
+$darkPrimary : #202e48;
 $darkSecondary : #30456b;
-
-$accesoryColor: #0b6298;
-
 $lightPrimary : #1b9eee;
 $lightSecondary : #0f81c7;
-
+$accesoryColor1: #0b6298;
+$gray: #444444;
+$lightGray: #888;
 $white: #ffffff;
 $black: #000000;
 
 
-@font-face {
-    font-family: Unbouded;
-    src: url(../fonts/Unbouded/static/Unbounded-Regular.ttf);    
-}
-
-
-
-*,body{
+* {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+html {}
+
+//ICONOS
+@import "compass/utilities/sprites";
+
+$icons: sprite-map("icons/*.png");
+
+@each $i in sprite-names($icons) {
+    .icon-#{$i} {
+        background-image: $icons;
+        background-clip: padding-box;
+        display: inline-block;
+        background-position: sprite-position($icons, $i);
+        @include sprite-dimensions($icons, $i);
+    }
 }
