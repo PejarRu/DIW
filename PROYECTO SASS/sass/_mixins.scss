@@ -35,8 +35,13 @@
 }
 
 @mixin invertir($porcentaje) {
-    -webkit-filter: invert($porcentaje);
     filter: invert($porcentaje);
+    -webkit-filter: invert($porcentaje);
+}
+
+@mixin filtrar($filtro) {
+    filter: $filtro;
+    -webkit-filter: $filtro;
 }
 
 @mixin transicionar($propiedad, $duracion: 0.4s, $timing: ease-out) {

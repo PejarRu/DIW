@@ -1,0 +1,199 @@
+&.buy-properties {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        .card {
+            width: calc(100% - 1rem);
+            margin: 1rem;
+            min-width: 300px;
+            border-radius: 0.5em;
+            background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            @include transicionar(all);
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            img {
+                margin: 1em;
+                max-height: 550px;
+                max-width: 65%;
+                object-fit: cover;
+                border-radius: 10px 10px;
+            }
+
+            .card-text {
+                position: relative;
+                height: 100%;
+                max-width: 100%;
+                padding-top: 3em;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 1em;
+
+                * {
+                    color: white;
+                }
+
+                h2,
+                h3 {
+                    font-size: 1.1em;
+                    color: white;
+                    margin: 10px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+
+                p {
+                    margin: 10px;
+                    text-align: justify;
+                }
+
+
+
+                .botones {
+                    position: absolute;
+                    bottom: 0;
+                    width: 95%;
+                    margin: 1em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+
+                    * {
+                        margin: 3px;
+                    }
+
+                    button {
+
+                        font-size: 1rem;
+                        padding: 0.6em;
+                        white-space: nowrap;
+                        border-radius: 0.2em;
+                        background: $accesoryColor1;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: $darkPrimary;
+                        }
+                    }
+
+                    * {
+                        &:hover {
+                            filter: grayscale(1);
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+&.rent-properties {
+    color: $white;
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card {
+            width: calc(33.33% - 2em);
+            margin: 1em;
+            background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
+            border-radius: 0.5em;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include transicionar(all);
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            img {
+                margin: 1em;
+                max-height: 550px;
+                max-width: 65%;
+                object-fit: cover;
+                border-radius: 10px 10px;
+            }
+
+            .card-text {
+                width: 80%;
+
+                h3 {
+                    color: white;
+                    margin: 10px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+
+                p {
+                    color: white;
+                    margin: 10px;
+                    text-align: justify;
+                }
+
+                .botones {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    button {
+                        font-size: 0.9rem;
+                        padding: 0.5em 1em;
+                        border: none;
+                        border-radius: 0.2em;
+                        background: linear-gradient(to right, $darkPrimary, $darkSecondary);
+                        color: white;
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+
+                        &:hover {
+                            background: linear-gradient(to right, $darkSecondary, $darkPrimary);
+                        }
+                    }
+
+                    img {
+                        height: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    @include redimensionar(medium) {
+        .cards {
+            .card {
+                width: calc(50% - 2em);
+            }
+        }
+    }
+
+    @include redimensionar(small) {
+        .cards {
+            .card {
+                width: 100%;
+            }
+        }
+    }
+
+}

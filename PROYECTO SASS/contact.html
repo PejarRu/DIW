@@ -23,8 +23,8 @@
     <title>ChainHouse - Practica SASS</title>
   </head>
   <body>
-     <!-- HEADER START -->
-     <header>
+    <!-- HEADER START -->
+    <header>
       <div class="brand">
         <div class="logo">
           <img
@@ -97,7 +97,7 @@
             </ul>
           </li>
           <li><a href="about.html">Sobre nosotros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="contact.html" class="active">Contacto</a></li>
         </ul>
       </nav>
       <!-- NAV END -->
@@ -105,17 +105,33 @@
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main>
-      <div class="goolgle_maps"></div>
-      <div>
-        <form action="">
-          formulario de contacto
+    <main class="contacto">
+      <h1>Contacta con nosotros</h1>
+      <section class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3126.602647851118!2d-0.531760685306718!3d38.404435583456376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6233fea3991575%3A0xf28fcef8c48c1513!2sIES%20San%20Vicente!5e0!3m2!1ses!2ses!4v1672959776555!5m2!1ses!2ses"
+          width="90%"
+          height="900"
+          allowfullscreen="true"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <section class="formulario">
+        <form>
+          <label for="nombre">Nombre:</label><br />
+          <input type="text" id="nombre" name="nombre" /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" /><br />
+          <label for="mensaje">Mensaje:</label><br />
+          <textarea id="mensaje" name="mensaje"></textarea><br /><br />
+          <input type="submit" value="Enviar" />
         </form>
-      </div>
+      </section>
     </main>
     <!-- MAIN END -->
 
-     <!-- FOOTER START -->
+    <!-- FOOTER START -->
     <footer>
       <!-- SECCION: ENLACES START -->
       <section class="footer">
@@ -190,7 +206,7 @@
             <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
             <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
             <p>
-              <a href="contacto.html">enviar mensaje</a>
+              <a href="contact.html">enviar mensaje</a>
             </p>
           </div>
         </div>

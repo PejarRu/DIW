@@ -21,10 +21,10 @@
       type="text/css"
     />
     <title>ChainHouse - Practica SASS</title>
-  </head> 
+  </head>
   <body>
-     <!-- HEADER START -->
-     <header>
+    <!-- HEADER START -->
+    <header>
       <div class="brand">
         <div class="logo">
           <img
@@ -96,7 +96,7 @@
               </li>
             </ul>
           </li>
-          <li><a href="about.html">Sobre nosotros</a></li>
+          <li><a href="about.html" class="active">Sobre nosotros</a></li>
           <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav>
@@ -105,49 +105,101 @@
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main>
-      <div
-        class="whoweare"
-        style="
-          display: grid;
-          grid-template-columns: 1.2fr 0.7fr 1.1fr;
-          grid-template-rows: 1.4fr 0.1fr;
-          gap: 0px 0px;
-          grid-template-areas:
-            '.' '.' '.'
-            '.' '.' '.'; "
-      >
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div
-        class="ourhistory"
-        style="
-          display: grid; 
-  grid-template-columns: 1.2fr; 
-  grid-template-rows: 0.3fr 1.8fr 0.4fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    '.'
-    '.'
-    '.';
-        "
-      >
-        <div>Titile</div>
-        <div>Text</div>
-        <div>Interactive button line
-
+    <main class="about">
+      <h2>Sobre nosotros</h2>
+      <section class="nosotros">
+        <img
+          class="nosotros__imagen"
+          src="img/about/our-history.jpg"
+          alt="Foto importante"
+        />
+        <div class="nosotros__contenido">
+          <h2>Nuestra historia</h2>
+          <p>
+            Fundada en el año 2000, nuestra empresa se ha consolidado como líder
+            en el mercado inmobiliario online. Desde entonces, hemos ayudado a
+            miles de personas a encontrar su hogar perfecto o a invertir en
+            propiedades rentables. Nuestro equipo está formado por profesionales
+            altamente cualificados y comprometidos con ofrecer el mejor servicio
+            a nuestros clientes.
+          </p>
         </div>
-    
-      </div>
+      </section>
+      <section class="nosotros">
+        <img
+          class="nosotros__imagen"
+          src="img/about/our-filosophy-1.jpg"
+          alt="Foto de nuestra filosofia"
+        />
+        <div class="nosotros__contenido">
+          <h2>Nuestra filosofía</h2>
+          <p>
+            Para nosotros, la satisfacción del cliente es lo más importante. Por
+            eso, ponemos a su disposición una amplia gama de propiedades y
+            servicios adaptados a sus necesidades y presupuesto. Además,
+            trabajamos con transparencia y honestidad, siempre buscando la mejor
+            solución para nuestros clientes.
+          </p>
+        </div>
+      </section>
+
+      <section class="historia">
+        <div class="nosotros__contenido">
+          <h2>Nuestra historia</h2>
+          <p>
+            Fundada en el año 2000, nuestra empresa se ha consolidado como líder
+            en el mercado inmobiliario online. Desde entonces, hemos ayudado a
+            miles de personas a encontrar su hogar perfecto o a invertir en
+            propiedades rentables. Nuestro equipo está formado por profesionales
+            altamente cualificados y comprometidos con ofrecer el mejor servicio
+            a nuestros clientes.
+          </p>
+        </div>
+
+        <div class="botones-historia">
+          <button
+            id="button-history-1"
+            class="boton-historia"
+            data-historia="historia1"
+          >
+            2005
+          </button>
+          <button
+            id="button-history-2"
+            class="boton-historia"
+            data-historia="historia2"
+          >
+            2010
+          </button>
+          <button
+            id="button-history-3"
+            class="boton-historia"
+            data-historia="historia3"
+          >
+            2015
+          </button>
+          <button
+            id="button-history-4"
+            class="boton-historia"
+            data-historia="historia3"
+          >
+            2018
+          </button>
+          <button
+            id="button-history-5"
+            class="boton-historia"
+            data-historia="historia3"
+          >
+            2023
+          </button>
+          <span class="line"> </span>
+        </div>
+      </section>
     </main>
+
     <!-- MAIN END -->
 
-     <!-- FOOTER START -->
+    <!-- FOOTER START -->
     <footer>
       <!-- SECCION: ENLACES START -->
       <section class="footer">
@@ -222,7 +274,7 @@
             <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
             <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
             <p>
-              <a href="contacto.html">enviar mensaje</a>
+              <a href="contact.html">enviar mensaje</a>
             </p>
           </div>
         </div>
@@ -239,3 +291,44 @@
     <!-- FOOTER END -->
   </body>
 </html>
+
+<script>
+  const buttons = document.querySelectorAll("[id^='button-history-']");
+  const textElement = document.querySelector(".historia p");
+  let textArray = [
+    "Fundada en el año 2000, nuestra empresa se ha consolidado como líder en el mercado inmobiliario online. Desde entonces, hemos ayudado a miles de personas a encontrar su hogar perfecto o a invertir en propiedades rentables. Nuestro equipo está formado por profesionales altamente cualificados y comprometidos con ofrecer el mejor servicio a nuestros clientes.",
+    "En el año 2005, ampliamos nuestra presencia a nivel nacional y comenzamos a ofrecer servicios inmobiliarios en toda España.",
+    "En el año 2010, lanzamos nuestra primera plataforma online, lo que nos permitió llegar a un público mucho más amplio y ofrecer un servicio más cómodo y accesible a nuestros clientes.",
+    "En el año 2015, comenzamos a ofrecer también servicios de alquiler de propiedades, lo que nos permitió diversificar nuestro negocio y ofrecer aún más opciones a nuestros clientes.",
+    "En el año 2018, inauguramos nuestra primera oficina física en el centro de Madrid, lo que nos permitió mejorar la atención al cliente y ofrecer un servicio más personalizado.",
+    "En el año 2023, lanzamos una nueva plataforma online con funcionalidades avanzadas y un diseño totalmente renovado, lo que nos permitió mejorar la experiencia de usuario y seguir siendo líderes en el mercado inmobiliario online.",
+  ];
+  let currentTextIndex = 1;
+
+  function changeToText(textToChange) {
+    textElement.textContent = textToChange;
+    currentTextIndex = 0;
+    startTime(10000);
+  }
+  function startTime(timeBetweenChange = 7000) {
+    setInterval(() => {
+      textElement.style.opacity = 0; // hacemos que la opacidad del texto sea 0 para que parezca que desaparece
+      setTimeout(() => {
+        //console.log(currentTextIndex);
+        currentTextIndex = currentTextIndex >= 6 ? 0 : currentTextIndex;
+
+        textElement.textContent = textArray[currentTextIndex]; // cambiamos el texto
+        currentTextIndex = (currentTextIndex + 1) % textArray.length; // actualizamos el índice del texto actual
+        textElement.style.opacity = 1; // hacemos que la opacidad del texto sea 1 para que parezca que aparece
+      }, 800); // esperamos 1 segundo para que la animación sea visible
+    }, timeBetweenChange); // cambiamos el texto cada 3 segundos
+  }
+  startTime();
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let numeroBoton = parseInt(button.dataset.historia.slice(8)); // obtenemos el número del botón clickeado
+      changeToText(textArray[numeroBoton]); // pasamos el número del botón a la función
+    });
+  });
+</script>

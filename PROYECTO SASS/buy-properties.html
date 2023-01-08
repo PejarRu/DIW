@@ -23,8 +23,8 @@
     <title>ChainHouse - Practica SASS</title>
   </head>
   <body>
-     <!-- HEADER START -->
-     <header>
+    <!-- HEADER START -->
+    <header>
       <div class="brand">
         <div class="logo">
           <img
@@ -63,7 +63,7 @@
           <li>
             <a href="index.html">Inicio</a>
           </li>
-          <li class="submenu">
+          <li class="submenu active">
             <a class="dropdown-arrow" href="buy-properties.html">Propiedades</a>
             <ul>
               <li>
@@ -105,91 +105,136 @@
     <!-- HEADER END -->
 
     <!-- MAIN START -->
-    <main>
+    <main class="buy-properties">
       <!-- SECCION DE DESTACADOS -->
-      <section class="featured-properties">
-        <h2>Propiedades en venta</h2>
+      <h1>Propiedades en venta</h1>
+      <section class="cards">
         <!-- CARDS DE PROPIEDADES -->
-        <div class="cards">
-          <!-- CARD DE PROPIEDAD 1 -->
-          <div class="card">
-            <img
-              src="img/pisos/piso-balcon-1.jpg"
-              class="main"
-              alt="Imagen de la propiedad 1"
-            />
-            <div class="card-text">
-              <h3>Casa en el centro de Madrid</h3>
-              <p>
-                3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Aenean efficitur, nisi non feugiat
-                euismod, dui enim tempus purus, sed tincidunt ligula ante at
-                lectus. Mauris non elit at odio convallis tempus. Nam accumsan
-                vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec
-                purus scelerisque consectetur. Proin ac ornare ipsum, ut
-                tincidunt tortor
-              </p>
-              <p>Precio: €300,000</p>
-              <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary">Ver detalles</button>
-                <img
-                  src="img/icons/bookmark-icon.png"
-                  alt="bookmark"
-                />
-              </div>
+        <!-- CARD DE PROPIEDAD 1 -->
+        <div class="card">
+          <img
+            src="img/pisos/piso-balcon-1.jpg"
+            class="main"
+            alt="Imagen de la propiedad 1"
+          />
+          <div class="card-text">
+            <h3>Casa en el centro de Madrid</h3>
+            <p>
+              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Aenean efficitur, nisi non feugiat
+              euismod, dui enim tempus purus, sed tincidunt ligula ante at
+              lectus. Mauris non elit at odio convallis tempus. Nam accumsan
+              vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec
+              purus scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt
+              tortor
+            </p>
+            <p>Precio: €300,000</p>
+            <!-- BOTON DE DETALLES -->
+            <div class="botones">
+              <button class="button-secondary">Ver detalles</button>
+              <div class="icon-bookmark"> </div>
             </div>
           </div>
+        </div>
 
-          <!-- CARD DE PROPIEDAD 2 -->
-          <div class="card">
-            <img
-              src="img/pisos/piso-balcon-2.jpg"
-              class="main"
-              alt="Imagen de la propiedad 2"
-            />
-            <div class="card-text">
-              <h3>Piso en el barrio de Chamberí</h3>
-              <p>
-                2 habitaciones, 1 baño, 70m² Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Aenean efficitur, nisi non feugiat
-                euismod, dui enim tempus purus, sed tincidunt ligula ante at
-                lectus. Mauris non elit at odio convallis tempus. Nam accumsan
-                vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec
-                purus scelerisque consectetur. Proin ac ornare ipsum, ut
-                tincidunt tortor
-              </p>
+        <!-- CARD DE PROPIEDAD 2 -->
+        <div class="card">
+          <img
+            src="img/pisos/piso-balcon-2.jpg"
+            class="main"
+            alt="Imagen de la propiedad 2"
+          />
+          <div class="card-text">
+            <h3>Piso en el barrio de Chamberí</h3>
+            <p>
+              2 habitaciones, 1 baño, 70m² Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Aenean efficitur, nisi non feugiat
+              euismod, dui enim tempus purus, sed tincidunt ligula ante at
+              lectus. Mauris non elit at odio convallis tempus. Nam accumsan
+              vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec
+              purus scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt
+              tortor
+            </p>
 
-              <p>Precio: €180,000</p>
-              <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary">Ver detalles</button>
-                <img
-                  src="img/icons/bookmark-icon.png"
-                  alt="bookmark"
-                />
-              </div>
+            <p>Precio: €180,000</p>
+            <!-- BOTON DE DETALLES -->
+            <div class="botones">
+              <button class="button-secondary">Ver detalles</button>
+              <div class="icon-bookmark"> </div>
             </div>
           </div>
-          <!-- CARD DE PROPIEDAD 3 -->
-          <div class="card">
-            <img
-              src="img/pisos/piso-balcon-3.jpg"
-              class="main"
-              alt="Imagen de la propiedad 3"
-            />
-            <div class="card-text">
-              <h3>Chalet en las afueras de Madrid</h3>
-              <p>5 habitaciones, 4 baños, 250m²</p>
-              <p>Precio: €550,000</p>
-              <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary">Ver detalles</button>
-                <img
-                  src="img/icons/bookmark-icon.png"
-                  alt="bookmark"
-                />
-              </div>
+        </div>
+
+        <!-- CARD DE PROPIEDAD 2 -->
+        <div class="card">
+          <img
+            src="img/pisos/piso-balcon-2.jpg"
+            class="main"
+            alt="Imagen de la propiedad 2"
+          />
+          <div class="card-text">
+            <h3>Piso en el barrio de Chamberí</h3>
+            <p>
+              2 habitaciones, 1 baño, 70m² Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Aenean efficitur, nisi non feugiat
+              euismod, dui enim tempus purus, sed tincidunt ligula ante at
+              lectus. Mauris non elit at odio convallis tempus. Nam accumsan
+              vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec
+              purus scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt
+              tortor
+            </p>
+
+            <p>Precio: €180,000</p>
+            <!-- BOTON DE DETALLES -->
+            <div class="botones">
+              <button class="button-secondary">Ver detalles</button>
+              <div class="icon-bookmark"> </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD DE PROPIEDAD 2 -->
+        <div class="card">
+          <img
+            src="img/pisos/piso-balcon-2.jpg"
+            class="main"
+            alt="Imagen de la propiedad 2"
+          />
+          <div class="card-text">
+            <h3>Piso en el barrio de Chamberí</h3>
+            <p>
+              2 habitaciones, 1 baño, 70m² Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Aenean efficitur, nisi non feugiat
+              euismod, dui enim tempus purus, sed tincidunt ligula ante at
+              lectus. Mauris non elit at odio convallis tempus. Nam accumsan
+              vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec
+              purus scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt
+              tortor
+            </p>
+
+            <p>Precio: €180,000</p>
+            <!-- BOTON DE DETALLES -->
+            <div class="botones">
+              <button class="button-secondary">Ver detalles</button>
+              <div class="icon-bookmark"> </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD DE PROPIEDAD 3 -->
+        <div class="card">
+          <img
+            src="img/pisos/piso-balcon-3.jpg"
+            class="main"
+            alt="Imagen de la propiedad 3"
+          />
+          <div class="card-text">
+            <h3>Chalet en las afueras de Madrid</h3>
+            <p>5 habitaciones, 4 baños, 250m²</p>
+            <p>Precio: €550,000</p>
+            <!-- BOTON DE DETALLES -->
+            <div class="botones">
+              <button class="button-secondary">Ver detalles</button>
+              <div class="icon-bookmark"> </div>
             </div>
           </div>
         </div>
@@ -271,7 +316,7 @@
             <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
             <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
             <p>
-              <a href="contacto.html">enviar mensaje</a>
+              <a href="contact.html">enviar mensaje</a>
             </p>
           </div>
         </div>

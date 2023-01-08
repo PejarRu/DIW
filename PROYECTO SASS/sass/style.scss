@@ -38,6 +38,15 @@
     transform: rotate(-360deg);
   }
 }
+$gradient-colors: $darkPrimary, $gray, $darkSecondary;
+@keyframes gradiente {
+  0% {
+    background-image: linear-gradient(to right, $gradient-colors);
+  }
+  100% {
+    background-image: linear-gradient(to right, $gradient-colors);
+  }
+}
 
 /* PLACEHOLDERs */
 
@@ -59,6 +68,11 @@
   padding: 10px 40px;
   background: $accesoryColor1;
   @extend %hover-shadow;
+}
+%simple-hover1 {
+  &:hover {
+    border: 2px solid $lightGray;
+}
 }
 
 %hover-shadow {

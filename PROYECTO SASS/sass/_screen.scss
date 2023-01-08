@@ -29,7 +29,9 @@ body {
     height: 100%;
 }
 
-html {}
+html {
+    min-width: 350px;
+}
 
 //ICONOS
 @import "compass/utilities/sprites";
@@ -39,8 +41,6 @@ $icons: sprite-map("icons/*.png");
 @each $i in sprite-names($icons) {
     .icon-#{$i} {
         background-image: $icons;
-        background-clip: padding-box;
-        display: inline-block;
         background-position: sprite-position($icons, $i);
         @include sprite-dimensions($icons, $i);
     }

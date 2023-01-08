@@ -167,7 +167,7 @@ header {
 
         button {
           float: right;
-          
+
           height: 100px;
           width: 50px;
           background: transparent;
@@ -186,9 +186,11 @@ header {
 
   .nav {
     background: linear-gradient(to bottom, $darkPrimary, $darkSecondary);
+    .active{
+      box-shadow: 1px 1px 25px white;
+    }
 
     @include redimensionar(medium) {
-
       div.button-menu {
         display: block;
       }
