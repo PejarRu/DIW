@@ -591,9 +591,8 @@ main.index .noticias a.extra {
 /* line 35, ../sass/_main-index.scss */
 main.index .noticias .noticia {
   background: linear-gradient(to right, #0b6298, #30456b);
-  scroll-snap-align: center;
   cursor: grab;
-  min-width: calc(80% - .5rem);
+  min-width: calc(70% - .5rem);
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
@@ -604,12 +603,12 @@ main.index .noticias .noticia {
   -ms-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
 }
-/* line 49, ../sass/_main-index.scss */
+/* line 48, ../sass/_main-index.scss */
 main.index .noticias .noticia:hover {
   transform: scale(1.01);
 }
 @media (max-width: 612px) {
-  /* line 55, ../sass/_main-index.scss */
+  /* line 54, ../sass/_main-index.scss */
   main.index .noticias .noticia, main.index .noticias .noticia:hover *,
   main.index .noticias .noticia *:hover {
     transform: none;
@@ -621,35 +620,37 @@ main.index .noticias .noticia:hover {
     filter: none;
   }
 }
-/* line 65, ../sass/_main-index.scss */
+/* line 64, ../sass/_main-index.scss */
 main.index .noticias .noticia * {
   width: 75%;
   color: #ffffff;
 }
-/* line 70, ../sass/_main-index.scss */
-main.index .noticias .noticia h2, main.index .noticias .noticia h3 {
+/* line 69, ../sass/_main-index.scss */
+main.index .noticias .noticia h2,
+main.index .noticias .noticia h3 {
   font-size: 1.5em;
   text-align: center;
   margin: 1em;
 }
-/* line 74, ../sass/_main-index.scss */
-main.index .noticias .noticia h2:hover, main.index .noticias .noticia h3:hover {
+/* line 75, ../sass/_main-index.scss */
+main.index .noticias .noticia h2:hover,
+main.index .noticias .noticia h3:hover {
   text-decoration: underline;
   color: #1b9eee;
 }
-/* line 79, ../sass/_main-index.scss */
+/* line 81, ../sass/_main-index.scss */
 main.index .noticias .noticia .flip-card {
   width: 75%;
   margin: 1em;
   position: relative;
 }
-/* line 84, ../sass/_main-index.scss */
+/* line 86, ../sass/_main-index.scss */
 main.index .noticias .noticia .flip-card img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
-/* line 90, ../sass/_main-index.scss */
+/* line 92, ../sass/_main-index.scss */
 main.index .noticias .noticia .flip-card p {
   position: absolute;
   top: 50%;
@@ -665,7 +666,7 @@ main.index .noticias .noticia .flip-card p {
   text-align: center;
 }
 @media (max-width: 612px) {
-  /* line 114, ../sass/_main-index.scss */
+  /* line 116, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card img,
   main.index .noticias .noticia .flip-card p,
   main.index .noticias .noticia .flip-card img:hover,
@@ -682,11 +683,11 @@ main.index .noticias .noticia .flip-card p {
   }
 }
 @media (min-width: 612px) {
-  /* line 132, ../sass/_main-index.scss */
+  /* line 134, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card:hover {
     transform-style: preserve-3d;
   }
-  /* line 135, ../sass/_main-index.scss */
+  /* line 137, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card:hover img {
     transition: all 0.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
@@ -697,7 +698,7 @@ main.index .noticias .noticia .flip-card p {
     filter: brightness(0%);
     transform: rotateY(180deg);
   }
-  /* line 144, ../sass/_main-index.scss */
+  /* line 146, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card:hover p {
     transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
@@ -709,18 +710,19 @@ main.index .noticias .noticia .flip-card p {
     text-transform: uppercase;
   }
 }
-/* line 162, ../sass/_main-index.scss */
+/* line 165, ../sass/_main-index.scss */
 main.index .popular .tab-content {
   width: 100%;
   flex-wrap: nowrap !important;
   justify-content: center;
   padding: 1em;
 }
-/* line 168, ../sass/_main-index.scss */
+/* line 172, ../sass/_main-index.scss */
 main.index .popular .tab-content#rentals {
-  overflow-y: none;
   overflow-x: scroll;
-  scroll-snap-align: end;
+  scroll-snap-align: center;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 /* line 1, ../sass/_main-about.scss */
 main.about {
@@ -2219,9 +2221,9 @@ main.index .popular .tab-content#rentals .card:hover, main.rent-properties secti
 }
 /* line 123, ../sass/style.scss */
 main.index .popular .tab-content#rentals .card img, main.rent-properties section.container .cards .card img, main.index .popular .tab-content#sales .card img, main.buy-properties .cards .card img {
-  margin: 1em;
+  margin: 1em auto;
   max-height: 550px;
-  max-width: 65%;
+  max-width: 95%;
   object-fit: cover;
   border-radius: 10px 10px;
 }

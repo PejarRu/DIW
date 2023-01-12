@@ -29,7 +29,7 @@
   <!-- MAIN START -->
   <main class="index">
     <h1>Novedades</h1>
-    <section class="noticias">
+    <section class="noticias" id="draggableJS">
       <div class="noticia">
         <h2>Exclusiva propiedad con vistas al mar en Marbella</h2>
         <div class="flip-card">
@@ -69,43 +69,40 @@
         </div>
       </div>
       <div class="noticia">
-        <h2>Nuevas viviendas de lujo en Marbella</h2>
+        <h2>Nuevos proyectos de viviendas en Madrid</h2>
         <div class="flip-card">
           <p>
-            Te presentamos nuestra nueva promoción de viviendas de lujo en la
-            zona de playa de Marbella. Estas viviendas cuentan con piscina
-            privada, jardín y vistas al mar. ¡No pierdas la oportunidad de vivir
-            en una de las zonas más exclusivas de la Costa del Sol!
+            Estamos emocionados de anunciar nuestros nuevos proyectos de viviendas en el centro de Madrid. Ofrecemos una
+            amplia variedad de opciones, desde apartamentos modernos hasta casas tradicionales, con una excelente
+            ubicación y conectividad. ¡No pierdas la oportunidad de vivir en la capital!
           </p>
-          <img src="img/lugar/casa-clasica.jpg" alt="imagen de la noticia 1" />
+          <img src="img/lugar/casa-clasica.jpg" alt="imagen de la noticia 2" />
+        </div>
+      </div>
+      <div class="noticia">
+        <h2>Lanzamiento de nuestra aplicación móvil</h2>
+        <div class="flip-card">
+          <p>
+            ¡Estamos emocionados de anunciar el lanzamiento de nuestra aplicación móvil! Ahora puedes buscar y reservar
+            propiedades desde tu dispositivo móvil, con una interfaz fácil de usar y funciones adicionales. Descarga
+            nuestra aplicación hoy mismo y comienza a encontrar tu hogar perfecto.
+          </p>
+          <img src="img/lugar/casa-moderna.jpg" alt="imagen de la noticia 3" />
+        </div>
+      </div>
+      <div class="noticia">
+        <h2>Ofertas especiales en propiedades vacacionales</h2>
+        <div class="flip-card">
+          <p>
+            ¿Buscas una escapada vacacional? ¡Tenemos ofertas especiales en propiedades vacacionales en toda España!
+            Desde apartamentos frente al mar hasta cabañas en la montaña, tenemos algo para todos los gustos. ¡Aprovecha
+            estas ofertas antes de que se acaben!
+          </p>
+          <img src="img/lugar/casa-rural.jpg" alt="imagen de la noticia 4" />
         </div>
       </div>
 
-      <div class="noticia">
-        <h3>Local comercial en el centro de Madrid</h3>
-        <div class="flip-card">
-          <p>
-            Tenemos disponibles varios locales comerciales en el centro de
-            Madrid, ideales para establecimientos de moda, restaurantes o
-            pequeñas empresas. ¡Ven a visitarnos y encuentra el local que se
-            adapte a tus necesidades!
-          </p>
-          <img src="img/lugar/casa-moderna.jpg" alt="Fachada de un edificio de oficinas" />
-        </div>
-      </div>
 
-      <div class="noticia">
-        <h3>Chalet con piscina en la sierra de Madrid</h3>
-        <div class="flip-card">
-          <p>
-            Te ofrecemos la oportunidad de adquirir un chalet con piscina en la
-            sierra de Madrid, a sólo 30 minutos de la ciudad. Esta propiedad
-            cuenta con amplias zonas verdes y una vista impresionante. ¡No dejes
-            pasar esta oportunidad única!
-          </p>
-          <img src="img/lugar/casa-rural.jpg" alt="Imagen de una vivienda con piscina" />
-        </div>
-      </div>
       <a href="#" class="extra">
         <div>Ver mas...</div>
       </a>
@@ -115,7 +112,7 @@
       <div class="tab-content" id="rentals">
         <!-- CARD DE FAVORITO-RENT 1 -->
         <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <img src="img/pisos/piso-salon-2.jpg" class="main" alt="Imagen de la propiedad 1" />
           <div class="card-text">
             <h3>Piso en el centro de Madrid</h3>
 
@@ -138,7 +135,7 @@
               </div>
               <!-- BOTON DE DETALLES -->
               <div class="botones">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
 
                 <div class="icon-bookmark"> </div>
               </div>
@@ -147,7 +144,7 @@
         </div>
         <!-- CARD DE FAVORITO-RENT 2 -->
         <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <img src="img/pisos/piso-salon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
           <div class="card-text">
             <h3>Casa en la playa</h3>
 
@@ -167,7 +164,7 @@
               </div>
               <!-- BOTON DE DETALLES -->
               <div class="botones">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
 
                 <div class="icon-bookmark"> </div>
               </div>
@@ -176,20 +173,16 @@
         </div>
         <!-- CARD DE FAVORITO-RENT 3 -->
         <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <img src="img/pisos/piso-balcon-4.jpg" class="main" alt="Imagen de la propiedad 1" />
           <div class="card-text">
-            <h3>Piso en el centro de Madrid</h3>
-
+            <h3>Casa en las afueras de Madrid</h3>
             <p>
-              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              efficitur,
-              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
-              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
-              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+              4 habitaciones, 3 baños, 150m² . La casa cuenta con un gran jardín y una piscina privada. Está ubicada en
+              una zona tranquila y residencial, pero a solo 15 minutos en coche del centro de Madrid.
             </p>
             <p>Dirección: Calle Falsa 123, Madrid</p>
-            <p>Distancia: 1km</p>
-            <p>Precio: €800/mes</p>
+            <p>Distancia: 10km</p>
+            <p>Precio: €1,200/mes</p>
             <div class="button-bottom">
               <div class="valoracion">
                 <div class="icon-star"></div>
@@ -200,7 +193,7 @@
               </div>
               <!-- BOTON DE DETALLES -->
               <div class="botones">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
 
                 <div class="icon-bookmark"> </div>
               </div>
@@ -209,20 +202,17 @@
         </div>
         <!-- CARD DE FAVORITO-RENT 4 -->
         <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <img src="img/pisos/piso-balcon-3.jpg" class="main" alt="Imagen de la propiedad 1" />
           <div class="card-text">
-            <h3>Piso en el centro de Madrid</h3>
-
+            <h3>Piso moderno en el barrio de Chamberí</h3>
             <p>
-              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              efficitur,
-              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
-              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
-              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+              2 habitaciones, 1 baño, 70m² Este piso moderno se encuentra en el barrio de Chamberí, uno de los más
+              tradicionales y populares de Madrid. Cuenta con 2 habitaciones amplias, 1 baño y una cocina totalmente
+              equipada. El precio de alquiler es de €700 al mes.
             </p>
-            <p>Dirección: Calle Falsa 123, Madrid</p>
-            <p>Distancia: 1km</p>
-            <p>Precio: €800/mes</p>
+            <p>Dirección: Calle Chamberí 123, Madrid</p>
+            <p>Distancia: 2km</p>
+            <p>Precio: €700/mes</p>
             <div class="button-bottom">
               <div class="valoracion">
                 <div class="icon-star"></div>
@@ -233,7 +223,7 @@
               </div>
               <!-- BOTON DE DETALLES -->
               <div class="botones">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
 
                 <div class="icon-bookmark"> </div>
               </div>
@@ -242,20 +232,17 @@
         </div>
         <!-- CARD DE FAVORITO-RENT 5 -->
         <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 1" />
           <div class="card-text">
-            <h3>Piso en el centro de Madrid</h3>
-
+            <h3>Piso moderno en el barrio de Chamberí</h3>
             <p>
-              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              efficitur,
-              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
-              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
-              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+              2 habitaciones, 1 baño, 70m² Este piso moderno se encuentra en el barrio de Chamberí, uno de los más
+              tradicionales y populares de Madrid. Cuenta con 2 habitaciones amplias, 1 baño y una cocina totalmente
+              equipada. El precio de alquiler es de €700 al mes.
             </p>
-            <p>Dirección: Calle Falsa 123, Madrid</p>
-            <p>Distancia: 1km</p>
-            <p>Precio: €800/mes</p>
+            <p>Dirección: Calle Chamberí 123, Madrid</p>
+            <p>Distancia: 2km</p>
+            <p>Precio: €700/mes</p>
             <div class="button-bottom">
               <div class="valoracion">
                 <div class="icon-star"></div>
@@ -266,7 +253,7 @@
               </div>
               <!-- BOTON DE DETALLES -->
               <div class="botones">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
 
                 <div class="icon-bookmark"> </div>
               </div>
@@ -275,20 +262,17 @@
         </div>
         <!-- CARD DE FAVORITO-RENT 6 -->
         <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <img src="img/pisos/piso-salon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
           <div class="card-text">
-            <h3>Piso en el centro de Madrid</h3>
-
+            <h3>Piso en zona residencial</h3>
             <p>
-              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              efficitur,
-              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
-              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
-              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+              3 habitaciones, 2 baños, 110m² Este piso se encuentra en una zona residencial de Madrid, rodeado de zonas
+              verdes y tranquilas. cuenta con 3 habitaciones, 2 baños y un jardín privado. El precio de alquiler es de
+              €900 al mes.
             </p>
-            <p>Dirección: Calle Falsa 123, Madrid</p>
-            <p>Distancia: 1km</p>
-            <p>Precio: €800/mes</p>
+            <p>Dirección: Calle Residencial 123, Madrid</p>
+            <p>Distancia: 5km</p>
+            <p>Precio: €900/mes</p>
             <div class="button-bottom">
               <div class="valoracion">
                 <div class="icon-star"></div>
@@ -299,7 +283,7 @@
               </div>
               <!-- BOTON DE DETALLES -->
               <div class="botones">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
 
                 <div class="icon-bookmark"> </div>
               </div>
@@ -344,36 +328,39 @@
 
 </html>
 <script>
+  const noticias = document.querySelectorAll('#draggableJS');
 
-  // obtenemos el elemento que contiene las tarjetas
-  const container = document.querySelector(".noticias");
+  let isDown = false; // flag para saber si se está arrastrando
+  let startX; // posición inicial del mouse
+  let scrollLeft; // posición actual del elemento
 
-  let isDown = false; // indica si el usuario está arrastrando el elemento
-  let startX = 0; // posición inicial del elemento en el eje x al comenzar a arrastrar
-  let scrollLeft = 0; // desplazamiento en el eje x
+  noticias.forEach(noticia => {
+    noticia.addEventListener('mousedown', (e) => {
+      console.log("down");
+      isDown = true;
+      noticia.classList.add('active');
+      startX = e.pageX - noticia.offsetLeft;
+      scrollLeft = noticia.scrollLeft;
+    });
+    noticia.addEventListener('mouseleave', () => {
+      console.log("leave");
 
-  // añadimos el evento mousedown al elemento
-  container.addEventListener("mousedown", (e) => {
-    // establecemos una bandera para indicar que el usuario está arrastrando el elemento
-    isDown = true;
-    container.style.cursor = 'grabbing'
-    startX = e.clientX;
-  });
-  // añadimos el evento mousedown al elemento
-  container.addEventListener("mouseleave", (e) => {
-    // establecemos una bandera para indicar que el usuario está arrastrando el elemento
-    isDown = false;
-  });
-  // añadimos el evento mouseup al elemento
-  container.addEventListener("mouseup", () => {
-    // establecemos una bandera para indicar que el usuario ha dejado de arrastrar el elemento
-    isDown = false;
-    container.style.cursor = 'grab'
-  });
-  // añadimos el evento mousemove al elemento
-  container.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    this.scrollLeft += startX - e.clientX;
-    console.log(this.scrollLeft, startX);
+      isDown = false;
+      noticia.classList.remove('active');
+    });
+    noticia.addEventListener('mouseup', () => {
+      console.log("up");
+      isDown = false;
+      noticia.classList.remove('active');
+    });
+    noticia.addEventListener('mousemove', (e) => {
+
+      if (!isDown) return;
+      console.log("move");
+      e.preventDefault();
+      const x = e.pageX - noticia.offsetLeft;
+      const walk = (x - startX) * 3; // multiplicamos para darle un poco más de velocidad al movimiento
+      noticia.scrollLeft = scrollLeft - walk;
+    });
   });
 </script>

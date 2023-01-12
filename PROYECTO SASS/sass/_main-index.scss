@@ -34,10 +34,9 @@
 
         .noticia {
             background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
-            scroll-snap-align: center;
             cursor: grab;
 
-            min-width: calc(80% - .5rem);
+            min-width: calc(70% - .5rem);
             border-radius: 0.5em;
 
             display: flex;
@@ -67,15 +66,18 @@
                 color: $white;
             }
 
-            h2,h3{
+            h2,
+            h3 {
                 font-size: 1.5em;
                 text-align: center;
                 margin: 1em;
-                &:hover{
+
+                &:hover {
                     text-decoration: underline;
                     color: $lightPrimary;
                 }
             }
+
             .flip-card {
                 width: 75%;
                 margin: 1em;
@@ -157,6 +159,7 @@
     }
 
     width: 100%;
+
     .popular {
 
         .tab-content {
@@ -165,10 +168,12 @@
             justify-content: center;
             @extend %cards-container;
             padding: 1em;
+
             &#rentals {
-                overflow-y: none;
                 overflow-x: scroll;
-                scroll-snap-align: end;
+                scroll-snap-align: center;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
 
                 .card {
 

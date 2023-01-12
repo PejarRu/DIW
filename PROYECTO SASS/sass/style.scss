@@ -121,9 +121,9 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
   }
 
   img {
-    margin: 1em;
+    margin: 1em auto;
     max-height: 550px;
-    max-width: 65%;
+    max-width: 95%;
     object-fit: cover;
     border-radius: 10px 10px;
   }
