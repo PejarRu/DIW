@@ -1,293 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="author" content="Antons Berzins" />
-    <meta
-      name="description"
-      content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022"
-    />
-    <meta name="contact" content="berzinsanton@gmail.com" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="css/style.css"
-      media="screen, projection"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <title>ChainHouse - Practica SASS</title>
-  </head>
-  <body>
-    <!-- HEADER START -->
-    <header>
-      <div class="brand">
-        <div class="logo">
-          <img
-            class="logo-min"
-            src="img/logo-min.png"
-            alt="logotipo-min"
-            width="100px"
-          />
-          <img
-            class="logo-full"
-            src="img/logo.png"
-            alt="logotipo-full"
-            width="100px"
-          />
-        </div>
-        <a href="index.html">
-          <h2 class="brand_title" data-text="ChainHouse">
-            <span class="load"></span>
 
-            ChainHouse
-            <span class="underline"></span>
-          </h2>
-        </a>
-        <div class="buscador">
-          <form action="#">
-            <input type="text" placeholder="Buscar" />
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-        </div>
-      </div>
+<head>
+  <meta name="author" content="Antons Berzins" />
+  <meta name="description"
+    content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022" />
+  <meta name="contact" content="berzinsanton@gmail.com" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <title>ChainHouse - Practica SASS</title>
+  <script src="./renderHTML.js"></script>
+</head>
 
-      <!-- NAV START -->
-      <nav class="nav">
-        <div class="button-menu"></div>
-        <ul class="menu">
-          <li class="active">
-            <a href="index.html">Inicio</a>
-          </li>
-          <li class="submenu">
-            <a class="dropdown-arrow" href="buy-properties.html">Propiedades</a>
-            <ul>
-              <li>
-                <a href="favourites.html">Mis Favoritos</a>
-              </li>
+<body>
 
-              <li class="submenu">
-                <a class="dropdown-arrow" href="rent-properties.html">
-                  Alquiler
-                </a>
-                <ul>
-                  <li>
-                    <a href="rent-properties.html">Viviendas</a>
-                  </li>
-                  <li>
-                    <a href="rent-properties.html">Locales</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="submenu">
-                <a class="dropdown-arrow" href="buy-properties.html">Comprar</a>
-                <ul>
-                  <li>
-                    <a href="buy-properties.html">Adquisicion total</a>
-                  </li>
-                  <li>
-                    <a href="buy-properties.html">Adquisicion parcial</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="about.html">Sobre nosotros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- NAV END -->
-    </header>
-    <!-- HEADER END -->
-
-    <!-- MAIN START -->
-    <main class="index">
-      <h1>Novedades</h1>
-      <section class="noticias">
-        <div class="noticia">
-          <h2>Exclusiva propiedad con vistas al mar en Marbella</h2>
-          <img
-            src="img/lugar/casa-clasica-1.jpg"
-            alt="imagen de la noticia 1"
-          />
+  <!-- HEADER START -->
+  <script>
+    renderHeader();
+    /*
+    let activeContainer = document.querySelector("#index");
+    activeContainer.classList.add("active")
+    */
+  </script>
+  <!-- HEADER END -->
+  <!-- MAIN START -->
+  <main class="index">
+    <h1>Novedades</h1>
+    <section class="noticias">
+      <div class="noticia">
+        <h2>Exclusiva propiedad con vistas al mar en Marbella</h2>
+        <div class="flip-card">
           <p>
             Te presentamos nuestra nueva promoción de viviendas de lujo en la
             zona de playa de Marbella. Estas viviendas cuentan con piscina
             privada, jardín y vistas al mar. ¡No pierdas la oportunidad de vivir
             en una de las zonas más exclusivas de la Costa del Sol!
           </p>
+          <img src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
         </div>
+      </div>
 
-        <div class="noticia">
-          <h3>Alquilamos locales comerciales en el centro de Madrid</h3>
-          <img
-            src="img/lugar/casa-moderna-1.jpg"
-            alt="Fachada de un edificio de oficinas"
-          />
+      <div class="noticia">
+        <h3>Alquilamos locales comerciales en el centro de Madrid</h3>
+        <div class="flip-card">
           <p>
             Tenemos disponibles varios locales comerciales en el centro de
             Madrid, ideales para establecimientos de moda, restaurantes o
             pequeñas empresas. ¡Ven a visitarnos y encuentra el local que se
             adapte a tus necesidades!
           </p>
+          <img src="img/lugar/casa-moderna-1.jpg" alt="Fachada de un edificio de oficinas" />
         </div>
+      </div>
 
-        <div class="noticia">
-          <h3>Venta de chalet con piscina en la sierra de Madrid</h3>
-          <img
-            src="img/lugar/casa-rural-1.jpg"
-            alt="Imagen de una vivienda con piscina"
-          />
+      <div class="noticia">
+        <h3>Venta de chalet con piscina en la sierra de Madrid</h3>
+        <div class="flip-card">
           <p>
             Te ofrecemos la oportunidad de adquirir un chalet con piscina en la
             sierra de Madrid, a sólo 30 minutos de la ciudad. Esta propiedad
             cuenta con amplias zonas verdes y una vista impresionante. ¡No dejes
             pasar esta oportunidad única!
           </p>
+          <img src="img/lugar/casa-rural-1.jpg" alt="Imagen de una vivienda con piscina" />
         </div>
-        <div class="noticia">
-          <h2>Nuevas viviendas de lujo en Marbella</h2>
+      </div>
+      <div class="noticia">
+        <h2>Nuevas viviendas de lujo en Marbella</h2>
+        <div class="flip-card">
+          <p>
+            Te presentamos nuestra nueva promoción de viviendas de lujo en la
+            zona de playa de Marbella. Estas viviendas cuentan con piscina
+            privada, jardín y vistas al mar. ¡No pierdas la oportunidad de vivir
+            en una de las zonas más exclusivas de la Costa del Sol!
+          </p>
           <img src="img/lugar/casa-clasica.jpg" alt="imagen de la noticia 1" />
-          <p>
-            Te presentamos nuestra nueva promoción de viviendas de lujo en la
-            zona de playa de Marbella. Estas viviendas cuentan con piscina
-            privada, jardín y vistas al mar. ¡No pierdas la oportunidad de vivir
-            en una de las zonas más exclusivas de la Costa del Sol!
-          </p>
         </div>
+      </div>
 
-        <div class="noticia">
-          <h3>Local comercial en el centro de Madrid</h3>
-          <img
-            src="img/lugar/casa-moderna.jpg"
-            alt="Fachada de un edificio de oficinas"
-          />
+      <div class="noticia">
+        <h3>Local comercial en el centro de Madrid</h3>
+        <div class="flip-card">
           <p>
             Tenemos disponibles varios locales comerciales en el centro de
             Madrid, ideales para establecimientos de moda, restaurantes o
             pequeñas empresas. ¡Ven a visitarnos y encuentra el local que se
             adapte a tus necesidades!
           </p>
+          <img src="img/lugar/casa-moderna.jpg" alt="Fachada de un edificio de oficinas" />
         </div>
+      </div>
 
-        <div class="noticia">
-          <h3>Chalet con piscina en la sierra de Madrid</h3>
-          <img
-            src="img/lugar/casa-rural.jpg"
-            alt="Imagen de una vivienda con piscina"
-          />
+      <div class="noticia">
+        <h3>Chalet con piscina en la sierra de Madrid</h3>
+        <div class="flip-card">
           <p>
             Te ofrecemos la oportunidad de adquirir un chalet con piscina en la
             sierra de Madrid, a sólo 30 minutos de la ciudad. Esta propiedad
             cuenta con amplias zonas verdes y una vista impresionante. ¡No dejes
             pasar esta oportunidad única!
           </p>
+          <img src="img/lugar/casa-rural.jpg" alt="Imagen de una vivienda con piscina" />
         </div>
-        <a href="#">
-          <div class="extra">Ver mas...</div>
-        </a>
-      </section>
-    </main>
-    <!-- MAIN END -->
-
-    <!-- FOOTER START -->
-    <footer>
-      <!-- SECCION: ENLACES START -->
-      <section class="footer">
-        <div class="social">
-          <!-- GRID COLUMNA 1:CONTENIDO -->
-          <h6 class="section-title">Redes Sociales</h6>
-          <i class="icon-search"></i>
-          <!-- IZQUIERDA END -->
-
-          <!-- DERECHA START -->
-          <div class="menu">
-            <span>Siguenos en las redes sociales: <br /></span>
-            <a href="">
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-google"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <!-- GRID COLUMNA 1 -->
-
-        <!-- GRID COLUMNA 2: -->
-        <div class="product">
-          <h6 class="section-title">Propiedades</h6>
-          <i class="icon-house"></i>
-          <div class="menu">
-            <a href="#!" class="text-white"><p>alquiler viviendas</p></a>
-            <a href="#!" class="text-white"><p>alquiler oficinas</p></a>
-            <a href="#!" class="text-white"><p>viviendas propias</p></a>
-            <a href="#!" class="text-white"><p>viviendas para inverison</p></a>
-          </div>
-        </div>
-        <!-- GRID COLUMNA 2 -->
-
-        <!-- GRID COLUMNA 3 -->
-        <div class="links">
-          <!-- ENLACES -->
-          <h6 class="section-title">Enlaces interesantes</h6>
-          <i class="icon-enlace"></i>
-          <div class="menu">
-            <a href="#!" class="text-white">
-              <p>mi cuenta</p>
-            </a>
-            <a href="#!" class="text-white">
-              <p>ser afiliado</p>
-            </a>
-            <a href="#!" class="text-white">
-              <p>trabaja con nosotros</p>
-            </a>
-            <a href="#!" class="text-white">
-              <p>ayuda</p>
-            </a>
-          </div>
-        </div>
-        <!-- GRID COLUMNA 3 -->
-
-        <!-- GRID COLUMNA 4 -->
-        <div class="contact">
-          <!-- ENLACES -->
-          <h6 class="section-title">Contacto</h6>
-          <i class="icon-mail"></i>
-          <div class="menu">
-            <p><i class="fa fa-home mr-3"></i>Madrid, MD 10012, ES</p>
-            <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
-            <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
-            <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
-            <p>
-              <a href="contact.html">enviar mensaje</a>
-            </p>
-          </div>
-        </div>
-        <!-- GRID COLUMNA 4 -->
-      </section>
-      <!-- SECCION: ENLACES END -->
-      <!-- DERECHOS AUTOR START -->
-      <div class="author">
-        © 2022 Copyright:
-        <a href="">Berzins Antons</a>
       </div>
-      <!-- DERECHOS AUTOR END -->
-    </footer>
-    <!-- FOOTER END -->
-  </body>
-</html>F
+      <a href="#" class="extra">
+        <div>Ver mas...</div>
+      </a>
+    </section>
+    <h3>Propiedades mas vistas</h3>
+    <section class="popular">
+      <div class="tab-content" id="rentals">
+        <!-- CARD DE FAVORITO-RENT 1 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <div class="card-text">
+            <h3>Piso en el centro de Madrid</h3>
 
+            <p>
+              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur,
+              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
+              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
+              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+            </p>
+            <p>Dirección: Calle Falsa 123, Madrid</p>
+            <p>Distancia: 1km</p>
+            <p>Precio: €800/mes</p>
+            <div class="button-bottom">
+              <div class="valoracion">
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="botones">
+                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+
+                <div class="icon-bookmark"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD DE FAVORITO-RENT 2 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <div class="card-text">
+            <h3>Casa en la playa</h3>
+
+            <p>
+              4 habitaciones, 3 baños, 150m², vistas al mar
+            </p>
+            <p>Dirección: Calle Playa 123, Malgrat de Mar</p>
+            <p>Distancia: 200m</p>
+            <p>Precio: €1500/mes</p>
+            <div class="button-bottom">
+              <div class="valoracion">
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="botones">
+                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+
+                <div class="icon-bookmark"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD DE FAVORITO-RENT 3 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <div class="card-text">
+            <h3>Piso en el centro de Madrid</h3>
+
+            <p>
+              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              efficitur,
+              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
+              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
+              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+            </p>
+            <p>Dirección: Calle Falsa 123, Madrid</p>
+            <p>Distancia: 1km</p>
+            <p>Precio: €800/mes</p>
+            <div class="button-bottom">
+              <div class="valoracion">
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="botones">
+                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+
+                <div class="icon-bookmark"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD DE FAVORITO-RENT 4 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <div class="card-text">
+            <h3>Piso en el centro de Madrid</h3>
+
+            <p>
+              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              efficitur,
+              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
+              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
+              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+            </p>
+            <p>Dirección: Calle Falsa 123, Madrid</p>
+            <p>Distancia: 1km</p>
+            <p>Precio: €800/mes</p>
+            <div class="button-bottom">
+              <div class="valoracion">
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="botones">
+                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+
+                <div class="icon-bookmark"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD DE FAVORITO-RENT 5 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <div class="card-text">
+            <h3>Piso en el centro de Madrid</h3>
+
+            <p>
+              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              efficitur,
+              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
+              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
+              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+            </p>
+            <p>Dirección: Calle Falsa 123, Madrid</p>
+            <p>Distancia: 1km</p>
+            <p>Precio: €800/mes</p>
+            <div class="button-bottom">
+              <div class="valoracion">
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="botones">
+                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+
+                <div class="icon-bookmark"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD DE FAVORITO-RENT 6 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
+          <div class="card-text">
+            <h3>Piso en el centro de Madrid</h3>
+
+            <p>
+              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              efficitur,
+              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
+              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
+              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+            </p>
+            <p>Dirección: Calle Falsa 123, Madrid</p>
+            <p>Distancia: 1km</p>
+            <p>Precio: €800/mes</p>
+            <div class="button-bottom">
+              <div class="valoracion">
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+                <div class="icon-star"></div>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="botones">
+                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+
+                <div class="icon-bookmark"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="sales">
+        <!-- CARD DE FAVORITO-BUY 1 -->
+        <div class="card">
+          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 2" />
+          <div class="card-text">
+            <h3>Piso en el barrio de Chamberí</h3>
+            <p>
+              2 habitaciones, 1 baño, 70m² Este acogedor piso se encuentra en una de las zonas más tranquilas de Madrid,
+              en el barrio de Chamberí. Es ideal para parejas o pequeñas familias. cuenta con 2 habitaciones, 1 baño y
+              un balcón con vistas a la calle.
+            </p>
+
+            <p>Precio: €180,000</p>
+            <!-- BOTON DE DETALLES -->
+            <div class="botones">
+              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
+              <button class="button-secondary red">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+  </main>
+  <!-- MAIN END -->
+
+  <!-- FOOTER START -->
+  <script>
+    renderFooter();
+  </script>
+  <!-- FOOTER END -->
+</body>
+
+</html>
 <script>
+
   // obtenemos el elemento que contiene las tarjetas
   const container = document.querySelector(".noticias");
 

@@ -22,82 +22,62 @@
     renderHeader();
   </script>
   <!-- HEADER END -->
-
   <!-- MAIN START -->
-  <main class="about">
-    <h2>Sobre nosotros</h2>
-    <section class="nosotros">
-      <img class="nosotros__imagen" src="img/about/our-history.jpg" alt="Foto importante" />
-      <div class="nosotros__contenido">
-        <h2>Nuestra historia</h2>
-        <p>
-          Fundada en el año 2000, nuestra empresa se ha consolidado como líder
-          en el mercado inmobiliario online. Desde entonces, hemos ayudado a
-          miles de personas a encontrar su hogar perfecto o a invertir en
-          propiedades rentables. Nuestro equipo está formado por profesionales
-          altamente cualificados y comprometidos con ofrecer el mejor servicio
-          a nuestros clientes.
-        </p>
-      </div>
-    </section>
-    <section class="nosotros">
-      <img class="nosotros__imagen" src="img/about/our-filosophy-1.jpg" alt="Foto de nuestra filosofia" />
-      <div class="nosotros__contenido">
-        <h2>Nuestra filosofía</h2>
-        <p>
-          Para nosotros, la satisfacción del cliente es lo más importante. Por
-          eso, ponemos a su disposición una amplia gama de propiedades y
-          servicios adaptados a sus necesidades y presupuesto. Además,
-          trabajamos con transparencia y honestidad, siempre buscando la mejor
-          solución para nuestros clientes.
-        </p>
-      </div>
-    </section>
+  <main class="aviso-legal">
+    <h1>Aviso Legal</h1>
+    <div class="container">
+      <p>
+        En cumplimiento con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
+        Información y del Comercio Electrónico, a continuación se exponen los datos identificativos de la empresa.
+      </p>
+      <h2>Identificación de la empresa</h2>
+      <p>
+        Denominación social: Inmobiliaria Online S.L.<br>
+        NIF: B-12341234<br>
+        Dirección: Calle Falsa 123, 28003 Madrid<br>
+        Teléfono: +34 987 654 321<br>
+        Correo electrónico: info@inmobiliariaonline.com
+      </p>
+      <h2>Condiciones de uso</h2>
+      <p>
+        El uso de esta página web implica la aceptación plena e incondicional de las presentes condiciones de uso. El
+        acceso a la página y el uso correcto de la información contenida en ella son responsabilidad de quien los
+        realiza.
+      </p>
+      <h2>Propiedad intelectual</h2>
+      <p>
+        Los contenidos de esta página web, incluyendo textos, imágenes, sonidos, archivos, diseños, estructura,
+        selección, ordenación y presentación de sus contenidos, así como cualesquiera otros contenidos en ella
+        incorporados, son propiedad de Inmobiliaria Online S.L. o de terceros, sin que puedan entenderse cedidos al
+        usuario, en virtud de lo dispuesto en estas condiciones, ningún derecho de explotación sobre los mismos más allá
+        de lo estrictamente necesario para el correcto uso de la página.
+      </p>
+      <h2>Exclusión de responsabilidades</h2>
+      <p>
+        Inmobiliaria Online S.L. no se hace responsable del uso ilegal, negligente, fraudulento o contrario a las
+        presentes condiciones por parte del usuario. Asimismo, no será responsable de los perjuicios que pudieran
+        derivarse del acceso a los contenidos de la web o del uso incorrecto, inadecuado o ilícito de la información
+        contenida en la misma.
+      </p>
+    </div>
 
-    <section class="historia">
-      <div class="nosotros__contenido">
-        <h2>Nuestra historia</h2>
-        <p>
-          Fundada en el año 2000, nuestra empresa se ha consolidado como líder
-          en el mercado inmobiliario online. Desde entonces, hemos ayudado a
-          miles de personas a encontrar su hogar perfecto o a invertir en
-          propiedades rentables. Nuestro equipo está formado por profesionales
-          altamente cualificados y comprometidos con ofrecer el mejor servicio
-          a nuestros clientes.
-        </p>
-      </div>
-
-      <div class="botones-historia">
-        <button id="button-history-1" class="boton-historia" data-historia="historia1">
-          2005
-        </button>
-        <button id="button-history-2" class="boton-historia" data-historia="historia2">
-          2010
-        </button>
-        <button id="button-history-3" class="boton-historia" data-historia="historia3">
-          2015
-        </button>
-        <button id="button-history-4" class="boton-historia" data-historia="historia3">
-          2018
-        </button>
-        <button id="button-history-5" class="boton-historia" data-historia="historia3">
-          2023
-        </button>
-        <span class="line"> </span>
-      </div>
-    </section>
   </main>
+
 
   <!-- MAIN END -->
 
   <!-- FOOTER START -->
-  <script>
-    renderFooter();
-  </script>
+  <footer>
+    <script src="./footer.js"></script>
+    <script>
+      renderFooter();
+    </script>
+  </footer>
   <!-- FOOTER END -->
 </body>
 
 </html>
+
 <script>
   const buttons = document.querySelectorAll("[id^='button-history-']");
   const textElement = document.querySelector(".historia p");

@@ -1,192 +1,199 @@
 header {
-
-
   background: linear-gradient(to bottom, $darkPrimary, $darkSecondary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5em;
   letter-spacing: 3px;
   white-space: nowrap;
 
-  @include redimensionar(small) {
-    font-size: 1em;
-
-  }
-
   .brand {
-    min-height: 30vh;
     padding: 1em;
     margin-bottom: 2px;
     background-color: $darkPrimary;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    vertical-align: middle;
-    justify-content: space-between;
 
-    @include redimensionar(medium) {
-      justify-content: center;
-    }
-
-    @include redimensionar(small) {
-
-      .logo img.logo-min,
-      h2 {
-        display: none;
-      }
-
-      .logo img.logo-full {
-        display: inline;
-        width: 50%;
-      }
-    }
-
-    .logo {
+    .logo-container {
       display: flex;
-      justify-content: center;
+      flex-direction: row;
       align-items: center;
-      margin: 5%;
-
-      img {
-        cursor: pointer;
-        border-radius: 2em;
-        @include transicionar(box-shadow);
-
-        &:hover {
-          transform: scale(1.25);
-          @include sombrear(10px, 10px, 50px, #000000);
-        }
-      }
-
-      .logo-full {
-        display: none;
-      }
-    }
-
-    h2.brand_title {
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: 7.5vmin;
-      color: $darkPrimary;
-      letter-spacing: 0.15em;
-      position: relative;
-      text-transform: uppercase;
-      box-sizing: border-box;
-
-
-      &::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        @include animar(width0to100, 2s, ease-in-out);
-        @include textoGradiente($lightPrimary, $accesoryColor1);
-
-      }
-
-      span {
-
-        &.underline {
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          background: $accesoryColor1;
-          height: 3px;
-          width: 100%;
-          transform: scaleX(0);
-        }
-
-        &.load {
-          display: block;
-          position: absolute;
-          height: 100%;
-          background: $lightSecondary;
-          @include animar(loadAni, 2s, ease-in-out);
-
-          @keyframes loadAni {
-            from {
-              left: 0;
-              width: 10px;
-            }
-
-            to {
-              left: 100%;
-              width: 0px;
-            }
-          }
-        }
-      }
-
-      &:hover {
-        span.underline {
-          width: 100%;
-          height: 3px;
-
-          transform: scaleX(1);
-          transform-origin: left;
-          transition: transform 0.33s;
-        }
-      }
-    }
-
-
-    .buscador {
-      display: block;
-      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 3em;
+      width: 100%;
 
       @include redimensionar(medium) {
-        display: none;
+        justify-content: center;
+        .logo {
+          max-width: 15%;
+
+          .logo-border {
+            display: none !important;
+          }
+        }
       }
 
+      @include redimensionar(small) {
 
-      form {
-        float: right;
-        margin: 10px;
-        display: flex;
+        .logo img.logo-min,
+        h2 {
+          display: none;
+        }
+
+        .logo img.logo-full {
+          display: block;
+          margin: 0 auto;
+          width: 50%;
+
+        }
+      }
+
+      .logo {
+        align-self: center;
+        justify-content: center;
         align-items: center;
+        position: relative;
+        margin: 1em;
+        max-width: 10%;
 
-        @include transicionar(all, 0.3s, ease-in-out);
 
-        input {
-          color: $white;
-          padding: 6px 24px;
-          font-size: 14px;
-          background-color: transparent;
-          border-radius: 50px;
-          border: 1px solid $accesoryColor1;
+        @include redimensionar(small) {
+          max-width: 100%;
+        }
 
-          &:hover,
-          &:focus {
-            outline: 0;
-            border: 1px solid transparent;
-            border-bottom: 1px solid $lightPrimary;
-            border-radius: 0;
+        img,
+        .logo-border {
+          border-radius: 100%;
+          height: 100%;
+          width: 100%;
+        }
+
+        img {
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          cursor: pointer;
+          z-index: 1;
+          @include transicionar(box-shadow);
+
+          &:hover {
+            transform: scale(1.25);
+            @include sombrear(10px, 10px, 50px, #000000);
+            @include animar(rotate-reverse, 4s, linear, infinite);
+          }
+
+
+        }
+
+        .logo-border {
+          width: 90%;
+          height: 90%;
+
+          display: block;
+          position: absolute;
+          background-image: conic-gradient(from 35deg at 50% 0%, #069fff 0%, transparent 20%, transparent 40%, #1B9EEE 60%, transparent 80%);
+          top: 7px;
+          left: 7px;
+          transform-origin: center;
+          @include animar(rotate, 2s, linear, infinite);
+
+          &:hover {
+            border-color: transparentize($color: #000, $amount: 0.5);
+
           }
         }
 
-        button {
-          float: right;
 
-          height: 100px;
-          width: 50px;
-          background: transparent;
-          border: transparent;
-          font-size: 20px;
-          color: $white;
-          cursor: pointer;
-          outline: 0;
+        .logo-full {
+          display: none;
+        }
+
+        .logo-full {
+          border-radius: 1em;
+
+          &:hover {
+            animation: none;
+          }
         }
       }
+
+      h2.brand_title {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 7.5vmin;
+        color: $darkPrimary;
+        letter-spacing: 0.15em;
+        position: relative;
+        text-transform: uppercase;
+        box-sizing: border-box;
+
+        &::before {
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          @include animar(width0to100, 2s, ease-in-out);
+          @include textoGradiente($lightPrimary, $accesoryColor1);
+
+        }
+
+        span {
+          &.underline {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $accesoryColor1;
+            height: 3px;
+            width: 100%;
+            transform: scaleX(0);
+          }
+
+          &.load {
+            display: block;
+            position: absolute;
+            height: 100%;
+            background: $lightSecondary;
+            @include animar(loadAni, 2s, ease-in-out);
+
+            @keyframes loadAni {
+              from {
+                left: 0;
+                width: 10px;
+              }
+
+              to {
+                left: 100%;
+                width: 0px;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          span.underline {
+            width: 100%;
+            height: 3px;
+
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform 0.33s;
+          }
+        }
+      }
+    }
+
+    .buscador {
+      width: 30%;
+      margin-left: 70%;
     }
   }
 
-
-
-
   .nav {
     background: linear-gradient(to bottom, $darkPrimary, $darkSecondary);
-    .active{
+
+    .active {
       box-shadow: 1px 1px 25px white;
     }
 
@@ -224,17 +231,15 @@ header {
       display: none;
       width: 100%;
       min-height: 15px;
-      background: url("../img/icons/dropdownmenu-icon.png") no-repeat center;
+      background: url("../img/icons/dropdownmenu.png") no-repeat center;
       background-size: contain;
       @include invertir(100%)
     }
 
     ul {
-
       list-style: none;
       margin: 0;
       padding: 0;
-      background-color: gradient;
 
       li {
         width: 100%;
@@ -249,7 +254,6 @@ header {
         }
 
         &:hover {
-
           background-color: $darkSecondary;
         }
       }
@@ -296,9 +300,67 @@ header {
       }
     }
 
-    a.dropdown-arrow:after {
-      content: "\25BE";
-      margin-left: 5px;
+
+  }
+}
+
+.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+
+.buscador {
+  align-self: center;
+  display: block;
+  @include redimensionar(medium) {
+    display: none;
+  }
+
+  form {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include transicionar(all, 0.3s, ease-in-out);
+
+    input {
+      width: 85%;
+      color: $white;
+      padding: 6px 24px;
+      font-size: 14px;
+      background-color: transparent;
+      border-radius: 50px;
+      border: 1px solid darken($color: $accesoryColor1, $amount: 10%);
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        border: 1px solid transparent;
+        border-radius: 0;
+      }
+
+      &:hover {
+        border-bottom: 1px solid $lightSecondary;
+
+      }
+
+      &:focus {
+        border-bottom: 1px solid $lightPrimary;
+
+      }
+    }
+
+    button {
+      float: right;
+      height: 100px;
+      width: 50px;
+      background: none;
+      border: none;
+      font-size: 1em;
+      color: $white;
+      cursor: pointer;
     }
   }
 }

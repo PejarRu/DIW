@@ -1,8 +1,7 @@
   footer {
       background-color: $darkSecondary;
-      position: relative;
-      bottom: 0;
       width: 100%;
+      min-height: 300px;
 
       * {
           color: $white;
@@ -13,65 +12,84 @@
           }
       }
 
-      section.footer {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          justify-content: space-around;
+      .footer {
+          width: 100%;
           text-align: center;
           position: relative;
           background-color: $darkPrimary;
-          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
 
           @include redimensionar(medium) {
-              flex-wrap: wrap;
-
-              transform-style: preserve-3d;
-              background-color: transparent;
-
-
               >div {
-                  @include transicionar(all);
-
                   width: 50%;
                   height: 260px;
                   vertical-align: center;
+                  position: relative;
 
                   &.social {
-                      background: contain no-repeat;
-                  }
-
-                  &.product {
-                      background-position: 0, 1500px;
-                  }
-
-                  &.links {
-                      background-position: 0, 1500px;
-                  }
-
-                  &.contact {
-                      background-position: 0, 1500px;
+                      .menu {
+                          display: block;
+                      }
                   }
 
                   &:hover {
-                      background: $accesoryColor1;
-                      transform: scale(1.03) rotateY(180deg);
+                      @include transicionar(all);
                       box-shadow: -1px 1px 10px cadetblue;
-                      border: none;
+                      background-color: $darkSecondary;
+                  }
 
-                      .section-title {
+              }
+
+              .footer-card {
+                  @include redimensionar(medium) {
+                      &:has(.buscador) {
                           display: none;
                       }
+                  }
 
-                      .menu {
+                  //.links, .contact, .product
+                  >div {
+                      width: 100%;
+
+                      h6 {
                           display: block;
-                          transform: rotateY(180deg);
-                          position: relative;
-                          top: 20%;
                       }
 
-                      >i[class*="icon"] {
-                          opacity: 0;
+                      i[class*="icon"] {
+                          display: inline-block;
+                          position: absolute;
+                          top: 40%;
+                          left: 40%;
+                          overflow: visible;
+                          transform: scale(3);
+                          filter: opacity(0.5);
+                      }
+                  }
+
+
+                  &:hover {
+                      @include transicionar(all);
+
+                      //.links, .contact, .product
+                      >div {
+                          @include transicionar(all);
+
+                          transform: scale(1.03) rotateY(180deg);
+                          border: none;
+
+                          .section-title {
+                              display: none;
+                          }
+
+                          .menu {
+                              display: block;
+                              transform: rotateY(180deg);
+                              position: relative;
+                              top: 20%;
+                          }
                       }
                   }
 
@@ -83,54 +101,65 @@
 
                   }
 
-                  .menu {
+                  .menu,
+                  h6 {
                       display: none;
                   }
-
-                  /*
-                  >i[class*="icon"] {
-                      display: block;
-                      position: absolute;
-                      transform: scale(0.1);
-                    &.icon-mail{
-                        left: -25%;
-                        top: -25%;
-                    }              
-                  }
-                  */
               }
 
           }
 
           @include redimensionar(small) {
               display: block;
-              @include transicionar(overflow);
+              width: 100%;
 
-              >div {
+              div {
                   width: 100%;
 
+              }
+
+              //.footer-card + .social
+              >div.footer-card {
+                  @include transicionar(all);
+
                   &:hover {
-                      transform: rotateX(180deg);
-                      .menu,
-                      h6.section-title {
-                        position: static;
-
-                          display: block;
+                      >div {
                           transform: rotateX(180deg);
+
+                          .menu,
+                          .section-title {
+                              display: block;
+                              transform: rotateX(180deg);
+                          }
+
+                          i {
+                              display: none;
+                          }
+
+                          h6 {
+                              border-bottom: 1px $lightGray solid;
+                              letter-spacing: 4px;
+                              margin: 0.5em;
+                              @include transicionar(letter-spacing, 0.2s, ease-in-out);
+
+                              &:hover {
+                                  letter-spacing: 10px;
+                              }
+                          }
                       }
                   }
-                  h6 {
-                      border-bottom: 1px $lightGray solid;
-                      letter-spacing: 4px;
 
-                      @include transicionar(letter-spacing, 0.2s, ease-in-out);
-                      &:hover {
-                          letter-spacing: 10px;
-                      }
+                  i[class*="icon"] {
+                      left: 45%;
+                      margin: 0 auto;
                   }
 
-                  >i[class*="icon"] {
-                      display: none;
+                  &.social {
+
+                      .menu,
+                      .section-title {
+                          transform: rotateX(360deg);
+                      }
                   }
               }
           }
@@ -141,18 +170,21 @@
               background-color: $accesoryColor1;
               border-bottom: 3px solid $darkPrimary;
               border-right: 5px solid $darkPrimary;
-              &.contact{
-                p {
-                    &:hover {
-                        text-decoration: none;
-                    }
-                    a{
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
-                }
+
+              &.contact {
+                  p {
+                      &:hover {
+                          text-decoration: none;
+                      }
+
+                      a {
+                          &:hover {
+                              text-decoration: underline;
+                          }
+                      }
+                  }
               }
+
               h6 {
                   display: block;
                   font-size: large;
@@ -162,18 +194,21 @@
                   white-space: nowrap;
 
               }
+
               p {
                   padding: 0.5em;
                   text-transform: capitalize;
+
                   &:hover {
                       text-decoration: underline;
                   }
-                  
+
               }
 
               i {
                   margin: 0 15px;
               }
+
               .menu {
                   margin-top: 10px;
 
@@ -186,7 +221,7 @@
       }
 
       .author {
-          background-color: $darkPrimary;
+          background-color: $darkSecondary;
       }
 
 

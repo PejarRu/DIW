@@ -1,16 +1,32 @@
+$max-small-screen: 612px;
+$min-medium-screen: 612px;
+$max-medium-screen: 1024px;
+$min-large-screen: 1024px;
+
 @mixin redimensionar ($size) {
     @if $size==small {
-
-        //Ancho maximo 800px
-        @media (max-width:600px) {
+        //Ancho maximo 612px
+        @media (max-width:$max-small-screen) {
+            @content;
+        }
+    }
+    @else if $size==from-medium {
+        //ancho minimo 612px
+        @media (min-width:$min-medium-screen) {
             @content;
         }
     }
 
     @else if $size==medium {
 
-        //ancho maximo 1020px
-        @media (max-width:1024px) {
+        //ancho maximo 1024px
+        @media (max-width:$max-medium-screen) {
+            @content;
+        }
+    }
+    @else if $size==only-large {
+        //ancho minimo 1024px
+        @media (min-width:$min-large-screen) {
             @content;
         }
     }
@@ -20,9 +36,9 @@
     color: darken($color, $porcetaje)
 }
 
-@mixin animar($nombre, $duracion: 0.4s, $timing: linear, $extra: '') {
-    animation: $nombre $duracion $timing $extra;
-    -webkit-animation: $nombre $duracion $timing $extra;
+@mixin animar($nombre, $duracion: 0.4s, $timing: linear, $iterator: 1) {
+    -webkit-animation: $nombre $duracion $timing $iterator;
+    animation: $nombre $duracion $timing $iterator;
 }
 
 @mixin textoGradiente($color1, $color2, $direccion: to bottom) {

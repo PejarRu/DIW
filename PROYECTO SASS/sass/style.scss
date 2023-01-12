@@ -17,7 +17,16 @@
   }
 }
 
+@keyframes opacity0to1 {
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+
+  }
+}
 
 @keyframes width0to100 {
   0% {
@@ -35,14 +44,27 @@
   }
 
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
+
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 $gradient-colors: $darkPrimary, $gray, $darkSecondary;
+
 @keyframes gradiente {
   0% {
     background-image: linear-gradient(to right, $gradient-colors);
   }
+
   100% {
     background-image: linear-gradient(to right, $gradient-colors);
   }
@@ -69,10 +91,11 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
   background: $accesoryColor1;
   @extend %hover-shadow;
 }
+
 %simple-hover1 {
   &:hover {
     border: 2px solid $lightGray;
-}
+  }
 }
 
 %hover-shadow {
@@ -82,4 +105,142 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
     filter: drop-shadow(9px 10px 8px$lightPrimary);
 
   }
+}
+
+%propertie-card {
+  min-width: 302px;
+  border-radius: 0.5em;
+  background: linear-gradient(to left, $accesoryColor1, $darkSecondary);
+  display: flex;
+  position: relative;
+  @include transicionar(all);
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 50px 10px black;
+  }
+
+  img {
+    margin: 1em;
+    max-height: 550px;
+    max-width: 65%;
+    object-fit: cover;
+    border-radius: 10px 10px;
+  }
+
+  $altura-botones: 160px;
+
+  .card-text {
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: $altura-botones;
+
+    * {
+      color: white;
+    }
+
+    h3 {
+      margin: 10px;
+      font-size: 1.1em;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    p {
+      margin: 10px;
+      text-align: justify;
+    }
+  }
+
+  .button-bottom {
+    align-self: flex-end;
+    width: 100%;
+    height: $altura-botones;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1em;
+
+    * {
+      margin: 3px;
+
+      &:hover {
+        filter: grayscale(1);
+        transform: scale(1.09);
+        text-decoration: underline;
+
+      }
+    }
+
+    button {
+      padding: 1em;
+      white-space: nowrap;
+      border-radius: 0.2em;
+      background: $accesoryColor1;
+      cursor: pointer;
+
+      &:hover {
+        background: $darkPrimary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+%propertie-card-rent {
+  @extend %propertie-card;
+  width: calc(30% - 2em);
+  flex-direction: column;
+  position: relative;
+
+
+
+  .valoracion {
+    position: relative;
+    height: 50px;
+    @extend .botones;
+    justify-content: center;
+
+    div {
+      &:hover {
+        filter: invert(1);
+        transform: scale(1.09);
+        text-decoration: underline;
+
+      }
+    }
+  }
+}
+
+%propertie-card-buy {
+  @extend %propertie-card;
+  flex-direction: row;
+  width: calc(100% - 2rem);
+
+  .card-text {
+    .botones {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+%cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5em;
+  gap: 1em;
+  max-width: calc(100% - 2em);
 }
