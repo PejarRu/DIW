@@ -1,0 +1,66 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+//VARIABLES
+$primary: #15a;
+$link-hover-color: lighten($primary, 10%);
+$default-font: Georgia, 'Times New Roman', Times, serif;
+$input-border-radius: 5px;
+$dropdown-bg: $primary;
+$dropdown-link-color: white;
+$link-hover-color: $primary;
+
+body {
+    font-family: $default-font;
+}
+
+input {
+    border-radius: $input-border-radius;
+}
+
+a {
+    color: lighten($color: $primary, $amount: 10%);
+
+    &:hover {
+        color: $link-hover-color;
+    }
+}
+
+.dropdown {
+    background-color: $dropdown-bg;
+
+    a {
+        color: $dropdown-link-color;
+
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+}
+
+// Establece el fondo del dropdown como primary
+// Asigna al dropdown el color del 
+
+
+//ICONOS
+@import "compass/utilities/sprites";
+$icons: sprite-map("../icons/*.png");
+
+i {
+    background: $icons;
+    display: inline-block;
+}
+
+@each $i in sprite-names($icons) {
+    .icon-#{$i} {
+        background-position: sprite-position($icons, $i);
+        @include sprite-dimensions($icons, $i);
+    }
+}
+
+// Required
+@import "../node_modules/bootstrap/scss/bootstrap";
