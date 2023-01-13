@@ -8,7 +8,7 @@
     color: $colorTextoHover;
     background-color: $colorFondoHover;
 }
-
+ 
 @mixin transicionar($propiedad, $duracion, $timing: linear){
     transition: $propiedad $duracion $timing;
     -webkit-transition: $propiedad $duracion $timing;

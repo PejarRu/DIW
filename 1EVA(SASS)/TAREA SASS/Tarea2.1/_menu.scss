@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import "mixin.scss";
+@import "mixin";
 
 /* KEYFRAMES */
 @keyframes iluminar {
@@ -50,7 +50,7 @@ li.categoria{
     }
     &:hover {
         ul{
-        height: 100px;
+        height: 200px;
         }
         >a{
             padding: 10px 20px;

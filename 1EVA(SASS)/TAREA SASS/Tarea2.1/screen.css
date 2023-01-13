@@ -1,17 +1,8 @@
 /* VARIABLES*/
 /* IMPORTS */
-/* IMPORTS */ /* MIXINS */
+/* IMPORTS */
+/* MIXINS */
 /* KEYFRAMES */
-@-webkit-keyframes iluminar {
-  from {
-    background-color: #666;
-    color: #eee;
-  }
-  to {
-    background-color: #888;
-    color: #fff;
-  }
-}
 @keyframes iluminar {
   from {
     background-color: #666;
@@ -23,22 +14,26 @@
   }
 }
 /* ETIQUETAS SECUNDARIAS */
+/* line 16, _menu.scss */
 nav {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   width: 100%;
 }
+/* line 20, _menu.scss */
 nav ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
+/* line 25, _menu.scss */
 nav > ul {
   color: #eee;
   background-color: #666;
   height: 32px;
   width: 100%;
 }
+/* line 30, _menu.scss */
 nav a {
   color: #eee;
   background-color: #666;
@@ -49,6 +44,7 @@ nav a {
   display: block;
   width: 160px;
 }
+/* line 39, _menu.scss */
 nav a:hover {
   color: #fff;
   background-color: #888;
@@ -56,9 +52,11 @@ nav a:hover {
   -webkit-animation: iluminar 0.4s linear;
 }
 
+/* line 46, _menu.scss */
 li.categoria {
   float: left;
 }
+/* line 48, _menu.scss */
 li.categoria > a {
   transition: padding 0.5s, ease-out;
   -webkit-transition: padding 0.5s, ease-out;
@@ -66,13 +64,16 @@ li.categoria > a {
   -ms-transition: padding 0.5s, ease-out;
   -o-transition: padding 0.5s, ease-out;
 }
+/* line 52, _menu.scss */
 li.categoria:hover ul {
-  height: 100px;
+  height: 200px;
 }
+/* line 55, _menu.scss */
 li.categoria:hover > a {
   padding: 10px 20px;
 }
 
+/* line 63, _menu.scss */
 ul.submenu {
   position: absolute;
   overflow: hidden;
@@ -86,24 +87,21 @@ ul.submenu {
 
 /* AQUI IRAN LOS placeholders, sprites, 
 etc. TODO LO DEL CONTENIDO */
-input::-moz-placeholder {
-  content: "Hello Word";
-}
-input:-ms-input-placeholder {
-  content: "Hello Word";
-}
+/* line 4, _contenido.scss */
 input::placeholder {
   content: "Hello Word";
 }
 
 /* ETIQUETAS PRINCIPALES*/
+/* line 12, screen.scss */
 body {
   padding: 0;
   margin: 0;
 }
 
+/* line 16, screen.scss */
 header {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia,'Times New Roman', Times, serif;
   text-shadow: 1px 1px 2px #aaa;
   background-color: #eee;
   padding: 12px 30px;
@@ -111,6 +109,7 @@ header {
   font-size: 1.8em;
 }
 
+/* line 25, screen.scss */
 footer {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -121,4 +120,4 @@ footer {
   padding: 5px;
   width: 100%;
   bottom: 0;
-}/*# sourceMappingURL=screen.css.map */
+}

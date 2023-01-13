@@ -60,7 +60,7 @@ nav li.categoria:hover > a {
 }
 /* line 51, ../sass/_menu.scss */
 nav li.categoria:hover ul.submenu {
-  height: 100px;
+  height: 170px;
 }
 /* line 57, ../sass/_menu.scss */
 nav li.categoria > a {

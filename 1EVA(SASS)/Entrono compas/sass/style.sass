@@ -1,0 +1,42 @@
+$theme: light
+$colorTexto : #eee
+$colorFondo : #138
+$colorTitulo : darken($colorFondo, 10%)
+$colorTextoHover : lighten($colorTexto, 10%)
+$colorFondoHover : lighten($colorFondo, 10%)
+
+/* KEYFRAMES */
+@keyframes iluminar 
+    from 
+        background-color: #15a
+        color: #eee
+    to 
+        background-color: #166cd8
+        color: #fff
+    
+
+/* IMPORTS */
+@import "menu"
+@import "contenido"
+
+/* ETIQUETAS PRINCIPALES*/
+body  
+    padding: 0
+    margin: 0
+ 
+header
+    padding: 12px 30px
+    color: #444
+    font-size: 1.8em
+    background-color: #eee
+    font-weight: bold
+    text-shadow: 1px 1px 2px #aaa
+    font-family: Georgia, 'Times New Roman', Times, serif
+
+footer
+    @include boxSizing(border-box)
+    @include colorear
+    position: fixed
+    width: 100%
+    padding: 5px
+    bottom: 0    

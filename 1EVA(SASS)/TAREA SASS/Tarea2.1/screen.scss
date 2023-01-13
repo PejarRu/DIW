@@ -5,8 +5,8 @@ $colorFondo : #666;
 $colorFondoHover : #888;
 
 /* IMPORTS */
-@import "menu.scss";
-@import "contenido.scss";
+@import "menu";
+@import "contenido";
 
 /* ETIQUETAS PRINCIPALES*/
 body{
