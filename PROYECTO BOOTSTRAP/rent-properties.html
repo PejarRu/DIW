@@ -10,6 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
   <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>ChainHouse - Practica SASS</title>
@@ -26,10 +27,10 @@
   <!-- MAIN START -->
   <main class="rent-properties">
     <h2>Nuestras propiedades en alquiler</h2>
-    <section class="container">
-      <div class="filtros">
-        <h3>Filtros de búsqueda</h3>
-        <form>
+    <section class="container-fluid d-flex position-relative jus">
+      <div class="filtros d-none d-lg-flex flex-column align-content-center col-2 h-100 p-3">
+        <h3 class="section-title text-center m-1 ">Filtros de búsqueda</h3>
+        <form class="d-flex flex-column align-items-start w-100 p-3 rounded">
           <label>
             <input type="checkbox" name="precio" value="bajo"> Bajo precio
           </label>
@@ -53,286 +54,328 @@
           <label>
             <input type="checkbox" name="habitaciones" value="3"> 3 habitaciones o más
           </label>
-          <button>Aplicar filtros</button>
+          <div class="col-12 m-3">
+            <button class="btn btn-primary btn-block mx-auto text-nowrap rounded ">
+              Aplicar filtros
+            </button>
+          </div>
         </form>
       </div>
 
-      <div class="cards">
+      <div class="container-fluid w-100 d-flex flex-wrap justify-content-center">
         <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad" />
-          <div class="card-text">
-            <h3>Piso en el centro de Barcelona</h3>
-            <p>
-              ¿Buscas un lugar tranquilo y privado para llamar hogar? Este apartamento de una habitación en un edificio
-              recién renovado es perfecto para ti. Con una ubicación en una zona residencial segura, este piso cuenta
-              con una cocina totalmente equipada, un baño moderno y una terraza privada para disfrutar de las noches de
-              verano. ¡Llama hoy para programar una visita
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-balcon-3.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso moderno en el barrio de Chamberí
+            </h3>
+            <p class="card-text">
+              2 habitaciones, 1 baño, 70m² Este piso moderno se encuentra en el barrio de Chamberí, uno de los más
+              tradicionales y populares de Madrid. Cuenta con 2 habitaciones amplias, 1 baño y una cocina totalmente
+              equipada. El precio de alquiler es de €700 al mes.
             </p>
-            <p>Dirección: Calle Falsa 132, Barcelona</p>
-            <p>Distancia: 10km</p>
-            <p>Precio: €8900/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Dirección: Calle Chamberí 123, Madrid
+            </p>
+            <p class="card-text">
+              Distancia: 2km
+            </p>
+            <p class="card-text">
+              Precio: €700/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-3.jpg" class="main" alt="Imagen de la propiedad 2" />
-          <div class="card-text">
-            <h3>Piso en el centro de Carracas</h3>
-            <p>
+        <!-- PROPIEDAD ALQUILER 2 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-balcon-1.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de Carracas
+            </h3>
+            <p class="card-text">
               Este acogedor piso de 1 habitación y 1 baño es el lugar perfecto para vivir en solitario o como pareja.
               Con una ubicación céntrica, cocina totalmente equipada y una decoración moderna, ¡no podrías pedir más!
               Alquiler a partir de €800 al mes.
             </p>
-            <p>Dirección: Calle Falsa 123, Carracas</p>
-            <p>Distancia: 100km</p>
-            <p>Precio: €830/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Dirección: Calle Falsa 123, Carracas
+            </p>
+            <p class="card-text">
+              Distancia: 100km
+            </p>
+            <p class="card-text">
+              Precio: €830/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-4.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de Pais Vasco</h3>
-            <p>
+        <!-- PROPIEDAD ALQUILER 3 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-balcon-4.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de Pais Vasco
+            </h3>
+            <p class="card-text">
               ¡Vive en el corazón de la ciudad! Piso de 2 habitaciones y 1 baño en el barrio de Malasaña. Con una
               terraza privada, cocina totalmente equipada y una decoración moderna, ¡no podrías pedir más! Alquiler a
               partir de €1,200 al mes.
             </p>
-            <p>Dirección: Calle Falsa 123, Pais Vasco</p>
-            <p>Distancia: 1km</p>
-            <p>Precio: €700/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-              </div>
-              <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-4.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de La rioja</h3>
-            <p>"¡Vive en el corazón de la ciudad! Piso de 2 habitaciones y 1 baño en el barrio de Malasaña. Con una
-              terraza privada, cocina totalmente equipada y una decoración moderna, ¡no podrías pedir más! Alquiler a
-              partir de €1,200 al mes.
+            <p class="card-text">
+              Dirección: Calle Falsa 123, Pais Vasco
             </p>
-            <p>Dirección: Calle Falsa 123, La rioja</p>
-            <p>Distancia: 5km</p>
-            <p>Precio: €800/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Distancia: 1km
+            </p>
+            <p class="card-text">
+              Precio: €700/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de Valencia</h3>
-            <p>
+        <!-- PROPIEDAD ALQUILER 4 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-3.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de La Rioja
+            </h3>
+            <p class="card-text">
+              Con una terraza privada, cocina totalmente equipada y una decoración moderna, ¡no podrías pedir más! Alquiler a
+              partir de €1,200 al mes. ¡Vive en el corazón de la ciudad! Piso de 2 habitaciones y 1 baño en el barrio de Malasaña. 
+            </p>
+            <p class="card-text">
+              Dirección: Calle Falsa 123, Pais Vasco
+            </p>
+            <p class="card-text">
+              Distancia: 5km
+            </p>
+            <p class="card-text">
+              Precio: €800/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star-half-alt text-warning"></i>
+              </div>
+              <!-- BOTON DE DETALLES -->
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PROPIEDAD ALQUILER 5 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-balcon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de Valencia
+            </h3>
+            <p class="card-text">
               Este apartamento de tres habitaciones se encuentra en un edificio recién construido en el lujoso barrio de
               la ciudad. Con vistas impresionantes, una cocina de lujo y un baño moderno, este piso es el lugar perfecto
               para aquellos que buscan vivir en estilo. El edificio cuenta con una piscina, un gimnasio y una terraza en
-              la azotea para disfrutar de las vistas de la ciudad
+              la azotea para disfrutar de las vistas de la ciudad</p>
+            <p class="card-text">
+              Dirección: Calle Falsa 123, Valencia
             </p>
-            <p>Dirección: Calle Fallo 123, Valencia</p>
-            <p>Distancia: 3km</p>
-            <p>Precio: €200/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Distancia: 3km
+            </p>
+            <p class="card-text">
+              Precio: €200/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de Murcia</h3>
-            <p>
+        <!-- PROPIEDAD ALQUILER 6 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-1.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de Murcia
+            </h3>
+            <p class="card-text">
               Este impresionante apartamento de 2 dormitorios está situado en el corazón de la ciudad y cuenta con una
               terraza privada con vistas panorámicas. El edificio cuenta con una piscina y un gimnasio para su uso
               exclusivo. ¡No pierdas la oportunidad de vivir en esta zona céntrica con todas las comodidades a tu
               alcance!
             </p>
-            <p>Dirección: Calle Murcia 123, Murcia</p>
-            <p>Distancia: 7km</p>
-            <p>Precio: €650/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Dirección: Calle Murcia 123, Murcia
+            </p>
+            <p class="card-text">
+              Distancia: 7km
+            </p>
+            <p class="card-text">
+              Precio: €650/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de Sevilla</h3>
-            <p>
+        <!-- PROPIEDAD ALQUILER 7 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de Sevilla
+            </h3>
+            <p class="card-text">
               Encuentra tu hogar ideal en este impresionante piso de 3 habitaciones y 2 baños en el centro de la
               ciudad. Con vistas panorámicas, cocina totalmente equipada y una ubicación céntrica, ¡no podrías pedir
               más! Alquiler a partir de €1,500 al mes.
+            <p class="card-text">
+              Dirección: Calle Falsa 123, Sevilla
             </p>
-            <p>Dirección: Calle Falacia 123, Sevilla</p>
-            <p>Distancia: 4km</p>
-            <p>Precio: €825/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Distancia: 3km
+            </p>
+            <p class="card-text">
+              Precio: 825/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROPIEDAD ALQUILER 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-3.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de Madrid</h3>
-            <p>
+        <!-- PROPIEDAD ALQUILER 8 -->
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-4.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Piso en el centro de Madrid
+            </h3>
+            <p class="card-text">
               Este hermoso apartamento de dos habitaciones se encuentra en un edificio histórico en el corazón de la
               ciudad. Con una ubicación ideal cerca de tiendas, restaurantes y transporte público, este piso es perfecto
               para aquellos que buscan vivir en el centro de todo. El alquiler incluye una cocina totalmente equipada y
               un balcón privado con vistas a la ciudad. ¡Agende su visita hoy mismo!
             </p>
-            <p>Dirección: Calle Marcos 123, Madrid</p>
-            <p>Distancia: 9km</p>
-            <p>Precio: €1500/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-              </div>
-              <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROPIEDAD ALQUILER 8-->
-        <div class="card card1">
-          <img src="img/pisos/piso-balcon-4.jpg" class="main" alt="Imagen de la propiedad 2" />
-          <div class="card-text">
-            <h3>Casa con piscina en la playa</h3>
-            <p>
-              ¡No te pierdas esta oportunidad única! Piso de lujo de 2 habitaciones y 2 baños en el prestigioso barrio
-              de Recoletos. Con acabados de alta calidad, terraza privada y servicio de conserjería, ¡vivirás como un
-              rey! Alquiler a partir de €2,000 al mes.
+            <p class="card-text">
+              Dirección: Calle Marcos 123, Madrid
             </p>
-            <p>Dirección: Playa de Málaga, Málaga</p>
-            <p>Distancia: 5km</p>
-            <p>Precio: €1,300/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">
+              Distancia: 8km
+            </p>
+            <p class="card-text">
+              Precio: €1500/mes
+            </p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
-
       </div>
   </main>
   <!-- MAIN END -->

@@ -1,7 +1,7 @@
 $max-small-screen: 612px;
 $min-medium-screen: 612px;
-$max-medium-screen: 1024px;
-$min-large-screen: 1024px;
+$max-medium-screen: 1200px;
+$min-large-screen: 1200px;
 
 @mixin redimensionar ($size) {
     @if $size==small {

@@ -26,71 +26,136 @@
 
   <!-- MAIN START -->
   <main class="propertie-info">
-    <h2>Propiedad #134104</h2>
-    <section class="property-details">
-      <h2 class="property-title">Piso en el centro de Madrid</h2>
-      <div class="property-img-container">
-        <img class="img-main" src="img/pisos/piso-balcon-1.jpg" alt="Imagen de la propiedad 1" />
-        <div class="property-img-thumbnail-container">
-          <img src="img/pisos/piso-salon-2.jpg" alt="Imagen de la cocina" class="property-img-thumbnail" />
-          <img src="img/pisos/piso-salon-4.jpg" alt="Imagen del dormitorio" class="property-img-thumbnail" />
-          <img src="img/pisos/piso-salon-1.jpg" alt="Imagen del salon" class="property-img-thumbnail" />
-          <img src="img/pisos/piso-balcon-3.jpg" alt="Imagen del baño" class="property-img-thumbnail" />
+    <h2 class="section-title text-dark">Propiedad #134104</h2>
+    <section class="property-details text-white w-75 my-1 mx-auto">
+      <h2 class="brand_title text-uppercase mb-2 font-weight-bold">Piso en el centro de Madrid</h2>
+      <!-- IMG CONTAINER: START -->
+      <div class="ecommerce-gallery" data-mdb-zoom-effect="true" data-mdb-auto-height="true">
+        <div class=" col-12 d-flex flex-row-reverse py-3 shadow-5 position-relative">
+          <div class="col-9 mb-1">
+                <img
+                  src="img/pisos/piso-salon-1.jpg"
+                  alt="Gallery image 1"
+                  id="img-main"
+                  class="ecommerce-gallery-main-img rounded active w-100"/>
+          </div>
+          <div class="col-3 ">
+            <div class="col-12 m-1">
+              <img
+                src="img/pisos/piso-salon-1.jpg"
+                alt="Gallery image 1"
+                class="w-100 rounded" id="thumbnail"
+                />
+            </div>
+            <div class="col-12 m-1">
+            <img
+              src="img/pisos/piso-salon-2.jpg"
+              alt="Gallery image 2"
+              class="w-100 rounded" id="thumbnail"
+            />
+          </div>
+          
+          <div class="col-12 m-1">
+            <img
+              src="img/pisos/piso-salon-3.jpg"
+              alt="Gallery image 3"
+              class="rounded w-100" id="thumbnail"
+            />
+          </div>
+          <div class="col-12 m-1">
+            <img
+              src="img/pisos/piso-salon-4.jpg"
+              alt="Gallery image 4"
+              class="w-100 rounded" id="thumbnail"
+            />
+          </div>
         </div>
       </div>
-      <div class="property-info">
-        <p>3 habitaciones, 2 baños, 120m²</p>
-        <p>Dirección: Calle Falsa 123, Madrid</p>
-        <p>Precio: €800/mes</p>
+      <!-- IMG CONTAINER: END -->
+
+      <!-- PROPERTIE INFO: START -->
+      <div class="property-info text-center p-1">
+        <p>
+          3 habitaciones, 2 baños, 120m²
+        </p>
+        <p>
+          Dirección: Calle Falsa 123, Madrid
+        </p>
+        <p>
+          Precio: €800/mes
+
+        </p>
       </div>
-      <p class="property-description">Este espectacular piso se encuentra en el centro de Madrid, cerca de tiendas y
+      <p class="property-description p-1 text-justify mb-1 " style="font-size: 1.2rem; line-height: 1.5;">
+        Este espectacular piso se encuentra en el centro de Madrid, cerca de tiendas y
         restaurantes. Cuenta con 3 habitaciones amplias, 2 baños y una terraza con vistas impresionantes. El precio de
-        alquiler es de €800 al mes.</p>
-      <div class="property-actions">
-        <button class="button-secondary">Solicitar visita</button>
+        alquiler es de €800 al mes.
+      </p>
+      <div class="col-3 text-center mx-auto py-5">
+        <button class=" btn  btn-primary rounded text-white text-nowrap text-center border p-1">
+          Solicitar visita
+        </button>
       </div>
-    </section>
 
     <span class="line-separation"></span>
 
     <section class="property-comments">
-      <h3 class="h3">Comentarios de clientes anteriores</h3>
+      <h3 class="text-white text-center">
+        Comentarios de clientes anteriores
+      </h3>
       <ul class="comments-list">
         <div class="comments-container">
-          <div class="comment">
-            <div class="comment-header">
-              <img src="img/icons/avatar.png" alt="User Avatar" class="avatar">
-              <div class="comment-header-text">
-                <h3 class="username">Juan Pérez</h3>
-                <p class="comment-date">25 de enero de 2022</p>
+          <div class="comment w-50 d-flex flex-wrap align-items-start p-1 border rounded">
+            <div class=" d-flex align-items-center mr-1">
+              <img class="avatar m-3" src="img/icons/avatar.png" alt="User Avatar" >
+              <div class="d-flex flex-column ml-3">
+                <h3 class="font-weight-bold mb-1 ">
+                  Juan Pérez
+                </h3>
+                <p class="comment-date">
+                  25 de enero de 2022
+                </p>
               </div>
             </div>
-            <p class="comment-content">Me encantó vivir en este piso. Era espacioso y bien ubicado. Sin embargo, tuve
-              algunos problemas con el ruido del tráfico.</p>
+            <p class="mx-5">
+              Me encantó vivir en este piso. Era espacioso y bien ubicado. Sin embargo, tuve
+              algunos problemas con el ruido del tráfico.
+            </p>
           </div>
-          <div class="comment">
-            <div class="comment-header">
-              <img src="img/icons/avatar.png" alt="User Avatar" class="avatar">
-              <div class="comment-header-text">
-                <h3 class="username">Maria González</h3>
-                <p class="comment-date">20 de diciembre de 2021</p>
+          <div class="comment w-50 d-flex flex-wrap align-items-start p-1 border rounded">
+            <div class=" d-flex align-items-center mr-1">
+              <img class="avatar m-3" src="img/icons/avatar.png" alt="User Avatar" >
+              <div class="d-flex flex-column ml-3">
+                <h3 class="font-weight-bold mb-1 ">
+                  Pedro Martínez
+                </h3>
+                <p class="comment-date">
+                  5 de noviembre de 2021
+                </p>
               </div>
             </div>
-            <p class="comment-content">La ubicación es excelente, cerca de todo. El piso es muy amplio y luminoso.
-              Recomendaría vivir aquí.</p>
+            <p class="mx-5">
+              El piso es muy bonito, pero tuve problemas con el vecindario. Era muy ruidoso por
+              la noche.
+            </p>
           </div>
-          <div class="comment">
-            <div class="comment-header">
-              <img src="img/icons/avatar.png" alt="User Avatar" class="avatar">
-              <div class="comment-header-text">
-                <h3 class="username">Pedro Martínez</h3>
-                <p class="comment-date">5 de noviembre de 2021</p>
+          <div class="comment w-50 d-flex flex-wrap align-items-start p-1 border rounded">
+            <div class=" d-flex align-items-center mr-1">
+              <img class="avatar m-3" src="img/icons/avatar.png" alt="User Avatar" >
+              <div class="d-flex flex-column ml-3">
+                <h3 class="font-weight-bold mb-1 ">
+                  Maria González
+                </h3>
+                <p class="comment-date">
+                  20 de diciembre de 2021
+                </p>
               </div>
             </div>
-            <p class="comment-content">El piso es muy bonito, pero tuve problemas con el vecindario. Era muy ruidoso por
-              la noche.</p>
+            <p class="mx-5">
+              La ubicación es excelente, cerca de todo. El piso es muy amplio y luminoso.
+              Recomendaría vivir aquí.
+            </p>
           </div>
-
     </section>
   </main>
 
@@ -105,26 +170,8 @@
 
 </html>
 <script>
-  // seleccionamos el elemento hijo
-  const hijo = document.querySelector('.card1');
-
-
-  for (let index = 0; index < 5; index++) {
-    console.log(index);
-    // hacemos una copia del elemento hijo
-    const copia1 = hijo.cloneNode(true);
-
-    // seleccionamos el padre del elemento hijo
-    const padre = hijo.parentNode;
-    console.log(padre);
-
-    // insertamos las copias como hermanos del elemento hijo original
-    padre.insertBefore(copia1, hijo);
-  }
-</script>
-<script>
-  let imgMain = document.querySelector('.img-main');
-  let thumbnails = document.querySelectorAll('.property-img-thumbnail');
+  let imgMain = document.querySelector('#img-main');
+  let thumbnails = document.querySelectorAll('#thumbnail');
 
   thumbnails.forEach(function (thumbnail) {
     thumbnail.addEventListener('click', changeImg);
@@ -137,7 +184,7 @@
     }, 10);
     setTimeout(() => {
       imgMain.style.opacity = 1;
-    }, 500);
+    }, 100);
   }
 
 </script>

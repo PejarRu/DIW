@@ -1,24 +1,12 @@
 &.aviso-legal {
   background-color: $darkPrimary;
-  .container {
-    margin: 1em auto;
-    padding: 2em;
+  .container-fluid {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 1024px;
     background-color: $darkSecondary;
-    @include redimensionar(small){
-      width: 100%;
-    }
 
     * {
       color: wheat;
-    }
-
-    h2 {
-      font-size: 2rem;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 2em;
     }
 
     p {

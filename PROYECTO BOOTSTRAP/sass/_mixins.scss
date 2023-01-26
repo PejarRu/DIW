@@ -1,35 +1,42 @@
-$max-small-screen: 612px;
-$min-medium-screen: 612px;
-$max-medium-screen: 1024px;
-$min-large-screen: 1024px;
+$max-small-screen: 576px;
+$min-medium-screen: 576px;
+$max-medium-screen: 768px;
+$min-large-screen: 768px;
+$max-large-screen: 992px;
+$min-extralarge-screen: 1200px;
 
 @mixin redimensionar ($size) {
     @if $size==small {
-        //Ancho maximo 612px
         @media (max-width:$max-small-screen) {
             @content;
         }
     }
     @else if $size==from-medium {
-        //ancho minimo 612px
         @media (min-width:$min-medium-screen) {
             @content;
         }
     }
-
     @else if $size==medium {
-
-        //ancho maximo 1024px
         @media (max-width:$max-medium-screen) {
             @content;
         }
     }
-    @else if $size==only-large {
-        //ancho minimo 1024px
+    @else if $size==from-large {
         @media (min-width:$min-large-screen) {
             @content;
         }
     }
+    @else if $size==large {
+        @media (max-width:$max-large-screen) {
+            @content;
+        }
+    }
+    @else if $size==from-extra-large {
+        @media (min-width:$min-extralarge-screen) {
+            @content;
+        }
+    }
+
 }
 
 @mixin oscurecer($color, $porcetaje:10) {

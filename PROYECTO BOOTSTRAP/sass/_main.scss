@@ -6,7 +6,6 @@ main {
     @import "main-index";
     @import "main-about" ;   
     @import "main-legal";  
-    @import "main-contact"; 
     @import "main-list"; 
     @import "main-favourites"; 
     @import "main-propertie"; 
@@ -34,5 +33,8 @@ main {
     >h3, .h3 {
         font-size: 1.7em; 
     }
-    
+    .card{
+        background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
+        color: white;
+    }
 }

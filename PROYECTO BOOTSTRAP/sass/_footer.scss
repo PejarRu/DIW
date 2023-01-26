@@ -1,7 +1,7 @@
   footer {
       background-color: $darkSecondary;
       width: 100%;
-      min-height: 300px;
+      min-height: 350px;
 
       * {
           color: $white;
@@ -139,7 +139,7 @@
                           h6 {
                               border-bottom: 1px $lightGray solid;
                               letter-spacing: 4px;
-                              margin: 0.5em;
+                              margin: 0.1em;
                               @include transicionar(letter-spacing, 0.2s, ease-in-out);
 
                               &:hover {
@@ -190,13 +190,11 @@
                   font-size: large;
                   text-transform: uppercase;
                   padding: 5px;
-                  margin: 25px;
+                  margin: 15px;
                   white-space: nowrap;
-
               }
 
               p {
-                  padding: 0.5em;
                   text-transform: capitalize;
 
                   &:hover {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta name="author" content="Antons Berzins" />
   <meta name="description"
@@ -14,7 +13,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>ChainHouse - Practica SASS</title>
   <script src="./renderHTML.js"></script>
-   
 </head>
 
 <body>
@@ -25,13 +23,15 @@
   <!-- HEADER END -->
 
   <!-- MAIN START -->
-  <main class="about">
-    <h2>Sobre nosotros</h2>
-    <section class="nosotros">
-      <img class="nosotros__imagen" src="img/about/our-history.jpg" alt="Foto importante" />
-      <div class="nosotros__contenido">
-        <h2>Nuestra historia</h2>
-        <p>
+  <main class="about text-white py-1">
+    <h2 class="brand_title w-auto">Sobre nosotros</h2>
+    <section class="nosotros d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <img class="card-img col-10 col-md-3 m-1" src="img/about/our-history.jpg" alt="Foto importante" />
+      <div class="card-body col-12 col-md-7 d-flex flex-column align-items-end">
+        <h2 class="text-uppercase py-4 my-4 font-weight-bold section-title text-right  w-100">
+          Nuestra historia
+        </h2>
+        <p class="card-text text-right py-4 my-4">
           Fundada en el año 2000, nuestra empresa se ha consolidado como líder
           en el mercado inmobiliario online. Desde entonces, hemos ayudado a
           miles de personas a encontrar su hogar perfecto o a invertir en
@@ -41,11 +41,13 @@
         </p>
       </div>
     </section>
-    <section class="nosotros">
-      <img class="nosotros__imagen" src="img/about/our-filosophy-1.jpg" alt="Foto de nuestra filosofia" />
-      <div class="nosotros__contenido">
-        <h2>Nuestra filosofía</h2>
-        <p>
+    <section class="nosotros d-flex flex-column flex-md-row-reverse align-items-center justify-content-between">
+      <img class="card-img col-10 col-md-3 m-1 mx-md-auto" src="img/about/our-filosophy-1.jpg" alt="Foto importante" />
+      <div class="card-body col-10 col-md-7 d-flex flex-column align-items-end">
+        <h2 class="text-uppercase py-4 my-4 font-weight-bold section-title text-left w-100">
+          Nuestra filosofía
+        </h2>
+        <p class="card-text py-4 my-4">
           Para nosotros, la satisfacción del cliente es lo más importante. Por
           eso, ponemos a su disposición una amplia gama de propiedades y
           servicios adaptados a sus necesidades y presupuesto. Además,
@@ -56,7 +58,7 @@
     </section>
 
     <section class="historia">
-      <div class="nosotros__contenido">
+      <div class="nosotros__contenido w-100">
         <h2>Nuestra historia</h2>
         <p>
           Fundada en el año 2000, nuestra empresa se ha consolidado como líder
@@ -84,7 +86,7 @@
         <button id="button-history-5" class="boton-historia" data-historia="historia3">
           2023
         </button>
-        <span class="line"> </span>
+        <span class="line"></span>
       </div>
     </section>
   </main>

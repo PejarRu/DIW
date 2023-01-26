@@ -191,7 +191,7 @@ header .brand .logo-container {
   margin-top: 3em;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 16, ../sass/_header.scss */
   header .brand .logo-container {
     justify-content: center;
@@ -370,7 +370,7 @@ header .nav {
 header .nav .active {
   box-shadow: 1px 1px 25px white;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 201, ../sass/_header.scss */
   header .nav div.button-menu {
     display: block;
@@ -488,7 +488,7 @@ header .nav li.submenu:hover > ul li:hover {
   align-self: center;
   display: block;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 312, ../sass/_header.scss */
   .buscador {
     display: none;
@@ -553,7 +553,7 @@ main {
 main.index {
   width: 100%;
 }
-/* line 2, ../sass/_main-index.scss */
+/* line 4, ../sass/_main-index.scss */
 main.index .noticias {
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -565,30 +565,30 @@ main.index .noticias {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
-@media (max-width: 1024px) {
-  /* line 2, ../sass/_main-index.scss */
+@media (max-width: 1200px) {
+  /* line 4, ../sass/_main-index.scss */
   main.index .noticias {
     flex-direction: column;
     align-items: center;
   }
-  /* line 18, ../sass/_main-index.scss */
+  /* line 21, ../sass/_main-index.scss */
   main.index .noticias .noticia {
     width: 95%;
   }
-  /* line 21, ../sass/_main-index.scss */
+  /* line 24, ../sass/_main-index.scss */
   main.index .noticias .noticia:not(:nth-child(-n+4)) {
     display: none;
   }
-  /* line 26, ../sass/_main-index.scss */
+  /* line 29, ../sass/_main-index.scss */
   main.index .noticias a.extra {
     display: block;
   }
 }
-/* line 31, ../sass/_main-index.scss */
+/* line 34, ../sass/_main-index.scss */
 main.index .noticias a.extra {
   display: none;
 }
-/* line 35, ../sass/_main-index.scss */
+/* line 38, ../sass/_main-index.scss */
 main.index .noticias .noticia {
   background: linear-gradient(to right, #0b6298, #30456b);
   cursor: grab;
@@ -603,12 +603,12 @@ main.index .noticias .noticia {
   -ms-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
 }
-/* line 48, ../sass/_main-index.scss */
+/* line 51, ../sass/_main-index.scss */
 main.index .noticias .noticia:hover {
   transform: scale(1.01);
 }
 @media (max-width: 612px) {
-  /* line 54, ../sass/_main-index.scss */
+  /* line 57, ../sass/_main-index.scss */
   main.index .noticias .noticia, main.index .noticias .noticia:hover *,
   main.index .noticias .noticia *:hover {
     transform: none;
@@ -620,37 +620,37 @@ main.index .noticias .noticia:hover {
     filter: none;
   }
 }
-/* line 64, ../sass/_main-index.scss */
+/* line 67, ../sass/_main-index.scss */
 main.index .noticias .noticia * {
   width: 75%;
   color: #ffffff;
 }
-/* line 69, ../sass/_main-index.scss */
+/* line 72, ../sass/_main-index.scss */
 main.index .noticias .noticia h2,
 main.index .noticias .noticia h3 {
   font-size: 1.5em;
   text-align: center;
   margin: 1em;
 }
-/* line 75, ../sass/_main-index.scss */
+/* line 78, ../sass/_main-index.scss */
 main.index .noticias .noticia h2:hover,
 main.index .noticias .noticia h3:hover {
   text-decoration: underline;
   color: #1b9eee;
 }
-/* line 81, ../sass/_main-index.scss */
+/* line 84, ../sass/_main-index.scss */
 main.index .noticias .noticia .flip-card {
   width: 75%;
   margin: 1em;
   position: relative;
 }
-/* line 86, ../sass/_main-index.scss */
+/* line 89, ../sass/_main-index.scss */
 main.index .noticias .noticia .flip-card img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
-/* line 92, ../sass/_main-index.scss */
+/* line 95, ../sass/_main-index.scss */
 main.index .noticias .noticia .flip-card p {
   position: absolute;
   top: 50%;
@@ -666,7 +666,7 @@ main.index .noticias .noticia .flip-card p {
   text-align: center;
 }
 @media (max-width: 612px) {
-  /* line 116, ../sass/_main-index.scss */
+  /* line 119, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card img,
   main.index .noticias .noticia .flip-card p,
   main.index .noticias .noticia .flip-card img:hover,
@@ -683,11 +683,11 @@ main.index .noticias .noticia .flip-card p {
   }
 }
 @media (min-width: 612px) {
-  /* line 134, ../sass/_main-index.scss */
+  /* line 137, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card:hover {
     transform-style: preserve-3d;
   }
-  /* line 137, ../sass/_main-index.scss */
+  /* line 140, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card:hover img {
     transition: all 0.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
@@ -698,7 +698,7 @@ main.index .noticias .noticia .flip-card p {
     filter: brightness(0%);
     transform: rotateY(180deg);
   }
-  /* line 146, ../sass/_main-index.scss */
+  /* line 149, ../sass/_main-index.scss */
   main.index .noticias .noticia .flip-card:hover p {
     transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
@@ -710,19 +710,29 @@ main.index .noticias .noticia .flip-card p {
     text-transform: uppercase;
   }
 }
-/* line 165, ../sass/_main-index.scss */
+/* line 166, ../sass/_main-index.scss */
 main.index .popular .tab-content {
   width: 100%;
   flex-wrap: nowrap !important;
   justify-content: center;
   padding: 1em;
 }
-/* line 172, ../sass/_main-index.scss */
+/* line 173, ../sass/_main-index.scss */
 main.index .popular .tab-content#rentals {
   overflow-x: scroll;
   scroll-snap-align: center;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+}
+/* line 186, ../sass/_main-index.scss */
+main.index .popular .tab-content#sales .card {
+  flex-direction: column !important;
+}
+@media (min-width: 1200px) {
+  /* line 186, ../sass/_main-index.scss */
+  main.index .popular .tab-content#sales .card {
+    flex-direction: row !important;
+  }
 }
 /* line 1, ../sass/_main-about.scss */
 main.about {
@@ -950,7 +960,7 @@ main.contacto .formulario {
   margin: 0 auto;
   padding: 10px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 24, ../sass/_main-contact.scss */
   main.contacto .formulario {
     width: 75%;
@@ -1187,7 +1197,7 @@ main.buy-properties .filtrar-pisos .dropdown-filters:hover .body {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 31, ../sass/_main-list.scss */
   main.buy-properties .filtrar-pisos .dropdown-filters {
     display: inline-block;
@@ -1242,7 +1252,7 @@ main.buy-properties .filtrar-pisos button {
 main.buy-properties .filtrar-pisos button:hover {
   color: white;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 106, ../sass/_main-list.scss */
   main.buy-properties .filtrar-pisos button {
     display: block;
@@ -1253,7 +1263,7 @@ main.buy-properties .filtrar-pisos button:hover {
 main.buy-properties .cards {
   justify-content: space-evenly;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 136, ../sass/_main-list.scss */
   main.buy-properties .cards .card {
     flex-direction: column !important;
@@ -1298,7 +1308,7 @@ main.rent-properties section.container .filtros {
   flex-direction: column;
   align-items: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 9, ../sass/_main-list-rent.scss */
   main.rent-properties section.container .filtros {
     display: none;
@@ -1383,7 +1393,7 @@ main.rent-properties section.container .filtros form button:hover {
 main.rent-properties section.container .cards .card:not(:last-child) {
   flex-grow: 1;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 112, ../sass/_main-list-rent.scss */
   main.rent-properties section.container .cards div.card {
     width: calc(33% - 2em);
@@ -1450,7 +1460,7 @@ main.favourites .favorites-section #rentals.tab-content {
   gap: 1em;
   max-width: calc(100% - 4em);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 49, ../sass/_main-favourites.scss */
   main.favourites .favorites-section #rentals.tab-content .card {
     width: calc(50% - 2em);
@@ -1613,7 +1623,7 @@ main.favourites .favorites-section #sales.tab-content .card {
 main.favourites .favorites-section #sales.tab-content .card:hover {
   transform: scale(1.01);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 191, ../sass/_main-favourites.scss */
   main.favourites .favorites-section #sales.tab-content .card {
     flex-direction: column;
@@ -1927,7 +1937,7 @@ footer .footer {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 26, ../sass/_footer.scss */
   footer .footer > div {
     width: 50%;
@@ -1950,13 +1960,13 @@ footer .footer {
     background-color: #30456b;
   }
 }
-@media (max-width: 1024px) and (max-width: 1024px) {
+@media (max-width: 1200px) and (max-width: 1200px) {
   /* line 48, ../sass/_footer.scss */
   footer .footer .footer-card:has(.buscador) {
     display: none;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* line 54, ../sass/_footer.scss */
   footer .footer .footer-card > div {
     width: 100%;

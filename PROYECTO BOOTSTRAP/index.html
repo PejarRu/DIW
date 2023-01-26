@@ -10,6 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
   <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>ChainHouse - Practica SASS</title>
@@ -21,313 +22,356 @@
   <!-- HEADER START -->
   <script>
     renderHeader();
-    /*
-    let activeContainer = document.querySelector("#index");
-    activeContainer.classList.add("active")
-    */
   </script>
   <!-- HEADER END -->
   <!-- MAIN START -->
-  <main class="index">
-    <h1>Novedades</h1>
-    <section class="noticias" id="draggableJS">
-      <div class="noticia">
-        <h2>Exclusiva propiedad con vistas al mar en Marbella</h2>
-        <div class="flip-card">
-          <p>
-            Te presentamos nuestra nueva promoción de viviendas de lujo en la
-            zona de playa de Marbella. Estas viviendas cuentan con piscina
-            privada, jardín y vistas al mar. ¡No pierdas la oportunidad de vivir
-            en una de las zonas más exclusivas de la Costa del Sol!
-          </p>
-          <img src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
-        </div>
-      </div>
+  <main class="index w-100 ">
+    <section class="container-fluid p-0 noticias">
+      <h1 class="modal-title text-white text-center">Novedades y noticias</h1>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner ">
+          <div class="carousel-item active">
+            <div class="card bh-100 d-flex text-white align-items-center justify-content-center">
+              <h2 class="card-title text-center m-4 w-100">
+                Exclusiva propiedad con vistas al mar en Marbella
+              </h2>
+              <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
+                <p class="card-text p-2 w-50">
+                  Te presentamos nuestra nueva promoción de viviendas de lujo en la
+                  zona de playa de Marbella. Estas viviendas cuentan con piscina
+                  privada, jardín y vistas al mar. ¡No pierdas la oportunidad de vivir
+                  en una de las zonas más exclusivas de la Costa del Sol!
+                </p>
+                <img class="card-img m-1 w-75" src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
+              </div>
+            </div>
+          </div>
+        
+          <div class="carousel-item">
+            <div class="card h-100 d-flex text-white align-items-center justify-content-center">
+              <h2 class="card-title text-center m-4 w-100">
+                Alquilamos locales comerciales en el centro de Madrid
+              </h2>
+              <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
+                <p class="card-text p-2 w-50">
+                  Tenemos disponibles varios locales comerciales en el centro de
+                  Madrid, ideales para establecimientos de moda, restaurantes o
+                  pequeñas empresas. ¡Ven a visitarnos y encuentra el local que se
+                  adapte a tus necesidades!
+                </p>
+                <img class="card-img m-1 w-75" src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
+              </div>
+            </div>
+          </div>
 
-      <div class="noticia">
-        <h3>Alquilamos locales comerciales en el centro de Madrid</h3>
-        <div class="flip-card">
-          <p>
-            Tenemos disponibles varios locales comerciales en el centro de
-            Madrid, ideales para establecimientos de moda, restaurantes o
-            pequeñas empresas. ¡Ven a visitarnos y encuentra el local que se
-            adapte a tus necesidades!
-          </p>
-          <img src="img/lugar/casa-moderna-1.jpg" alt="Fachada de un edificio de oficinas" />
-        </div>
-      </div>
+          <div class="carousel-item">
+            <div class="card h-100 d-flex text-white align-items-center justify-content-center">
+              <h2 class="card-title text-center m-4 w-100">
+                Venta de chalet con piscina en la sierra de Madrid
+              </h2>
+              <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
+                <p class="card-text p-2 w-50">
+                  Te ofrecemos la oportunidad de adquirir un chalet con piscina en la
+                  sierra de Madrid, a sólo 30 minutos de la ciudad. Esta propiedad
+                  cuenta con amplias zonas verdes y una vista impresionante. ¡No dejes
+                  pasar esta oportunidad única!
+                </p>
+                <img class="card-img m-1 w-75" src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
+              </div>
+            </div>         
+          </div>
 
-      <div class="noticia">
-        <h3>Venta de chalet con piscina en la sierra de Madrid</h3>
-        <div class="flip-card">
-          <p>
-            Te ofrecemos la oportunidad de adquirir un chalet con piscina en la
-            sierra de Madrid, a sólo 30 minutos de la ciudad. Esta propiedad
-            cuenta con amplias zonas verdes y una vista impresionante. ¡No dejes
-            pasar esta oportunidad única!
-          </p>
-          <img src="img/lugar/casa-rural-1.jpg" alt="Imagen de una vivienda con piscina" />
-        </div>
-      </div>
-      <div class="noticia">
-        <h2>Nuevos proyectos de viviendas en Madrid</h2>
-        <div class="flip-card">
-          <p>
-            Estamos emocionados de anunciar nuestros nuevos proyectos de viviendas en el centro de Madrid. Ofrecemos una
-            amplia variedad de opciones, desde apartamentos modernos hasta casas tradicionales, con una excelente
-            ubicación y conectividad. ¡No pierdas la oportunidad de vivir en la capital!
-          </p>
-          <img src="img/lugar/casa-clasica.jpg" alt="imagen de la noticia 2" />
-        </div>
-      </div>
-      <div class="noticia">
-        <h2>Lanzamiento de nuestra aplicación móvil</h2>
-        <div class="flip-card">
-          <p>
-            ¡Estamos emocionados de anunciar el lanzamiento de nuestra aplicación móvil! Ahora puedes buscar y reservar
-            propiedades desde tu dispositivo móvil, con una interfaz fácil de usar y funciones adicionales. Descarga
-            nuestra aplicación hoy mismo y comienza a encontrar tu hogar perfecto.
-          </p>
-          <img src="img/lugar/casa-moderna.jpg" alt="imagen de la noticia 3" />
-        </div>
-      </div>
-      <div class="noticia">
-        <h2>Ofertas especiales en propiedades vacacionales</h2>
-        <div class="flip-card">
-          <p>
-            ¿Buscas una escapada vacacional? ¡Tenemos ofertas especiales en propiedades vacacionales en toda España!
-            Desde apartamentos frente al mar hasta cabañas en la montaña, tenemos algo para todos los gustos. ¡Aprovecha
-            estas ofertas antes de que se acaben!
-          </p>
-          <img src="img/lugar/casa-rural.jpg" alt="imagen de la noticia 4" />
-        </div>
-      </div>
+          <div class="carousel-item">
+            <div class="card h-100 d-flex text-white align-items-center justify-content-center">
+              <h2 class="card-title text-center m-4 w-100">
+                Nuevos proyectos de viviendas en Madrid
+              </h2>
+              <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
+                <p class="card-text p-2 w-50">
+              Estamos emocionados de anunciar nuestros nuevos proyectos de viviendas en el centro de Madrid. Ofrecemos una
+              amplia variedad de opciones, desde apartamentos modernos hasta casas tradicionales, con una excelente
+              ubicación y conectividad. ¡No pierdas la oportunidad de vivir en la capital!
+                </p>
+                <img class="card-img m-1 w-75" src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
+              </div>
+            </div>         
+          </div>
 
+          <div class="carousel-item">
+            <div class="card h-100 d-flex text-white align-items-center justify-content-center">
+              <h2 class="card-title text-center m-4 w-100">
+                Lanzamiento de nuestra aplicación móvil
+              </h2>
+              <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center">
+                <p class="card-text p-2 w-50">
+              ¡Estamos emocionados de anunciar el lanzamiento de nuestra aplicación móvil! Ahora puedes buscar y reservar
+              propiedades desde tu dispositivo móvil, con una interfaz fácil de usar y funciones adicionales. Descarga
+              nuestra aplicación hoy mismo y comienza a encontrar tu hogar perfecto.
+                </p>
+                <img class="card-img m-1 w-75" src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
+              </div>
+            </div>         
+          </div>
 
-      <a href="#" class="extra">
-        <div>Ver mas...</div>
-      </a>
+          <div class="carousel-item">
+            <div class="card h-100 d-flex text-white align-items-center justify-content-center">
+              <h2 class="card-title text-center m-4 w-100">
+                Ofertas especiales en propiedades vacacionales
+              </h2>
+              <div class="card-body w-100 d-flex flex-column align-items-center justify-content-center ">
+                <p class="card-text p-2 w-50">
+              ¿Buscas una escapada vacacional? ¡Tenemos ofertas especiales en propiedades vacacionales en toda España!
+              Desde apartamentos frente al mar hasta cabañas en la montaña, tenemos algo para todos los gustos. ¡Aprovecha
+              estas ofertas antes de que se acaben!
+                </p>
+                <img class="card-img m-1 w-75" src="img/lugar/casa-clasica-1.jpg" alt="imagen de la noticia 1" />
+              </div>
+            </div>         
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </section>
-    <h3>Propiedades mas vistas</h3>
-    <section class="popular">
-      <div class="tab-content" id="rentals">
+    <section class="container-fluid popular">
+      <!-- ### RENT ### -->
+      <h2 class="modal-title text-white text-center">Propiedades mas populares para alquilar</h2>
+      <div class="tab-content d-flex flex-row flex-nowrap" id="rentals" data-ride="carousel">
         <!-- CARD DE FAVORITO-RENT 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-2.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en el centro de Madrid</h3>
-
-            <p>
-              3 habitaciones, 2 baños, 120m² Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur,
-              nisi non feugiat euismod, dui enim tempus purus, sed tincidunt ligula ante at lectus. Mauris non elit at
-              odio convallis tempus. Nam accumsan vehicula velit, vel dapibus nisi posuere vel. Duis ut orci nec purus
-              scelerisque consectetur. Proin ac ornare ipsum, ut tincidunt tortor.
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">Piso moderno en el barrio de Chamberí</h3>
+            <p class="card-text">
+              2 habitaciones, 1 baño, 70m² Este piso moderno se encuentra en el barrio de Chamberí, uno de los más
+              tradicionales y populares de Madrid. Cuenta con 2 habitaciones amplias, 1 baño y una cocina totalmente
+              equipada. El precio de alquiler es de €700 al mes.
             </p>
-            <p>Dirección: Calle Falsa 123, Madrid</p>
-            <p>Distancia: 1km</p>
-            <p>Precio: €800/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">Dirección: Calle Chamberí 123, Madrid</p>
+            <p class="card-text">Distancia: 2km</p>
+            <p class="card-text">Precio: €700/mes</p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <!-- CARD DE FAVORITO-RENT 2 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Casa en la playa</h3>
-
-            <p>
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body col-12 d-flex flex-column align-content-center">
+            <h3 class="card-title">
+              Casa en la playa
+            </h3>
+            <p class="card-text">
               4 habitaciones, 3 baños, 150m², vistas al mar
             </p>
-            <p>Dirección: Calle Playa 123, Malgrat de Mar</p>
-            <p>Distancia: 200m</p>
-            <p>Precio: €1500/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">Dirección: Calle Playa 123, Malgrat de Mar</p>
+            <p class="card-text">Distancia: 200m</p>
+            <p class="card-text">Precio: €1500/mes</p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <!-- CARD DE FAVORITO-RENT 3 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-4.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Casa en las afueras de Madrid</h3>
-            <p>
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Casa en las afueras de Madrid
+            </h3>
+            <p class="card-text">
               4 habitaciones, 3 baños, 150m² . La casa cuenta con un gran jardín y una piscina privada. Está ubicada en
               una zona tranquila y residencial, pero a solo 15 minutos en coche del centro de Madrid.
             </p>
-            <p>Dirección: Calle Falsa 123, Madrid</p>
-            <p>Distancia: 10km</p>
-            <p>Precio: €1,200/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">Dirección: Calle Falsa 123, Madrid</p>
+            <p class="card-text">Distancia: 10km</p>
+            <p class="card-text">Precio: €1,200/mes</p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <!-- CARD DE FAVORITO-RENT 4 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-3.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso moderno en el barrio de Chamberí</h3>
-            <p>
-              2 habitaciones, 1 baño, 70m² Este piso moderno se encuentra en el barrio de Chamberí, uno de los más
-              tradicionales y populares de Madrid. Cuenta con 2 habitaciones amplias, 1 baño y una cocina totalmente
-              equipada. El precio de alquiler es de €700 al mes.
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">
+              Pisa en el centro de Madrid
+            </h3>
+            <p class="card-text">
+              Este hermoso piso de dos habitaciones está situado en un edificio moderno con ascensor y se encuentra en una ubicación privilegiada en el centro de la ciudad.
             </p>
-            <p>Dirección: Calle Chamberí 123, Madrid</p>
-            <p>Distancia: 2km</p>
-            <p>Precio: €700/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">Dirección: Calle Falsa 123, Madrid</p>
+            <p class="card-text">Distancia: 1km</p>
+            <p class="card-text">Precio: €800/mes</p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
-          </div>
+
+            </div>
         </div>
         <!-- CARD DE FAVORITO-RENT 5 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso moderno en el barrio de Chamberí</h3>
-            <p>
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">Piso moderno en el barrio de Chamberí</h3>
+            <p class="card-text">
               2 habitaciones, 1 baño, 70m² Este piso moderno se encuentra en el barrio de Chamberí, uno de los más
               tradicionales y populares de Madrid. Cuenta con 2 habitaciones amplias, 1 baño y una cocina totalmente
               equipada. El precio de alquiler es de €700 al mes.
             </p>
-            <p>Dirección: Calle Chamberí 123, Madrid</p>
-            <p>Distancia: 2km</p>
-            <p>Precio: €700/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">Dirección: Calle Chamberí 123, Madrid</p>
+            <p class="card-text">Distancia: 2km</p>
+            <p class="card-text">Precio: €700/mes</p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <!-- CARD DE FAVORITO-RENT 6 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-1.jpg" class="main" alt="Imagen de la propiedad 1" />
-          <div class="card-text">
-            <h3>Piso en zona residencial</h3>
-            <p>
+        <div class="card flex-column position-relative col-11 col-md-5 col-lg-4 col-xl-3 m-1">
+          <img src="img/pisos/piso-salon-2.jpg" class="main card-img m-1" alt="Imagen de la propiedad 1" />
+          <div class="card-body">
+            <h3 class="card-title">Piso en zona residencial</h3>
+            <p class="card-text">
               3 habitaciones, 2 baños, 110m² Este piso se encuentra en una zona residencial de Madrid, rodeado de zonas
               verdes y tranquilas. cuenta con 3 habitaciones, 2 baños y un jardín privado. El precio de alquiler es de
               €900 al mes.
             </p>
-            <p>Dirección: Calle Residencial 123, Madrid</p>
-            <p>Distancia: 5km</p>
-            <p>Precio: €900/mes</p>
-            <div class="button-bottom">
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
+            <p class="card-text">Dirección: Calle Residencial 123, Madrid</p>
+            <p class="card-text">Distancia: 5km</p>
+            <p class="card-text">Precio: €900/mes</p>
+            <div class="card-buttons d-flex justify-content-between">
+              <div class="rating d-flex justify-content-center m-auto">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-empty text-warning"></i>
+                <i class="fas fa-star-half-alt text-warning"></i>
               </div>
               <!-- BOTON DE DETALLES -->
-              <div class="botones">
-                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <div class="icon-bookmark"> </div>
+              <div class="d-flex justify-content-end">
+                <div class="icon-bookmark m-2 rounded"> </div>
+                <button class="btn btn-dark m-2 rounded">
+                  <a href="propertie-info.html">
+                    Ver detalles
+                  </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="tab-content" id="sales">
+      <!-- ### BUY ### -->
+      <h2 class="modal-title text-white text-center">La propiedad con mas visitas</h2>
+      <div class="tab-content m-1 col-12" id="sales">
         <!-- CARD DE FAVORITO-BUY 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 2" />
-          <div class="card-text">
-            <h3>Piso en el barrio de Chamberí</h3>
-            <p>
+        <div class="card d-lg-flex flex-row flex-wrap m-4 position-relative" style="border-radius: 0.8em;">
+          <img src="img/pisos/piso-balcon-2.jpg" class="my-2 p-1 col-12 col-lg-8 " alt="Imagen de la propiedad 2" />
+          <div class="card-body pt-4 p-1  text-white text-center text-uppercase col-12 col-lg-4 d-flex flex-column ">
+            <h3 class="card-title m-1">Piso en el barrio de Chamberí</h3>
+            <p class="card-text m-1 text-justify text-uppercase">
               2 habitaciones, 1 baño, 70m² Este acogedor piso se encuentra en una de las zonas más tranquilas de Madrid,
               en el barrio de Chamberí. Es ideal para parejas o pequeñas familias. cuenta con 2 habitaciones, 1 baño y
               un balcón con vistas a la calle.
             </p>
 
-            <p>Precio: €180,000</p>
-            <!-- BOTON DE DETALLES -->
-            <div class="botones">
-              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-              <button class="button-secondary red">Eliminar</button>
+            <p class="m-1 p-1">Precio: €180,000</p>
+            <!-- BOTONES -->
+            <div class="card-buttons d-flex justify-content-end">
+              <div class="d-flex justify-content-end ">
+                <button class=" btn btn-secondary bg-white m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                <div class="icon-bookmark m-2 rounded"> </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
-
     </section>
   </main>
   <!-- MAIN END -->
 
   <!-- FOOTER START -->
-  <footer>
-
   <script>
     renderFooter();
   </script>
-  </footer>
   <!-- FOOTER END -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

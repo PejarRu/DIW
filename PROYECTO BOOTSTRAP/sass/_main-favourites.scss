@@ -2,313 +2,42 @@
     .tabs-section {
         background-color: $accesoryColor1;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        border-bottom: 2px solid white;
 
-        .tabs-list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style: none;
+        .active {
+            background-color: $darkPrimary;
+            color: white;
+        }
 
-            .tab-item {
-                font-size: larger;
-                padding: 0.5em 1em;
-                cursor: pointer;
-                color: $gray;
-                border-bottom: 2px solid transparent;
-                transition: all 0.2s;
+        #nav-tab>a {
+            cursor: pointer;
+            transition: all 0.2s;
 
-                &:hover {
-                    color: $white;
-                }
+            &:hover {
+                color: black;
 
-                &.active {
-                    color: $white;
-                    border-bottom: 2px solid $white;
-                }
+            }
+
+            &.active {
+                color: $white;
+                border-bottom: 2px solid $white;
             }
         }
     }
 
-    .favorites-section {
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1em;
+    .tab-content {
         margin: 1em auto;
-
-        #rentals.tab-content {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 1.5em;
-            gap: 1em;
-            max-width: calc(100% - 4em);
-
-            @include redimensionar(medium) {
-                & {
-                    .card {
-                        width: calc(50% - 2em);
-
-                    }
-
-                    .card:last-child {
-                        flex-grow: 0;
-
-                        width: calc(50% - 10em);
-
-                    }
-                }
-            }
-
-            @include redimensionar(small) {
-                & {
-                    .card {
-                        width: calc(100% - 4em);
-                    }
-
-                    .card:last-child {
-                        flex-grow: 1;
-                    }
-                }
-            }
-
-            .card:not(:last-child) {
-                flex-grow: 1;
-            }
-
+        #rentals {
             .card {
-                width: calc(30% - 2em);
-                min-width: 302px;
-                border-radius: 0.5em;
-                background: linear-gradient(to left, $accesoryColor1, $darkSecondary);
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                @include transicionar(all);
-
-                &:hover {
-                    transform: scale(1.01);
-                    box-shadow: 1px 1px 50px 10px black;
-                }
-
-                img {
-                    margin: 1em;
-                    max-height: 550px;
-                    max-width: 65%;
-                    object-fit: cover;
-                    border-radius: 10px 10px;
-                }
-
-                .card-text {
-                    width: 95%;
-                    //
-                    position: relative;
-                    height: 100%;
-                    max-width: 100%;
-                    padding-top: 3em;
-
-                    * {
-                        color: white;
-                    }
-
-                    h3 {
-                        margin: 10px;
-                        font-size: 1.1em;
-                        text-align: center;
-                        text-transform: uppercase;
-                        letter-spacing: 3px;
-                    }
-
-                    p {
-                        margin: 10px;
-                        text-align: justify;
-                    }
-
-                    .valoracion,
-                    .botones {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-
-                        * {
-                            margin: 3px;
-
-                            &:hover {
-                                filter: grayscale(1);
-                                transform: scale(1.09);
-                                text-decoration: underline;
-
-                            }
-                        }
-                    }
-
-                    .valoracion {
-                        div {
-
-                            &:hover {
-                                filter: invert(1);
-                                transform: scale(1.09);
-                                text-decoration: underline;
-
-                            }
-                        }
-                    }
-
-                    .botones {
-                        justify-content: flex-end;
-
-                        button {
-
-                            &:hover {
-                                filter: grayscale(1);
-                                transform: scale(1.09);
-                            }
-
-                            font-size: 1rem;
-                            padding: 1em;
-                            white-space: nowrap;
-                            border-radius: 0.2em;
-                            background: $accesoryColor1;
-                            cursor: pointer;
-
-                            &:hover {
-                                background: $darkPrimary;
-                            }
-                        }
-                    }
-                }
+                @extend %propertie-card-rent;
             }
         }
 
-        #sales.tab-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            row-gap: 1em;
+        &#sales {
 
             .card {
-                width: calc(100% - 2rem);
-                min-width: 300px;
-                border-radius: 0.5em;
-                background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
-
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                @include transicionar(all);
-
-                &:hover {
-                    transform: scale(1.01);
-                }
-
-                @include redimensionar(medium) {
-                    flex-direction: column;
-
-                    img {
-                        width: 90%;
-                    }
-
-                    .card-text {
-                        flex-direction: row;
-
-                        .botones {
-                            position: static !important;
-
-                            * {
-                                margin: 1em
-                            }
-                        }
-
-                    }
-                }
-
-
-
-                img {
-                    margin: 1em;
-                    max-height: 550px;
-                    max-width: 65%;
-                    object-fit: cover;
-                    border-radius: 10px 10px;
-                }
-
-                .card-text {
-                    position: relative;
-                    height: 100%;
-                    max-width: 100%;
-                    padding-top: 3em;
-
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    margin-left: 1em;
-
-                    * {
-                        color: white;
-                    }
-
-                    h2,
-                    h3 {
-                        margin: 10px;
-                        font-size: 1.1em;
-                        text-align: center;
-                        text-transform: uppercase;
-                        letter-spacing: 3px;
-                    }
-
-                    p {
-                        margin: 10px;
-                        text-align: justify;
-                    }
-
-
-
-                    .botones {
-                        position: absolute;
-                        bottom: 0;
-                        width: 95%;
-                        margin: 1em;
-
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-end;
-
-                        * {
-                            margin: 3px;
-
-                        }
-
-                        button {
-
-                            &:hover {
-                                filter: grayscale(1);
-                                transform: scale(1.09);
-                            }
-
-                            font-size: 1rem;
-                            padding: 1em;
-                            white-space: nowrap;
-                            border-radius: 0.2em;
-                            background: $accesoryColor1;
-                            cursor: pointer;
-
-                            &:hover {
-                                background: $darkPrimary;
-                            }
-                        }
-
-
-                    }
-                }
+                @extend %propertie-card-buy;
             }
         }
-    }
-
-    .red {
-        background: rgb(132, 17, 17) !important;
-
     }
 }

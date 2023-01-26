@@ -58,7 +58,9 @@
   }
 }
 
-$gradient-colors: $darkPrimary, $gray, $darkSecondary;
+$gradient-colors: $darkPrimary,
+$gray,
+$darkSecondary;
 
 @keyframes gradiente {
   0% {
@@ -109,10 +111,7 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
 
 %propertie-card {
   min-width: 302px;
-  border-radius: 0.5em;
   background: linear-gradient(to left, $accesoryColor1, $darkSecondary);
-  display: flex;
-  position: relative;
   @include transicionar(all);
 
   &:hover {
@@ -121,78 +120,47 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
   }
 
   img {
-    margin: 1em auto;
     max-height: 550px;
-    max-width: 95%;
+    border-radius: 0.5em;
     object-fit: cover;
-    border-radius: 10px 10px;
   }
 
-  $altura-botones: 160px;
-
-  .card-text {
-    width: 100%;
-    padding-top: 3em;
-    padding-bottom: $altura-botones;
-
-    * {
-      color: white;
-    }
-
-    h3 {
-      margin: 10px;
-      font-size: 1.1em;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-
-    p {
-      margin: 10px;
-      text-align: justify;
+  h3,h2 {
+    letter-spacing: 3px;
+    &:hover{
+      text-decoration: underline;
     }
   }
 
-  .button-bottom {
-    align-self: flex-end;
-    width: 100%;
-    height: $altura-botones;
+  .card-buttons:has(button) {
+    padding-top: 50px;
+    >div {
 
-    display: flex;
-    flex-direction: column;
+      position: absolute;
+      bottom: 10px;
+      right: 5px;
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-  }
-
-  .botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 1em;
-
-    * {
-      margin: 3px;
-
-      &:hover {
-        filter: grayscale(1);
-        transform: scale(1.09);
-        text-decoration: underline;
-
+      
+    }
+    @include redimensionar(medium) {
+      
+      >div {
+        position: relative;
+        justify-content: end;
       }
     }
+  }
 
-    button {
-      padding: 1em;
-      white-space: nowrap;
-      border-radius: 0.2em;
-      background: $accesoryColor1;
-      cursor: pointer;
+  .card-buttons {
+    .rating {
+      margin: 0 auto;
+      padding-bottom: 70px;
+    }
 
+    [class^='icon-'] {
       &:hover {
-        background: $darkPrimary;
+        filter: invert(1);
+        transform: scale(1.09);
         text-decoration: underline;
       }
     }
@@ -201,46 +169,12 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
 
 %propertie-card-rent {
   @extend %propertie-card;
-  width: calc(30% - 2em);
-  flex-direction: column;
-  position: relative;
-
-
-
-  .valoracion {
-    position: relative;
-    height: 50px;
-    @extend .botones;
-    justify-content: center;
-
-    div {
-      &:hover {
-        filter: invert(1);
-        transform: scale(1.09);
-        text-decoration: underline;
-
-      }
-    }
-  }
 }
 
 %propertie-card-buy {
   @extend %propertie-card;
-  flex-direction: row;
-  width: calc(100% - 2rem);
-
-  .card-text {
-    .botones {
-      position: absolute;
-      bottom: 0;
-    }
-  }
 }
 
 %cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1.5em;
   gap: 1em;
-  max-width: calc(100% - 2em);
 }

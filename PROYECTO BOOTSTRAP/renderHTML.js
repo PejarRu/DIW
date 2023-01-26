@@ -1,6 +1,6 @@
-export function renderHeader() {
+ function renderHeader() {
   var container = document.createElement('header');
-  fetch('./partials/header.html')
+  fetch('partials/header.html')
   .then(response => response.text())
   .then(html => {
     container.innerHTML = html;
@@ -8,11 +8,10 @@ export function renderHeader() {
   document.body.appendChild(container);
 }
 
-export function renderFooter() {
+ function renderFooter() {
   var container = document.createElement('footer');
-  fetch('./partials/footer.html')
-  .then(response => {
-    response.text()})
+  fetch('partials/footer.html')
+  .then(response => response.text())
   .then(html => {
     container.innerHTML = html;
   });

@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="author" content="Antons Berzins" />
+    <meta
+      name="description"
+      content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022"
+    />
+    <meta name="contact" content="berzinsanton@gmail.com" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="css/style.css"
+      media="screen, projection"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>ChainHouse - Practica SASS</title>
+    <script src="./renderHTML.js"></script>
+  </head>
 
-<head>
-  <meta name="author" content="Antons Berzins" />
-  <meta name="description"
-    content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022" />
-  <meta name="contact" content="berzinsanton@gmail.com" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>ChainHouse - Practica SASS</title>
-  <script src="./renderHTML.js"></script>
-   
-</head>
+  <body>
+    <!-- HEADER START -->
+    <script>
+      renderHeader();
+    </script>
+    <!-- HEADER END -->
+    <!-- MAIN START -->
+    <main class="aviso-legal">
+      <h1 class="brand_title">Aviso Legal</h1>
+      <div class="container-fluid text-white p-3 my-1 mx-auto col-11 col-sm-12">
+        <p>
+          En cumplimiento con lo establecido en la Ley 34/2002, de 11 de julio,
+          de Servicios de la Sociedad de la Información y del Comercio
+          Electrónico, a continuación se exponen los datos identificativos de la
+          empresa.
+        </p>
+        <h2>Identificación de la empresa</h2>
+        <p>
+          Denominación social: Inmobiliaria Online S.L.<br />
+          NIF: B-12341234<br />
+          Dirección: Calle Falsa 123, 28003 Madrid<br />
+          Teléfono: +34 987 654 321<br />
+          Correo electrónico: info@inmobiliariaonline.com
+        </p>
+        <h2>Condiciones de uso</h2>
+        <p>
+          El uso de esta página web implica la aceptación plena e incondicional
+          de las presentes condiciones de uso. El acceso a la página y el uso
+          correcto de la información contenida en ella son responsabilidad de
+          quien los realiza.
+        </p>
+        <h2>Propiedad intelectual</h2>
+        <p>
+          Los contenidos de esta página web, incluyendo textos, imágenes,
+          sonidos, archivos, diseños, estructura, selección, ordenación y
+          presentación de sus contenidos, así como cualesquiera otros contenidos
+          en ella incorporados, son propiedad de Inmobiliaria Online S.L. o de
+          terceros, sin que puedan entenderse cedidos al usuario, en virtud de
+          lo dispuesto en estas condiciones, ningún derecho de explotación sobre
+          los mismos más allá de lo estrictamente necesario para el correcto uso
+          de la página.
+        </p>
+        <h2>Exclusión de responsabilidades</h2>
+        <p>
+          Inmobiliaria Online S.L. no se hace responsable del uso ilegal,
+          negligente, fraudulento o contrario a las presentes condiciones por
+          parte del usuario. Asimismo, no será responsable de los perjuicios que
+          pudieran derivarse del acceso a los contenidos de la web o del uso
+          incorrecto, inadecuado o ilícito de la información contenida en la
+          misma.
+        </p>
+      </div>
+    </main>
 
-<body>
-  <!-- HEADER START -->
-  <script>
-    renderHeader();
-  </script>
-  <!-- HEADER END -->
-  <!-- MAIN START -->
-  <main class="aviso-legal">
-    <h1>Aviso Legal</h1>
-    <div class="container">
-      <p>
-        En cumplimiento con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
-        Información y del Comercio Electrónico, a continuación se exponen los datos identificativos de la empresa.
-      </p>
-      <h2>Identificación de la empresa</h2>
-      <p>
-        Denominación social: Inmobiliaria Online S.L.<br>
-        NIF: B-12341234<br>
-        Dirección: Calle Falsa 123, 28003 Madrid<br>
-        Teléfono: +34 987 654 321<br>
-        Correo electrónico: info@inmobiliariaonline.com
-      </p>
-      <h2>Condiciones de uso</h2>
-      <p>
-        El uso de esta página web implica la aceptación plena e incondicional de las presentes condiciones de uso. El
-        acceso a la página y el uso correcto de la información contenida en ella son responsabilidad de quien los
-        realiza.
-      </p>
-      <h2>Propiedad intelectual</h2>
-      <p>
-        Los contenidos de esta página web, incluyendo textos, imágenes, sonidos, archivos, diseños, estructura,
-        selección, ordenación y presentación de sus contenidos, así como cualesquiera otros contenidos en ella
-        incorporados, son propiedad de Inmobiliaria Online S.L. o de terceros, sin que puedan entenderse cedidos al
-        usuario, en virtud de lo dispuesto en estas condiciones, ningún derecho de explotación sobre los mismos más allá
-        de lo estrictamente necesario para el correcto uso de la página.
-      </p>
-      <h2>Exclusión de responsabilidades</h2>
-      <p>
-        Inmobiliaria Online S.L. no se hace responsable del uso ilegal, negligente, fraudulento o contrario a las
-        presentes condiciones por parte del usuario. Asimismo, no será responsable de los perjuicios que pudieran
-        derivarse del acceso a los contenidos de la web o del uso incorrecto, inadecuado o ilícito de la información
-        contenida en la misma.
-      </p>
-    </div>
+    <!-- MAIN END -->
 
-  </main>
-
-
-  <!-- MAIN END -->
-
-  <!-- FOOTER START -->
-  <footer>
-    <script src="./footer.js"></script>
+    <!-- FOOTER START -->
     <script>
       renderFooter();
     </script>
-  </footer>
-  <!-- FOOTER END -->
-</body>
-
+    <!-- FOOTER END -->
+  </body>
 </html>
 
 <script>

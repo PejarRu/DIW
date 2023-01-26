@@ -10,8 +10,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  
   <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
   <title>ChainHouse - Practica SASS</title>
   <script src="./renderHTML.js"></script>
 
@@ -25,224 +28,308 @@
   <!-- HEADER END -->
 
   <!-- MAIN START -->
+
   <main class="favourites">
-    <div class="tabs-section">
-      <ul class="tabs-list">
-        <li class="tab-item active" data-tab-id="rentals">Alquiler</li>
-        <li class="tab-item" data-tab-id="sales">Compra</li>
-      </ul>
-    </div>
-    <div class="favorites-section">
-      <div class="tab-content" id="rentals">
-        <!-- CARD DE FAVORITO-RENT 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-1.jpg" class="main" alt="Imagen de la propiedad 1 alquiler" />
-          <div class="card-text">
-            <h3>Espectacular Piso en el centro de Madrid</h3>
-            <p>
-              Este hermoso y luminoso piso cuenta con 3 habitaciones, 2 baños y una superficie de 120m².
-              El apartamento se encuentra en una zona privilegiada del centro de Madrid, cerca de tiendas,
-              restaurantes y servicios públicos.
-            </p>
-            <p>Dirección: Calle Gran Vía, Madrid</p>
-            <p>Distancia: 200m a la estación de metro Callao</p>
-            <p>Precio: €1.800/mes</p>
-            <div class="valoracion">
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-            </div>
-            <div class="botones">
-              <a href="propertie-info.html">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <button class="button-secondary red">Eliminar</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- CARD DE FAVORITO-RENT 2 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 2 alquiler" />
-          <div class="card-text">
-            <h3>Piso recién reformado en el barrio de Malasaña</h3>
-            <p>
-              Este acogedor piso cuenta con 2 habitaciones, 1 baño y una superficie de 75m².
-              La vivienda ha sido recién reformada y cuenta con acabados de alta calidad.
-              Se encuentra en uno de los barrios más icónicos y animados de Madrid, cerca de numerosos bares y tiendas.
-            </p>
-            <p>Dirección: Calle de San Bernardo, Madrid</p>
-            <p>Distancia: 600m a la estación de metro Tribunal</p>
-            <p>Precio: €1.300/mes</p>
-            <div class="valoracion">
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-            </div>
-            <div class="botones">
-              <a href="propertie-info.html">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <button class="button-secondary red">Eliminar</button>
-              </a>
-
-            </div>
-          </div>
-        </div>
-        <!-- CARD DE FAVORITO-RENT 3 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-2.jpg" class="main" alt="Imagen de la propiedad 1 venta" />
-          <div class="card-text">
-            <div class="card-text">
-              <h3>Estudio con vistas al río en el distrito de Chamberí</h3>
-              <p>Este estudio moderno cuenta con vistas al río y está situado en un edificio de lujo en el distrito de
-                Chamberí. Está equipado con todas las comodidades necesarias y cuenta con una terraza con vistas
-                impresionantes. Es una oportunidad única para vivir en una de las zonas más exclusivas de Madrid.</p>
-              <p>Dirección: Paseo de la Florida, Madrid</p>
-              <p>Distancia: 800m a la estación de metro Iglesia</p>
-              <p>Precio: €1.800/mes</p>
-              <div class="valoracion">
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-                <div class="icon-star"></div>
-              </div>
-              <div class="botones">
-                <a href="propertie-info.html">
-                                <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                  <button class="button-secondary red">Eliminar</button>
-                </a>
-
+    <nav class="tabs-section">
+      <div class="nav nav-tabs tabs-list text-center" id="nav-tab" role="tablist">
+        <a class="col-6 nav-item nav-link active px-4 " id="nav-rent-tab" data-toggle="tab" href="#nav-rent" role="tab" aria-controls="nav-rent" aria-selected="true">Alquiler</a>
+        <a class="col-6 nav-item nav-link px-4 " id="nav-buy-tab" data-toggle="tab" href="#nav-buy" role="tab" aria-controls="nav-buy" aria-selected="false">Compra</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <!-- ### RENT ### -->
+      <div class="tab-pane fade show active" id="nav-rent" role="tabpanel" aria-labelledby="nav-rent-tab">
+        <div class="d-flex flex-wrap m-1" id="rentals">
+          <!-- CARD DE FAVORITO-RENT 1 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-1">
+            <div class="card position-relative h-100 ">
+              <img src="img/pisos/piso-salon-2.jpg" class="main card-img " alt="Imagen de la propiedad 1" />
+              <div class="card-body col-12 d-flex flex-column align-content-center">
+                <h3 class="card-title">
+                  Espectacular Piso en el centro de Madrid
+                </h3>
+                <p class="card-text">
+                  Este hermoso y luminoso piso cuenta con 3 habitaciones, 2 baños y una superficie de 120m².
+                  El apartamento se encuentra en una zona privilegiada del centro de Madrid, cerca de tiendas,
+                  restaurantes y servicios públicos.
+                </p>
+                <p class="card-text">
+                  Dirección: Calle Gran Vía, Madrid
+                  </p>
+                <p class="card-text">              
+                  Distancia: 200m a la estación de metro Callao
+                </p>
+                <p class="card-text">
+                  Precio: €1.800/mes
+                </p>
+                <div class="card-buttons d-flex ">
+                  <div class="rating d-flex justify-content-between m-auto">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                  </div>
+                  <!-- BOTON DE DETALLES -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-block m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                    <button class="btn btn-danger m-1" d>Eliminar</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- CARD DE FAVORITO-RENT 4 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-3.jpg" class="main" alt="Imagen de la propiedad 2 venta" />
-          <div class="card-text">
-            <h3>Encantadora casa con piscina en la Sierra de Madrid</h3>
-            <p>
-              Esta hermosa casa cuenta con 3 habitaciones, 2 baños y una piscina privada. Se encuentra en una zona
-              rural
-              y tranquila de la Sierra de Madrid, rodeada de naturaleza y con impresionantes vistas panorámicas.
-            </p>
-            <p>Dirección: Calle del Monte, Madrid</p>
-            <p>Distancia: 30km al centro de Madrid</p>
-            <p>Precio: €450.000</p>
-            <div class="valoracion">
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-            </div>
-            <div class="botones">
-              <a href="propertie-info.html">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <button class="button-secondary red">Eliminar</button>
-              </a>
-
+          <!-- CARD DE FAVORITO-RENT 2 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-1">
+            <div class="card position-relative h-100">
+              <img src="img/pisos/piso-balcon-2.jpg" class="main card-img " alt="Imagen de la propiedad 1" />
+              <div class="card-body col-12 d-flex flex-column align-content-center">
+                <h3 class="card-title">
+                  Piso recién reformado en el barrio de Malasaña
+                </h3>
+                <p class="card-text">
+                  Este acogedor piso cuenta con 2 habitaciones, 1 baño y una superficie de 75m².
+                  La vivienda ha sido recién reformada y cuenta con acabados de alta calidad.
+                  Se encuentra en uno de los barrios más icónicos y animados de Madrid, cerca de numerosos bares y tiendas.
+                </p>
+                <p class="card-text">
+                  Dirección: Calle de San Bernardo, Madrid
+                  </p>
+                <p class="card-text">              
+                  Distancia: 600m a la estación de metro Tribunal
+                </p>
+                <p class="card-text">
+                  Precio: €1.300/mes
+                </p>
+                <div class="card-buttons d-flex justify-content-between">
+                  <div class="rating d-flex justify-content-center m-auto">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                  </div>
+                  <!-- BOTON DE DETALLES -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-block m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                    <button class="btn btn-danger m-1" d>Eliminar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- CARD DE FAVORITO-RENT 5 -->
-        <div class="card">
-          <img src="img/pisos/piso-salon-4.jpg" class="main" alt="Imagen de la propiedad 2 venta" />
-          <div class="card-text">
-            <h3>Casa con jardín en el barrio de Salamanca</h3>
-            <p>Esta hermosa casa cuenta con un amplio jardín y está ubicada en una zona tranquila del exclusivo barrio
-              de Salamanca. cuenta con 3 habitaciones, 2 baños y una cocina moderna. El jardín es perfecto para
-              relajarse y disfrutar del buen tiempo.</p>
-            <p>Dirección: Calle de la paz, Madrid</p>
-            <p>Distancia: 1200m a la estación de metro Goya</p>
-            <p>Precio: €2.300/mes</p>
-            <div class="valoracion">
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
-              <div class="icon-star"></div>
+          <!-- CARD DE FAVORITO-RENT 3 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-1">
+            <div class="card position-relative h-100">
+              <img src="img/pisos/piso-salon-3.jpg" class="main card-img " alt="Imagen de la propiedad 1" />
+              <div class="card-body col-12 d-flex flex-column align-content-center">
+                <h3 class="card-title">
+                  Estudio con vistas al río en el distrito de Chamberí
+                </h3>
+                <p class="card-text">
+                  Este estudio moderno cuenta con vistas al río y está situado en un edificio de lujo en el distrito de
+                  Chamberí. Está equipado con todas las comodidades necesarias y cuenta con una terraza con vistas
+                  impresionantes. Es una oportunidad única para vivir en una de las zonas más exclusivas de Madrid.</p>
+                </p>
+                <p class="card-text">
+                  Dirección: Paseo de la Florida, Madrid
+                  </p>
+                <p class="card-text">              
+                  Distancia: 800m a la estación de metro Iglesia
+                </p>
+                <p class="card-text">
+                  Precio: €1.800/mes
+                </p>
+                <div class="card-buttons d-flex justify-content-between">
+                  <div class="rating d-flex justify-content-center m-auto">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                  </div>
+                  <!-- BOTON DE DETALLES -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-block m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                    <button class="btn btn-danger m-1" d>Eliminar</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="botones">
-              <a href="propertie-info.html">
-                              <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-                <button class="button-secondary red">Eliminar</button>
-              </a>
-
+          </div>
+          <!-- CARD DE FAVORITO-RENT 4 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-1">
+            <div class="card position-relative h-100">
+              <img src="img/pisos/piso-balcon-3.jpg" class="main card-img " alt="Imagen de la propiedad 1" />
+              <div class="card-body col-12 d-flex flex-column align-content-center">
+                <h3 class="card-title">
+                  Encantadora casa con piscina en la Sierra de Madrid
+                </h3>
+                <p class="card-text">
+                  Esta hermosa casa cuenta con 3 habitaciones, 2 baños y una piscina privada. Se encuentra en una zona
+                  rural y tranquila de la Sierra de Madrid, rodeada de naturaleza y con impresionantes vistas panorámicas.
+                </p>
+                <p class="card-text">
+                  Dirección: Calle del Monte, Madrid
+                  </p>
+                <p class="card-text">              
+                  Distancia: 30km al centro de Madrid
+                </p>
+                <p class="card-text">
+                  Precio: €450.000
+                </p>
+                <div class="card-buttons d-flex justify-content-between">
+                  <div class="rating d-flex justify-content-center m-auto">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                  </div>
+                  <!-- BOTON DE DETALLES -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-block m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                    <button class="btn btn-danger m-1" d>Eliminar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD DE FAVORITO-RENT 5 -->
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-1">
+            <div class="card position-relative h-100">
+              <img src="img/pisos/piso-salon-4.jpg" class="main card-img " alt="Imagen de la propiedad 1" />
+              <div class="card-body col-12 d-flex flex-column align-content-center">
+                <h3 class="card-title">
+                  Casa con jardín en el barrio de Salamanca
+                </h3>
+                <p class="card-text">
+                  Esta hermosa casa cuenta con un amplio jardín y está ubicada en una zona tranquila del exclusivo barrio
+                  de Salamanca. cuenta con 3 habitaciones, 2 baños y una cocina moderna. El jardín es perfecto para
+                  relajarse y disfrutar del buen tiempo.</p>
+                <p class="card-text">
+                  Dirección: Calle de la paz, Madrid
+                  </p>
+                <p class="card-text">              
+                  Distancia: 1200m a la estación de metro Goya
+                </p>
+                <p class="card-text">
+                  Precio: €2.300/mes
+                </p>
+                <div class="card-buttons d-flex justify-content-between">
+                  <div class="rating d-flex justify-content-center m-auto">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </div>
+                  <!-- BOTON DE DETALLES -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-block m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                    <button class="btn btn-danger m-1" d>Eliminar</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="tab-content" id="sales" style="display:none;">
-        <!-- CARD DE FAVORITO-BUY 1 -->
-        <div class="card">
-          <img src="img/pisos/piso-balcon-2.jpg" class="main" alt="Imagen de la propiedad 2" />
-          <div class="card-text">
-            <h3>Piso en el barrio de Chamberí</h3>
-            <p>
-              2 habitaciones, 1 baño, 70m² Este acogedor piso se encuentra en una de las zonas más tranquilas de Madrid,
-              en el barrio de Chamberí. Es ideal para parejas o pequeñas familias. cuenta con 2 habitaciones, 1 baño y
-              un balcón con vistas a la calle.
-            </p>
-
-            <p>Precio: €180,000</p>
-            <!-- BOTON DE DETALLES -->
-            <div class="botones">
-                            <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-              <button class="button-secondary red">Eliminar</button>
+      <!-- ### BUY ### -->
+      <div class="tab-pane fade" id="nav-buy" role="tabpanel" aria-labelledby="nav-buy-tab">
+        <div class="tab-content d-flex flex-wrap justify-content-around  col-12" id="sales">
+           <!-- CARD DE FAVORITO-BUY 1 -->
+           <div class="card d-lg-flex flex-row flex-wrap m-4 position-relative" style="border-radius: 0.8em;">
+              <img src="img/pisos/piso-balcon-1.jpg" class="my-2 p-1 col-12 col-lg-8 " alt="Imagen de la propiedad 2" />
+              <div class="card-body pt-4 p-1  text-white text-center text-uppercase col-12 col-lg-4 d-flex flex-column ">
+                <h3 class="card-title m-1">
+                  Piso en el barrio de Chamberí
+                </h3>
+                <p class="card-text m-1 text-justify ">
+                  2 habitaciones, 1 baño, 70m² Este acogedor piso se encuentra en una de las zonas más tranquilas de Madrid,
+                  en el barrio de Chamberí. Es ideal para parejas o pequeñas familias. cuenta con 2 habitaciones, 1 baño y
+                  un balcón con vistas a la calle.2 habitaciones, 1 baño, 70m² Este acogedor piso se encuentra en una de las zonas más tranquilas de Madrid,
+                  en el barrio de Chamberí. Es ideal para parejas o pequeñas familias. cuenta con 2 habitaciones, 1 baño y
+                  un balcón con vistas a la calle.
+                </p>
+    
+                <p class="card-text m-1 p-1">
+                  Precio: €180,000
+                </p>
+                <!-- BOTONES -->
+                <div class="card-buttons d-flex justify-content-end">
+                  <div class="d-flex justify-content-end ">
+                    <button class="col-10 btn btn-secondary bg-white m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                    <button class="col-2 btn btn-danger m-1 p-1 text-center" d>X</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- CARD DE FAVORITO-BUY 2 -->
+          <div class="card d-lg-flex flex-row flex-wrap m-4 position-relative" style="border-radius: 0.8em;">
+            <img src="img/pisos/piso-balcon-2.jpg" class="my-2 p-1 col-12 col-lg-8 " alt="Imagen de la propiedad 2" />
+            <div class="card-body pt-4 p-1  text-white text-center text-uppercase col-12 col-lg-4 d-flex flex-column ">
+              <h3 class="card-title m-1">
+                Piso en el barrio de Colombia
+              </h3>
+              <p class="card-text m-1 text-justify text-uppercase">
+                3 habitaciones, 2 baños, 150m² Este impresionante piso de lujo se encuentra en el centro de Madrid, cerca de los principales puntos turísticos y tiendas de la ciudad. Cuenta con 3 habitaciones, 2 baños y una terraza con vistas panorámicas.
+              </p>
+  
+              <p class="card-text m-1 p-1">
+                Precio: €450,000
+              </p>
+              <!-- BOTONES -->
+              <div class="card-buttons d-flex justify-content-end">
+                <div class="d-flex justify-content-end ">
+                  <button class="col-10 btn btn-secondary bg-white m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                  <button class="col-2 btn btn-danger m-1 p-1 text-center" d>X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD DE FAVORITO-BUY 3 -->
+          <div class="card d-lg-flex flex-row flex-wrap m-4 position-relative" style="border-radius: 0.8em;">
+            <img src="img/pisos/piso-balcon-3.jpg" class="my-2 p-1 col-12 col-lg-8 " alt="Imagen de la propiedad 2" />
+            <div class="card-body pt-4 p-1  text-white text-center text-uppercase col-12 col-lg-4 d-flex flex-column ">
+              <h3 class="card-title m-1">
+                Estudio en el centro de Madrid
+              </h3>
+              <p class="card-text m-1 text-justify text-uppercase">
+                1 habitación, 1 baño, 40m² Este estudio se encuentra en el centro de Madrid, cerca de la Gran Vía y de la plaza de España. Es ideal para una persona o pareja que busque vivir en el centro de la ciudad. Cuenta con 1 habitación, 1 baño y un balcón con vistas a la calle.
+              </p>
+  
+              <p class="card-text m-1 p-1">
+                Precio: €120,000
+              </p>
+              <!-- BOTONES -->
+              <div class="card-buttons d-flex justify-content-end">
+                <div class="d-flex justify-content-end ">
+                  <button class="col-10 btn btn-secondary bg-white m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                  <button class="col-2 btn btn-danger m-1 p-1 text-center" d>X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CARD DE FAVORITO-BUY 4 -->
+          <div class="card d-lg-flex flex-row flex-wrap m-4 position-relative" style="border-radius: 0.8em;">
+            <img src="img/pisos/piso-salon-4.jpg" class="my-2 p-1 col-12 col-lg-8 " alt="Imagen de la propiedad 2" />
+            <div class="card-body pt-4 p-1  text-white text-center text-uppercase col-12 col-lg-4 d-flex flex-column ">
+              <h3 class="card-title m-1">
+                Espectacular piso moderno en el centro de Madrid
+              </h3>
+              <p class="card-text m-1 text-justify text-uppercase">
+                3 habitaciones, 2 baños, 120m². Este impresionante piso se encuentra en el corazón de Madrid, en el barrio de Malasaña. Cuenta con acabados de lujo, terraza privada y vistas panorámicas de la ciudad. Ideal para familias o personas que buscan vivir en el centro de la ciudad. 
+              </p>
+  
+              <p class="card-text m-1 p-1">
+                Precio: €425,000
+              </p>
+              <!-- BOTONES -->
+              <div class="card-buttons d-flex justify-content-end">
+                <div class="d-flex justify-content-end ">
+                  <button class="col-10 btn btn-secondary bg-white m-1"><a href="propertie-info.html">Ver detalles</a></button>
+                  <button class="col-2 btn btn-danger m-1 p-1 text-center" d>X</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- CARD DE FAVORITO-BUY 2 -->
-
-        <div class="card">
-          <img src="img/pisos/piso-balcon-3.jpg" class="main" alt="Imagen de la propiedad 3" />
-          <div class="card-text">
-            <h3>Dúplex en el barrio de Retiro</h3>
-            <p>3 habitaciones, 2 baños, 110m²</p>
-            <p>Este espectacular dúplex se encuentra en el barrio de Retiro, en Madrid. Cuenta con 3 habitaciones
-              amplias, 2 baños y una terraza privada con vistas al parque. El precio de alquiler es de €1,200 al mes.
-            </p>
-            <p>Precio: €1,200/mes</p>
-            <!-- BOTON DE DETALLES -->
-            <div class="botones">
-                            <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-              <button class="button-secondary red">Eliminar</button>
-            </div>
-
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/pisos/piso-balcon-4.jpg" class="main" alt="Imagen de la propiedad 4" />
-          <div class="card-text">
-            <h3>Apartamento en la zona de Moncloa</h3>
-            <p>1 habitación, 1 baño, 45m²</p>
-            <p>Este acogedor apartamento se encuentra en la zona de Moncloa, en Madrid. Cuenta con 1 habitación, 1 baño
-              y una cocina moderna. El precio de alquiler es de €800 al mes.</p>
-            <p>Precio: €800/mes</p>
-            <!-- BOTON DE DETALLES -->
-            <div class="botones">
-                            <button class="button-secondary"><a href="propertie-info.html">Ver detalles</a></button>
-
-              <button class="button-secondary red">Eliminar</button>
-            </div>
-          </div>
-        </div>
-
-
-
       </div>
-    </div>
     </div>
   </main>
   <!-- MAIN END -->
@@ -252,28 +339,10 @@
     renderFooter();
   </script>
   <!-- FOOTER END -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
-<script>
-  let activeTabId = "rentals";
-  const tabItems = document.querySelectorAll(".tab-item");
-  const tabContents = document.querySelectorAll(".tab-content");
-
-  tabItems.forEach(item => {
-    item.addEventListener("click", e => {
-      //remover la clase "active" de la pestaña activa
-      document.querySelector(`.tab-item.active[data-tab-id="${activeTabId}"]`).classList.remove("active");
-      //ocultar el contenido de la pestaña activa
-      document.getElementById(activeTabId).style.display = "none";
-
-      //establecer la nueva pestaña activa
-      activeTabId = e.target.dataset.tabId;
-      //agregar la clase "active" a la nueva pestaña activa
-      e.target.classList.add("active");
-      //mostrar el contenido de la nueva pestaña activa
-      document.getElementById(activeTabId).style.display = "flex";
-    });
-  });
-
-</script>
