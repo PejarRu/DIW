@@ -1,0 +1,47 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$darkPrimary : #202e48;
+$darkSecondary : #30456b;
+$lightPrimary : #1b9eee;
+$lightSecondary : #0f81c7;
+$accesoryColor1: #0b6298;
+$gray: #444444;
+$lightGray: #888;
+$white: #ffffff;
+$black: #000000;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+
+//ICONOS
+@import "compass/utilities/sprites";
+
+$icons: sprite-map("icons/*.png");
+
+@each $i in sprite-names($icons) {
+    .icon-#{$i} {
+        background-image: $icons;
+        background-position: sprite-position($icons, $i);
+        @include sprite-dimensions($icons, $i);
+    }
+}

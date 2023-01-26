@@ -1,0 +1,163 @@
+&.buy-properties {
+    .filtrar-pisos {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
+        margin: 1em auto;
+
+        label {
+            font-size: 0.8em;
+            white-space: nowrap;
+            margin: 0.6em;
+        }
+
+        input[type="text"] {
+            flex-grow: 3;
+            padding: 0.5em;
+            border-radius: 0.2em;
+            border: 1px solid transparent;
+            margin-bottom: 1em;
+            font-size: 1em;
+
+            &:hover,
+            &:active {
+                border: 1px solid $gray;
+            }
+        }
+
+        .dropdown-filters {
+            @include transicionar(all);
+            flex-grow: 1;
+
+            padding: 0.6em;
+            border-radius: 0.5em;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+
+
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+
+
+            &:hover {
+                position: relative;
+                z-index: 1;
+                min-width: 30%;
+
+                .body {
+                    @include transicionar(all);
+                    position: absolute;
+                    overflow: visible;
+                    top: 100%;
+                    height: 150px;
+                    border: 1px solid white;
+                    box-shadow: 1px 1px 10px 1px lighten($color: $darkPrimary, $amount: 10%);
+                    padding: 1em;
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(10px);
+
+                }
+            }
+
+            @include redimensionar(medium) {
+                display: inline-block;
+                width: calc(100% - 2em);
+            }
+
+            h3 {
+                white-space: nowrap;
+                display: block;
+                text-transform: capitalize;
+            }
+
+            .body {
+                height: 0;
+                overflow: hidden;
+                border-radius: 0.8em;
+                ;
+                padding: 1em auto;
+
+                .price,
+                .volume,
+                .distance {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    span {
+                        color: white;
+                        margin-right: 0.7em;
+                    }
+
+                    input[type="range"] {
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+
+        button {
+            flex-grow: 1;
+            padding: 0.8em;
+            text-transform: uppercase;
+
+            background: $accesoryColor1;
+            border: none;
+            border-radius: 0.2em;
+
+            &:hover {
+                color: white;
+            }
+
+            @include redimensionar(medium) {
+                display: block;
+                width: calc(20% - 2em);
+            }
+        }
+    }
+
+    .cards {
+        @extend %cards-container;
+        justify-content: space-evenly;
+
+        .card {
+            @extend %propertie-card-buy;
+        }
+
+        @include redimensionar(medium) {
+            & {
+                .card {
+                    flex-direction: column !important;
+
+                    img {
+                        width: 90%;
+                    }
+
+                    .card-text {
+                        flex-direction: row;
+
+                        .botones {
+                            position: static !important;
+
+                            * {
+                                margin: 1em
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+@import "main-list-rent";

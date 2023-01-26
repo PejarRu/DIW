@@ -1,0 +1,228 @@
+  footer {
+      background-color: $darkSecondary;
+      width: 100%;
+      min-height: 300px;
+
+      * {
+          color: $white;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+          ::first-letter {
+              text-transform: uppercase;
+          }
+      }
+
+      .footer {
+          width: 100%;
+          text-align: center;
+          position: relative;
+          background-color: $darkPrimary;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+
+          @include redimensionar(medium) {
+              >div {
+                  width: 50%;
+                  height: 260px;
+                  vertical-align: center;
+                  position: relative;
+
+                  &.social {
+                      .menu {
+                          display: block;
+                      }
+                  }
+
+                  &:hover {
+                      @include transicionar(all);
+                      box-shadow: -1px 1px 10px cadetblue;
+                      background-color: $darkSecondary;
+                  }
+
+              }
+
+              .footer-card {
+                  @include redimensionar(medium) {
+                      &:has(.buscador) {
+                          display: none;
+                      }
+                  }
+
+                  //.links, .contact, .product
+                  >div {
+                      width: 100%;
+
+                      h6 {
+                          display: block;
+                      }
+
+                      i[class*="icon"] {
+                          display: inline-block;
+                          position: absolute;
+                          top: 40%;
+                          left: 40%;
+                          overflow: visible;
+                          transform: scale(3);
+                          filter: opacity(0.5);
+                      }
+                  }
+
+
+                  &:hover {
+                      @include transicionar(all);
+
+                      //.links, .contact, .product
+                      >div {
+                          @include transicionar(all);
+
+                          transform: scale(1.03) rotateY(180deg);
+                          border: none;
+
+                          .section-title {
+                              display: none;
+                          }
+
+                          .menu {
+                              display: block;
+                              transform: rotateY(180deg);
+                              position: relative;
+                              top: 20%;
+                          }
+                      }
+                  }
+
+                  .section-title {
+                      height: 10%;
+                      box-sizing: content-box;
+                      position: relative;
+                      top: 30%;
+
+                  }
+
+                  .menu,
+                  h6 {
+                      display: none;
+                  }
+              }
+
+          }
+
+          @include redimensionar(small) {
+              display: block;
+              width: 100%;
+
+              div {
+                  width: 100%;
+
+              }
+
+              //.footer-card + .social
+              >div.footer-card {
+                  @include transicionar(all);
+
+                  &:hover {
+                      >div {
+                          transform: rotateX(180deg);
+
+                          .menu,
+                          .section-title {
+                              display: block;
+                              transform: rotateX(180deg);
+                          }
+
+                          i {
+                              display: none;
+                          }
+
+                          h6 {
+                              border-bottom: 1px $lightGray solid;
+                              letter-spacing: 4px;
+                              margin: 0.5em;
+                              @include transicionar(letter-spacing, 0.2s, ease-in-out);
+
+                              &:hover {
+                                  letter-spacing: 10px;
+                              }
+                          }
+                      }
+                  }
+
+                  i[class*="icon"] {
+                      left: 45%;
+                      margin: 0 auto;
+                  }
+
+                  &.social {
+
+                      .menu,
+                      .section-title {
+                          transform: rotateX(360deg);
+                      }
+                  }
+              }
+          }
+
+          >div {
+              flex-grow: 1;
+              padding: 1em;
+              background-color: $accesoryColor1;
+              border-bottom: 3px solid $darkPrimary;
+              border-right: 5px solid $darkPrimary;
+
+              &.contact {
+                  p {
+                      &:hover {
+                          text-decoration: none;
+                      }
+
+                      a {
+                          &:hover {
+                              text-decoration: underline;
+                          }
+                      }
+                  }
+              }
+
+              h6 {
+                  display: block;
+                  font-size: large;
+                  text-transform: uppercase;
+                  padding: 5px;
+                  margin: 25px;
+                  white-space: nowrap;
+
+              }
+
+              p {
+                  padding: 0.5em;
+                  text-transform: capitalize;
+
+                  &:hover {
+                      text-decoration: underline;
+                  }
+
+              }
+
+              i {
+                  margin: 0 15px;
+              }
+
+              .menu {
+                  margin-top: 10px;
+
+              }
+
+              >i {
+                  display: none;
+              }
+          }
+      }
+
+      .author {
+          background-color: $darkSecondary;
+      }
+
+
+  }
