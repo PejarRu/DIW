@@ -1,0 +1,134 @@
+&.rent-properties {
+    color: $white;
+
+    section.container {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+
+        .filtros {
+            @include redimensionar(medium) {
+                display: none;
+            }
+
+            background-color: $accesoryColor1;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            min-width: 20%;
+            min-height: calc(60vh - 50px);
+            max-height: 75vh;
+            padding: 1.5em;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            h3 {
+                font-size: larger;
+                margin: 0.5em;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                padding: 1em;
+                border: 1px solid $gray;
+                border-radius: 1em;
+
+                label {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.5em;
+                    color: white;
+                    font-size: 1em;
+                    letter-spacing: 1px;
+
+                    &:hover {
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        @include transicionar(all);
+                    }
+
+                    input[type="checkbox"] {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        min-width: 1.5em;
+                        height: 1.5em;
+                        border-radius: 1.5em;
+                        border: 2px solid white;
+                        margin-right: 0.8em;
+
+                        &:checked {
+                            background-color: white;
+                            position: relative;
+
+                            &::after {
+                                content: "✔";
+                                color: black;
+                                font-size: 2em;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    width: 75%;
+                    height: 1.5em;
+                    font-size: 1rem;
+                    margin: auto;
+                    white-space: nowrap;
+                    border-radius: 0.2em;
+                    background: $lightSecondary;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $white;
+                        border: $white 1px solid;
+                    }
+                }
+
+            }
+
+        }
+
+
+        .cards {
+            @extend %cards-container;
+            .card {
+                @extend %propertie-card-rent;
+            }
+            .card:not(:last-child) {
+                flex-grow: 1;
+            }
+            @include redimensionar(medium) {
+                & {
+                    div.card {
+                        width: calc(33% - 2em);
+                    }
+                    .card:last-child {
+                        flex-grow: 0;
+                    }
+                }
+            }
+
+            @include redimensionar(small) {
+                & {
+                    .card {
+                        width: calc(100% - 4em);
+                    }
+
+                    .card:last-child {
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+    }
+}

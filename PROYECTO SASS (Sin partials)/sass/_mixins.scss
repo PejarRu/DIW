@@ -1,0 +1,90 @@
+$max-small-screen: 612px;
+$min-medium-screen: 612px;
+$max-medium-screen: 1200px;
+$min-large-screen: 1200px;
+
+@mixin redimensionar ($size) {
+    @if $size==small {
+        //Ancho maximo 612px
+        @media (max-width:$max-small-screen) {
+            @content;
+        }
+    }
+    @else if $size==from-medium {
+        //ancho minimo 612px
+        @media (min-width:$min-medium-screen) {
+            @content;
+        }
+    }
+
+    @else if $size==medium {
+
+        //ancho maximo 1024px
+        @media (max-width:$max-medium-screen) {
+            @content;
+        }
+    }
+    @else if $size==only-large {
+        //ancho minimo 1024px
+        @media (min-width:$min-large-screen) {
+            @content;
+        }
+    }
+}
+
+@mixin oscurecer($color, $porcetaje:10) {
+    color: darken($color, $porcetaje)
+}
+
+@mixin animar($nombre, $duracion: 0.4s, $timing: linear, $iterator: 1) {
+    -webkit-animation: $nombre $duracion $timing $iterator;
+    animation: $nombre $duracion $timing $iterator;
+}
+
+@mixin textoGradiente($color1, $color2, $direccion: to bottom) {
+    color: red;
+    background-image: linear-gradient($direccion, $color1, $color2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin invertir($porcentaje) {
+    filter: invert($porcentaje);
+    -webkit-filter: invert($porcentaje);
+}
+
+@mixin filtrar($filtro) {
+    filter: $filtro;
+    -webkit-filter: $filtro;
+}
+
+@mixin transicionar($propiedad, $duracion: 0.4s, $timing: ease-out) {
+    transition: $propiedad $duracion $timing;
+    -webkit-transition: $propiedad $duracion $timing;
+    -moz-transition: $propiedad $duracion $timing;
+    -ms-transition: $propiedad $duracion $timing;
+    -o-transition: $propiedad $duracion $timing;
+}
+
+@mixin bordear($borde) {
+    border-radius: $borde;
+    -webkit-border-radius: $borde;
+    -moz-border-radius: $borde;
+    -ms-border-radius: $borde;
+    -o-border-radius: $borde;
+}
+
+@mixin sombrear($hLenth, $vLenth, $blurRadius, $color, $inverse: 0px) {
+    box-shadow: $hLenth $vLenth $blurRadius $inverse $color;
+    -webkit-box-shadow: $hLenth $vLenth $blurRadius $inverse $color;
+    -moz-box-shadow: $hLenth $vLenth $blurRadius $inverse $color;
+}
+
+@mixin boxSizing($valor) {
+    box-sizing: $valor;
+    -webkit-box-sizing: $valor;
+    -moz-box-sizing: $valor;
+
+}

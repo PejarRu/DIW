@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="Antons Berzins" />
+  <meta name="description"
+    content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022" />
+  <meta name="contact" content="berzinsanton@gmail.com" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <title>ChainHouse - Practica SASS</title>
+  <script src="./renderHTML.js"></script>
+   
+</head>
+
+<body>
+ <!-- HEADER START -->
+ <header>
+  <div class="brand">
+    <div class="logo-container">
+        <div class="logo">
+            <img class="logo-full" src="img/logo.png" alt="logotipo-full" width="100px">
+            <img class="logo-min" src="img/logo-min.png" alt="logotipo-min" width="100px">
+            <div class="logo-border"></div>
+        </div>
+        <a href="index.html">
+            <h2 class="brand_title" data-text="ChainHouse">
+                <span class="load"></span>
+                ChainHouse
+                <span class="underline"></span>
+            </h2>
+        </a>
+    </div>
+
+    <div class="buscador">
+        <form action="#">
+            <input type="text" placeholder="Buscar">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
+<!-- NAV START -->
+<nav class="nav">
+    <div class="button-menu"></div>
+    <ul class="menu">
+        <li id="index">
+            <a href="index.html">Inicio</a>
+        </li>
+        <li class="submenu" id="properties">
+            <a class="dropdown-arrow" href="buy-properties.html">Propiedades</a>
+            <ul>
+                <li>
+                    <a href="favourites.html">Mis Favoritos</a>
+                </li>
+
+                <li class="submenu">
+                    <a class="dropdown-arrow" href="rent-properties.html">
+                        Alquiler
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="rent-properties.html">Viviendas</a>
+                        </li>
+                        <li>
+                            <a href="rent-properties.html">Locales</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a class="dropdown-arrow" href="buy-properties.html">Comprar</a>
+                    <ul>
+                        <li>
+                            <a href="buy-properties.html">Adquisicion total</a>
+                        </li>
+                        <li>
+                            <a href="buy-properties.html">Adquisicion parcial</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li id="about"><a href="about.html">Sobre nosotros</a></li>
+        <li id="contact"><a href="contact.html">Contacto</a></li>
+    </ul>
+</nav>
+<!-- NAV END -->
+
+</header>
+<!-- HEADER END -->
+
+  <!-- MAIN START -->
+  <main class="about">
+    <h2>Sobre nosotros</h2>
+    <section class="nosotros">
+      <img class="nosotros__imagen" src="img/about/our-history.jpg" alt="Foto importante" />
+      <div class="nosotros__contenido">
+        <h2>Nuestra historia</h2>
+        <p>
+          Fundada en el año 2000, nuestra empresa se ha consolidado como líder
+          en el mercado inmobiliario online. Desde entonces, hemos ayudado a
+          miles de personas a encontrar su hogar perfecto o a invertir en
+          propiedades rentables. Nuestro equipo está formado por profesionales
+          altamente cualificados y comprometidos con ofrecer el mejor servicio
+          a nuestros clientes.
+        </p>
+      </div>
+    </section>
+    <section class="nosotros">
+      <img class="nosotros__imagen" src="img/about/our-filosophy-1.jpg" alt="Foto de nuestra filosofia" />
+      <div class="nosotros__contenido">
+        <h2>Nuestra filosofía</h2>
+        <p>
+          Para nosotros, la satisfacción del cliente es lo más importante. Por
+          eso, ponemos a su disposición una amplia gama de propiedades y
+          servicios adaptados a sus necesidades y presupuesto. Además,
+          trabajamos con transparencia y honestidad, siempre buscando la mejor
+          solución para nuestros clientes.
+        </p>
+      </div>
+    </section>
+
+    <section class="historia">
+      <div class="nosotros__contenido">
+        <h2>Nuestra historia</h2>
+        <p>
+          Fundada en el año 2000, nuestra empresa se ha consolidado como líder
+          en el mercado inmobiliario online. Desde entonces, hemos ayudado a
+          miles de personas a encontrar su hogar perfecto o a invertir en
+          propiedades rentables. Nuestro equipo está formado por profesionales
+          altamente cualificados y comprometidos con ofrecer el mejor servicio
+          a nuestros clientes.
+        </p>
+      </div>
+
+      <div class="botones-historia">
+        <button id="button-history-1" class="boton-historia" data-historia="historia1">
+          2005
+        </button>
+        <button id="button-history-2" class="boton-historia" data-historia="historia2">
+          2010
+        </button>
+        <button id="button-history-3" class="boton-historia" data-historia="historia3">
+          2015
+        </button>
+        <button id="button-history-4" class="boton-historia" data-historia="historia3">
+          2018
+        </button>
+        <button id="button-history-5" class="boton-historia" data-historia="historia3">
+          2023
+        </button>
+        <span class="line"> </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- MAIN END -->
+
+  <!-- FOOTER START -->
+  <footer>
+    <!-- SECCION: ENLACES START -->
+    <section class="footer">
+      <div class="social">
+          <!-- GRID COLUMNA 1:CONTENIDO -->
+          <h6 class="section-title">Redes Sociales</h6>
+          <i class="icon-search"></i>
+          <!-- IZQUIERDA END -->
+
+          <!-- DERECHA START -->
+          <div class="menu">
+              <span>Siguenos en las redes sociales: <br /></span>
+              <a href="">
+                  <i class="fa fa-twitter"></i>
+              </a>
+              <a href="">
+                  <i class="fa fa-google"></i>
+              </a>
+              <a href="">
+                  <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="">
+                  <i class="fa fa-github"></i>
+              </a>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 1 -->
+
+      <!-- GRID COLUMNA 2: -->
+      <div class="footer-card">
+          <div class="product">
+              <h6 class="section-title">Propiedades</h6>
+              <i class="icon-house"></i>
+              <div class="menu">
+                  <a href="rent-properties.html" class="text-white">
+                      <p>alquiler viviendas</p>
+                  </a>
+                  <a href="rent-properties.html" class="text-white">
+                      <p>alquiler oficinas</p>
+                  </a>
+                  <a href="buy-properties.html" class="text-white">
+                      <p>viviendas guardadas</p>
+                  </a>
+                  <a href="buy-properties.html" class="text-white">
+                      <p>viviendas para inverison</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 2 -->
+
+      <!-- GRID COLUMNA 3 -->
+      <div class="footer-card">
+          <div class="links">
+              <!-- ENLACES -->
+              <h6 class="section-title">Enlaces interesantes</h6>
+              <i class="icon-enlace"></i>
+              <div class="menu">
+                  <a href="#!" class="text-white">
+                      <p>mi cuenta</p>
+                  </a>
+                  <a href="#!" class="text-white">
+                      <p>ser afiliado</p>
+                  </a>
+                  <a href="#!" class="text-white">
+                      <p>trabaja con nosotros</p>
+                  </a>
+                  <a href="#!" class="text-white">
+                      <p>ayuda</p>
+                  </a>
+                  <a href="aviso-legal.html" class="text-white">
+                      <p>aviso legal</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 3 -->
+
+      <!-- GRID COLUMNA 4 -->
+      <div class="footer-card">
+          <div class="contact">
+              <!-- ENLACES -->
+              <h6 class="section-title">Contacto</h6>
+              <i class="icon-mail"></i>
+              <div class="menu">
+                  <p><i class="fa fa-home mr-3"></i>Madrid, MD 10012, ES</p>
+                  <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                  <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
+                  <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
+                  <p>
+                      <a href="contact.html">enviar mensaje</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 4 -->
+
+        <!-- GRID COLUMNA 5 -->
+        <div class="footer-card">
+            <div class="buscador">
+                <form action="#">
+                    <input type="text" placeholder="Buscar" />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <!-- GRID COLUMNA 5 -->
+    </section>
+    <!-- SECCION: ENLACES END -->
+    <!-- DERECHOS AUTOR START -->
+    <div class="author">
+      © 2022 Copyright:
+      <a href="">Berzins Antons</a>
+    </div>
+    <!-- DERECHOS AUTOR END -->
+  </footer>
+  <!-- FOOTER END -->
+</body>
+
+</html>
+<script>
+  const buttons = document.querySelectorAll("[id^='button-history-']");
+  const textElement = document.querySelector(".historia p");
+  let textArray = [
+    "Fundada en el año 2000, nuestra empresa se ha consolidado como líder en el mercado inmobiliario online. Desde entonces, hemos ayudado a miles de personas a encontrar su hogar perfecto o a invertir en propiedades rentables. Nuestro equipo está formado por profesionales altamente cualificados y comprometidos con ofrecer el mejor servicio a nuestros clientes.",
+    "En el año 2005, ampliamos nuestra presencia a nivel nacional y comenzamos a ofrecer servicios inmobiliarios en toda España.",
+    "En el año 2010, lanzamos nuestra primera plataforma online, lo que nos permitió llegar a un público mucho más amplio y ofrecer un servicio más cómodo y accesible a nuestros clientes.",
+    "En el año 2015, comenzamos a ofrecer también servicios de alquiler de propiedades, lo que nos permitió diversificar nuestro negocio y ofrecer aún más opciones a nuestros clientes.",
+    "En el año 2018, inauguramos nuestra primera oficina física en el centro de Madrid, lo que nos permitió mejorar la atención al cliente y ofrecer un servicio más personalizado.",
+    "En el año 2023, lanzamos una nueva plataforma online con funcionalidades avanzadas y un diseño totalmente renovado, lo que nos permitió mejorar la experiencia de usuario y seguir siendo líderes en el mercado inmobiliario online.",
+  ];
+  let currentTextIndex = 1;
+
+  function changeToText(textToChange) {
+    textElement.textContent = textToChange;
+    currentTextIndex = 0;
+    startTime(10000);
+  }
+  function startTime(timeBetweenChange = 7000) {
+    setInterval(() => {
+      textElement.style.opacity = 0; // hacemos que la opacidad del texto sea 0 para que parezca que desaparece
+      setTimeout(() => {
+        //console.log(currentTextIndex);
+        currentTextIndex = currentTextIndex >= 6 ? 0 : currentTextIndex;
+
+        textElement.textContent = textArray[currentTextIndex]; // cambiamos el texto
+        currentTextIndex = (currentTextIndex + 1) % textArray.length; // actualizamos el índice del texto actual
+        textElement.style.opacity = 1; // hacemos que la opacidad del texto sea 1 para que parezca que aparece
+      }, 800); // esperamos 1 segundo para que la animación sea visible
+    }, timeBetweenChange); // cambiamos el texto cada 3 segundos
+  }
+  startTime();
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let numeroBoton = parseInt(button.dataset.historia.slice(8)); // obtenemos el número del botón clickeado
+      changeToText(textArray[numeroBoton]); // pasamos el número del botón a la función
+    });
+  });

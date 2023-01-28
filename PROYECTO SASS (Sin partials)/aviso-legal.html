@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="author" content="Antons Berzins" />
+  <meta name="description"
+    content="Pagina para la asignatura Desarrollo de Aplicaciones Web (DIW). IES SANVICENTE DEL RASPEIG - 2022" />
+  <meta name="contact" content="berzinsanton@gmail.com" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="css/style.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <title>ChainHouse - Practica SASS</title>
+  <script src="./renderHTML.js"></script>
+   
+</head>
+
+<body>
+ <!-- HEADER START -->
+ <header>
+  <div class="brand">
+    <div class="logo-container">
+        <div class="logo">
+            <img class="logo-full" src="img/logo.png" alt="logotipo-full" width="100px">
+            <img class="logo-min" src="img/logo-min.png" alt="logotipo-min" width="100px">
+            <div class="logo-border"></div>
+        </div>
+        <a href="index.html">
+            <h2 class="brand_title" data-text="ChainHouse">
+                <span class="load"></span>
+                ChainHouse
+                <span class="underline"></span>
+            </h2>
+        </a>
+    </div>
+
+    <div class="buscador">
+        <form action="#">
+            <input type="text" placeholder="Buscar">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
+<!-- NAV START -->
+<nav class="nav">
+    <div class="button-menu"></div>
+    <ul class="menu">
+        <li id="index">
+            <a href="index.html">Inicio</a>
+        </li>
+        <li class="submenu" id="properties">
+            <a class="dropdown-arrow" href="buy-properties.html">Propiedades</a>
+            <ul>
+                <li>
+                    <a href="favourites.html">Mis Favoritos</a>
+                </li>
+
+                <li class="submenu">
+                    <a class="dropdown-arrow" href="rent-properties.html">
+                        Alquiler
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="rent-properties.html">Viviendas</a>
+                        </li>
+                        <li>
+                            <a href="rent-properties.html">Locales</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a class="dropdown-arrow" href="buy-properties.html">Comprar</a>
+                    <ul>
+                        <li>
+                            <a href="buy-properties.html">Adquisicion total</a>
+                        </li>
+                        <li>
+                            <a href="buy-properties.html">Adquisicion parcial</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li id="about"><a href="about.html">Sobre nosotros</a></li>
+        <li id="contact"><a href="contact.html">Contacto</a></li>
+    </ul>
+</nav>
+<!-- NAV END -->
+
+</header>
+<!-- HEADER END -->
+  <!-- MAIN START -->
+  <main class="aviso-legal">
+    <h1>Aviso Legal</h1>
+    <div class="container">
+      <p>
+        En cumplimiento con lo establecido en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la
+        Información y del Comercio Electrónico, a continuación se exponen los datos identificativos de la empresa.
+      </p>
+      <h2>Identificación de la empresa</h2>
+      <p>
+        Denominación social: Inmobiliaria Online S.L.<br>
+        NIF: B-12341234<br>
+        Dirección: Calle Falsa 123, 28003 Madrid<br>
+        Teléfono: +34 987 654 321<br>
+        Correo electrónico: info@inmobiliariaonline.com
+      </p>
+      <h2>Condiciones de uso</h2>
+      <p>
+        El uso de esta página web implica la aceptación plena e incondicional de las presentes condiciones de uso. El
+        acceso a la página y el uso correcto de la información contenida en ella son responsabilidad de quien los
+        realiza.
+      </p>
+      <h2>Propiedad intelectual</h2>
+      <p>
+        Los contenidos de esta página web, incluyendo textos, imágenes, sonidos, archivos, diseños, estructura,
+        selección, ordenación y presentación de sus contenidos, así como cualesquiera otros contenidos en ella
+        incorporados, son propiedad de Inmobiliaria Online S.L. o de terceros, sin que puedan entenderse cedidos al
+        usuario, en virtud de lo dispuesto en estas condiciones, ningún derecho de explotación sobre los mismos más allá
+        de lo estrictamente necesario para el correcto uso de la página.
+      </p>
+      <h2>Exclusión de responsabilidades</h2>
+      <p>
+        Inmobiliaria Online S.L. no se hace responsable del uso ilegal, negligente, fraudulento o contrario a las
+        presentes condiciones por parte del usuario. Asimismo, no será responsable de los perjuicios que pudieran
+        derivarse del acceso a los contenidos de la web o del uso incorrecto, inadecuado o ilícito de la información
+        contenida en la misma.
+      </p>
+    </div>
+
+  </main>
+
+
+  <!-- MAIN END -->
+
+  <!-- FOOTER START -->
+  <footer>
+    <!-- SECCION: ENLACES START -->
+    <section class="footer">
+      <div class="social">
+          <!-- GRID COLUMNA 1:CONTENIDO -->
+          <h6 class="section-title">Redes Sociales</h6>
+          <i class="icon-search"></i>
+          <!-- IZQUIERDA END -->
+
+          <!-- DERECHA START -->
+          <div class="menu">
+              <span>Siguenos en las redes sociales: <br /></span>
+              <a href="">
+                  <i class="fa fa-twitter"></i>
+              </a>
+              <a href="">
+                  <i class="fa fa-google"></i>
+              </a>
+              <a href="">
+                  <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="">
+                  <i class="fa fa-github"></i>
+              </a>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 1 -->
+
+      <!-- GRID COLUMNA 2: -->
+      <div class="footer-card">
+          <div class="product">
+              <h6 class="section-title">Propiedades</h6>
+              <i class="icon-house"></i>
+              <div class="menu">
+                  <a href="rent-properties.html" class="text-white">
+                      <p>alquiler viviendas</p>
+                  </a>
+                  <a href="rent-properties.html" class="text-white">
+                      <p>alquiler oficinas</p>
+                  </a>
+                  <a href="buy-properties.html" class="text-white">
+                      <p>viviendas guardadas</p>
+                  </a>
+                  <a href="buy-properties.html" class="text-white">
+                      <p>viviendas para inverison</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 2 -->
+
+      <!-- GRID COLUMNA 3 -->
+      <div class="footer-card">
+          <div class="links">
+              <!-- ENLACES -->
+              <h6 class="section-title">Enlaces interesantes</h6>
+              <i class="icon-enlace"></i>
+              <div class="menu">
+                  <a href="#!" class="text-white">
+                      <p>mi cuenta</p>
+                  </a>
+                  <a href="#!" class="text-white">
+                      <p>ser afiliado</p>
+                  </a>
+                  <a href="#!" class="text-white">
+                      <p>trabaja con nosotros</p>
+                  </a>
+                  <a href="#!" class="text-white">
+                      <p>ayuda</p>
+                  </a>
+                  <a href="aviso-legal.html" class="text-white">
+                      <p>aviso legal</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 3 -->
+
+      <!-- GRID COLUMNA 4 -->
+      <div class="footer-card">
+          <div class="contact">
+              <!-- ENLACES -->
+              <h6 class="section-title">Contacto</h6>
+              <i class="icon-mail"></i>
+              <div class="menu">
+                  <p><i class="fa fa-home mr-3"></i>Madrid, MD 10012, ES</p>
+                  <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                  <p><i class="fa fa-phone mr-3"></i> + 34 234 567 88</p>
+                  <p><i class="fa fa-print mr-3"></i> + 34 234 567 89</p>
+                  <p>
+                      <a href="contact.html">enviar mensaje</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <!-- GRID COLUMNA 4 -->
+
+        <!-- GRID COLUMNA 5 -->
+        <div class="footer-card">
+            <div class="buscador">
+                <form action="#">
+                    <input type="text" placeholder="Buscar" />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <!-- GRID COLUMNA 5 -->
+    </section>
+    <!-- SECCION: ENLACES END -->
+    <!-- DERECHOS AUTOR START -->
+    <div class="author">
+      © 2022 Copyright:
+      <a href="">Berzins Antons</a>
+    </div>
+    <!-- DERECHOS AUTOR END -->
+  </footer>
+  <!-- FOOTER END -->
+</body>
+
+</html>
+
+<script>
+  const buttons = document.querySelectorAll("[id^='button-history-']");
+  const textElement = document.querySelector(".historia p");
+  let textArray = [
+    "Fundada en el año 2000, nuestra empresa se ha consolidado como líder en el mercado inmobiliario online. Desde entonces, hemos ayudado a miles de personas a encontrar su hogar perfecto o a invertir en propiedades rentables. Nuestro equipo está formado por profesionales altamente cualificados y comprometidos con ofrecer el mejor servicio a nuestros clientes.",
+    "En el año 2005, ampliamos nuestra presencia a nivel nacional y comenzamos a ofrecer servicios inmobiliarios en toda España.",
+    "En el año 2010, lanzamos nuestra primera plataforma online, lo que nos permitió llegar a un público mucho más amplio y ofrecer un servicio más cómodo y accesible a nuestros clientes.",
+    "En el año 2015, comenzamos a ofrecer también servicios de alquiler de propiedades, lo que nos permitió diversificar nuestro negocio y ofrecer aún más opciones a nuestros clientes.",
+    "En el año 2018, inauguramos nuestra primera oficina física en el centro de Madrid, lo que nos permitió mejorar la atención al cliente y ofrecer un servicio más personalizado.",
+    "En el año 2023, lanzamos una nueva plataforma online con funcionalidades avanzadas y un diseño totalmente renovado, lo que nos permitió mejorar la experiencia de usuario y seguir siendo líderes en el mercado inmobiliario online.",
+  ];
+  let currentTextIndex = 1;
+
+  function changeToText(textToChange) {
+    textElement.textContent = textToChange;
+    currentTextIndex = 0;
+    startTime(10000);
+  }
+  function startTime(timeBetweenChange = 7000) {
+    setInterval(() => {
+      textElement.style.opacity = 0; // hacemos que la opacidad del texto sea 0 para que parezca que desaparece
+      setTimeout(() => {
+        //console.log(currentTextIndex);
+        currentTextIndex = currentTextIndex >= 6 ? 0 : currentTextIndex;
+
+        textElement.textContent = textArray[currentTextIndex]; // cambiamos el texto
+        currentTextIndex = (currentTextIndex + 1) % textArray.length; // actualizamos el índice del texto actual
+        textElement.style.opacity = 1; // hacemos que la opacidad del texto sea 1 para que parezca que aparece
+      }, 800); // esperamos 1 segundo para que la animación sea visible
+    }, timeBetweenChange); // cambiamos el texto cada 3 segundos
+  }
+  startTime();
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      let numeroBoton = parseInt(button.dataset.historia.slice(8)); // obtenemos el número del botón clickeado
+      changeToText(textArray[numeroBoton]); // pasamos el número del botón a la función
+    });
+  });
+</script>

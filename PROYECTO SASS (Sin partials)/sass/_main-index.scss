@@ -1,0 +1,199 @@
+&.index {
+    width: 100%;
+
+    .noticias {
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: row;
+        grid-gap: 1rem;
+        padding-bottom: 1rem;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+
+
+        @include redimensionar(medium) {
+            flex-direction: column;
+            align-items: center;
+
+            .noticia {
+                width: 95%;
+
+                &:not(:nth-child(-n+4)) {
+                    display: none;
+                }
+            }
+
+            a.extra {
+                display: block;
+            }
+        }
+
+        a.extra {
+            display: none;
+        }
+
+        .noticia {
+            background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
+            cursor: grab;
+
+            min-width: calc(70% - .5rem);
+            border-radius: 0.5em;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include transicionar(all);
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            @include redimensionar(small) {
+
+                &,
+                &:hover *,
+                *:hover {
+                    transform: none;
+                    @include transicionar(none);
+                    filter: none;
+                }
+
+            }
+
+            * {
+                width: 75%;
+                color: $white;
+            }
+
+            h2,
+            h3 {
+                font-size: 1.5em;
+                text-align: center;
+                margin: 1em;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $lightPrimary;
+                }
+            }
+
+            .flip-card {
+                width: 75%;
+                margin: 1em;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+
+                p {
+
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    opacity: 0;
+                    z-index: -1;
+                    border: $white 1px solid;
+                    line-height: 200%;
+
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+
+
+                }
+
+                @include redimensionar(small) {
+
+                    img,
+                    p,
+                    img:hover,
+                    p:hover {
+                        width: 100%;
+                        position: static;
+                        opacity: 1;
+                        z-index: 1;
+                        border: none;
+                        transform: none;
+                        margin: 1em;
+                        filter: none;
+                        transition: none;
+                    }
+                }
+
+                @include redimensionar(from-medium) {
+
+                    &:hover {
+                        transform-style: preserve-3d;
+
+                        img {
+                            @include transicionar(all);
+
+                            -webkit-user-drag: none;
+                            filter: brightness(0%);
+                            transform: rotateY(180deg);
+
+                        }
+
+                        p {
+                            @include transicionar(all, 0.5s, ease-in);
+
+                            z-index: 1;
+                            opacity: 1;
+
+                            text-transform: uppercase;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .popular {
+
+        .tab-content {
+            width: 100%;
+            flex-wrap: nowrap !important;
+            justify-content: center;
+            @extend %cards-container;
+            padding: 1em;
+
+            &#rentals {
+                overflow-x: scroll;
+                scroll-snap-align: center;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+
+                .card {
+
+                    @extend %propertie-card-rent;
+                }
+            }
+
+            &#sales {
+                .card {
+                    @extend %propertie-card-buy;
+
+                    flex-direction: column !important;
+
+                    @include redimensionar(only-large) {
+                        flex-direction: row !important;
+
+                    }
+                }
+            }
+        }
+    }
+}
