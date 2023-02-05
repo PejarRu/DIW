@@ -1,32 +1,34 @@
 &.propertie-info {
+    padding-bottom: 1em;
+
     h2 {
         color: black;
         font-weight: normal;
     }
 
     .property-details {
-        background-color: $darkPrimary;
         width: 75%;
 
-        margin: 1em auto;
+        margin: 1em auto 0 auto;
 
         .property-title {
-            font-size: 2rem;
+            font-size: 5vh;
             text-align: left;
             text-transform: uppercase;
-            margin-bottom: 2em;
             font-weight: bolder;
             color: white;
+            text-align: center;
         }
 
         .property-img-container {
-            margin: 2em auto;
+            margin: 0 auto;
             border-radius: 10px;
             overflow: hidden;
             position: relative;
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
+            max-height: 700px;
 
             img {
                 object-fit: cover;
@@ -38,10 +40,13 @@
                 width: 70%;
             }
 
-            
+
 
             .property-img-thumbnail-container {
+                overflow-y: scroll;
                 width: 30%;
+                height: 200%;
+
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -49,7 +54,6 @@
                 .property-img-thumbnail {
                     margin-right: 5px;
                     margin-top: 10px;
-
                     &:first-child {
                         margin-top: 0px;
 
@@ -59,18 +63,19 @@
 
         }
 
-        .property-info {
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 1em;
+        color: white;
+        font-size: 2vh;
 
+        .property-info {
+            color: $accesoryColorYellow;
+            padding: 1em;
             p {
-                margin-bottom: 1em;
+                margin-bottom: 0.5em;
+                margin: 1em;
             }
         }
 
         .property-description {
-            font-size: 1.2rem;
             line-height: 1.5;
             padding: 1em;
             margin-bottom: 1.5em;
@@ -82,16 +87,10 @@
             justify-content: center;
 
             button {
-                width: 15%;
-                font-size: 1rem;
-                padding: 1em;
-                white-space: nowrap;
-                border-radius: 0.2em;
-                background: $accesoryColor1;
-                cursor: pointer;
+                @extend %button-block;
 
                 &:hover {
-                    background: $darkPrimary;
+                    background: darken($color: $accesoryColor1, $amount: 5%);
                     text-decoration: underline;
                 }
             }
@@ -99,31 +98,27 @@
     }
 
     .line-separation {
-        display: block;
-        width: 80%;
-        height: 1px;
-        background-color: wheat;
-        margin: 1em auto;
-
+        @extend .line-separation;
     }
-
     .property-comments {
+        width: 80%;
+        max-height: 400px;
+        margin: 1em auto;
+        overflow: auto;
+
         h3 {
             text-align: center;
             color: white;
-            @extend .h3;
-
-
         }
 
         .comment {
-            width: 60%;
+            width: 85%;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            margin: 1rem auto;
+            margin: 0.5rem auto;
             padding: 1rem;
-            border: 1px solid #ddd;
+            border: 1px solid $accesoryColorOrange;
             border-radius: 4px;
             background-color: darken($color: $darkPrimary, $amount: 10);
 
@@ -146,6 +141,14 @@
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
+                margin: 3px;
+                @include transicionar(all);
+
+                &:hover {
+                    width: 53px;
+                    height: 53px;
+                    margin: 0px;
+                }
             }
 
             .comment-header-text {
@@ -155,18 +158,27 @@
             }
 
             .comment-name {
-                font-size: 1.2rem;
+                color: lighten($color: lighten($accesoryColor1, 20%), $amount: 20%);
+
+                font-size: 2vh;
                 font-weight: bold;
                 margin-bottom: 0.5rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
 
             .comment-date {
-                font-size: 0.9rem;
+                font-size: 1vh;
                 color: #666;
             }
 
             .comment-content {
-                font-size: 1.1rem;
+                width: 90%;
+                color: lighten($color: $accesoryColorOrange, $amount: 20%);
+
+                font-size: 1.5vh;
                 line-height: 1.5;
                 margin-top: 0.5rem;
             }

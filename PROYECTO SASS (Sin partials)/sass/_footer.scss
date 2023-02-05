@@ -22,6 +22,63 @@
           flex-wrap: wrap;
           justify-content: space-around;
 
+          >div {
+              flex-grow: 1;
+              padding: 1em;
+              background-color: $accesoryColor1;
+              border-bottom: 3px solid $darkPrimary;
+              border-right: 5px solid $darkPrimary;
+
+              &.contact {
+                  p {
+                      &:hover {
+                          text-decoration: none;
+                      }
+
+                      a {
+                          &:hover {
+                              text-decoration: underline;
+                          }
+                      }
+                  }
+              }
+
+              h6 {
+                  display: block;
+                  font-size: large;
+                  text-transform: uppercase;
+                  padding: 5px;
+                  margin: 25px;
+                  white-space: nowrap;
+
+              }
+
+              p {
+                  padding: 0.3em;
+                  text-transform: capitalize;
+
+                  &:hover {
+                      color: lighten($color: $accesoryColorOrange, $amount: 10);
+
+                      text-decoration: underline;
+                  }
+
+              }
+
+              i {
+                  margin: 0 15px;
+              }
+
+              .menu {
+                  margin-top: 10px;
+
+              }
+
+              >i {
+                  display: none;
+              }
+          }
+
           @include redimensionar(medium) {
               >div {
                   width: 50%;
@@ -44,18 +101,15 @@
               }
 
               .footer-card {
-                  @include redimensionar(medium) {
-                      &:has(.buscador) {
-                          display: none;
-                      }
-                  }
 
                   //.links, .contact, .product
                   >div {
                       width: 100%;
 
-                      h6 {
+                      .section-title {
                           display: block;
+                          word-wrap: break-word;
+                          margin: auto;
                       }
 
                       i[class*="icon"] {
@@ -121,10 +175,15 @@
               //.footer-card + .social
               >div.footer-card {
                   @include transicionar(all);
+                  height: 100%;
 
                   &:hover {
                       >div {
                           transform: rotateX(180deg);
+
+                          .section-title {
+                              margin-top: 0.1em;
+                          }
 
                           .menu,
                           .section-title {
@@ -164,63 +223,17 @@
               }
           }
 
-          >div {
-              flex-grow: 1;
-              padding: 1em;
-              background-color: $accesoryColor1;
-              border-bottom: 3px solid $darkPrimary;
-              border-right: 5px solid $darkPrimary;
 
-              &.contact {
-                  p {
-                      &:hover {
-                          text-decoration: none;
-                      }
+      }
 
-                      a {
-                          &:hover {
-                              text-decoration: underline;
-                          }
-                      }
-                  }
-              }
-
-              h6 {
-                  display: block;
-                  font-size: large;
-                  text-transform: uppercase;
-                  padding: 5px;
-                  margin: 25px;
-                  white-space: nowrap;
-
-              }
-
-              p {
-                  padding: 0.5em;
-                  text-transform: capitalize;
-
-                  &:hover {
-                      text-decoration: underline;
-                  }
-
-              }
-
-              i {
-                  margin: 0 15px;
-              }
-
-              .menu {
-                  margin-top: 10px;
-
-              }
-
-              >i {
-                  display: none;
-              }
+      .fa {
+          &:hover {
+              color: $accesoryColorOrange;
           }
       }
 
       .author {
+          padding: 7px;
           background-color: $darkSecondary;
       }
 

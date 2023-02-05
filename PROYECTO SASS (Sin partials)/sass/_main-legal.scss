@@ -1,7 +1,9 @@
 &.aviso-legal {
   background-color: $darkPrimary;
+  padding: 2em;
+
   .container {
-    margin: 1em auto;
+    margin: 1em auto 0 auto;
     padding: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 1024px;

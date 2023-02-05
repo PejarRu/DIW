@@ -1,38 +1,95 @@
 //Index
 main {
-    background-color: $darkPrimary;
+    $main-background: darken($color: $lightSecondary, $amount: 30%);
+    background-color: $main-background;
     width: 100%;
-    padding: 1em 0;
+    padding: 1em auto 0 auto;
     @import "main-index";
-    @import "main-about" ;   
-    @import "main-legal";  
-    @import "main-contact"; 
-    @import "main-list"; 
-    @import "main-favourites"; 
-    @import "main-propertie"; 
+    @import "main-about";
+    @import "main-legal";
+    @import "main-contact";
+    @import "main-list";
+    @import "main-favourites";
+    @import "main-propertie";
 
-    >h1, >h2, >h3, .h {
-        text-decoration: none;
-        list-style: none;
+    h1,
+    h2 {
         box-sizing: border-box;
-        margin: 1em 0;
-        padding: 0;
-        border: 0;
-        font: inherit;
+        margin: 0 auto;
+        padding-top: 10px;
         vertical-align: baseline;
-        color: #ffffff;
-        font-size: 2em; 
+        font-weight: bolder;
+        text-align: center;
+        font: inherit;
+
+        &:hover {
+            text-shadow: 5px 5px 50px $accesoryColorOrange;
+        }
+    }
+
+    >h2,
+    >h3 {
+        color: $white;
+        text-align: center;
+    }
+
+    h1 {
+        color: lighten($color: $lightPrimary, $amount: 30%);
         font-weight: bolder;
         text-align: center;
     }
-    >h1, .h1 {
-        font-size: 2.5em; 
+
+    >h1,
+    .h1 {
+        font-size: 3vmin;
     }
-    >h2, .h2{
-        font-size: 2em; 
+
+    >h2,
+    .h2 {
+        font-size: 2.5vmin;
     }
-    >h3, .h3 {
-        font-size: 1.7em; 
+
+    >h3,
+    .h3 {
+        font-size: 2vmin;
     }
-    
+
+    @include redimensionar(medium) {
+
+        >h1,
+        .h1 {
+            font-size: 4vmin;
+        }
+
+        >h2,
+        .h2 {
+            font-size: 3.5vmin;
+        }
+
+        >h3,
+        .h3 {
+            font-size: 3vmin;
+        }
+    }
+
+    @include redimensionar(small) {
+
+        >h1,
+        .h1 {
+            font-size: 5vmin;
+        }
+
+        >h2,
+        .h2 {
+            font-size: 4.5vmin;
+        }
+
+        >h3,
+        .h3 {
+            font-size: 4vmin;
+        }
+    }
+    .text-white{
+        color: white;
+    }
 }

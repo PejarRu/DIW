@@ -1,4 +1,5 @@
 &.buy-properties {
+
     .filtrar-pisos {
         width: 90%;
         display: flex;
@@ -31,7 +32,7 @@
         .dropdown-filters {
             @include transicionar(all);
             flex-grow: 1;
-
+            width: 30%;
             padding: 0.6em;
             border-radius: 0.5em;
             color: white;
@@ -48,14 +49,13 @@
             &:hover {
                 position: relative;
                 z-index: 1;
-                min-width: 30%;
 
                 .body {
                     @include transicionar(all);
                     position: absolute;
                     overflow: visible;
                     top: 100%;
-                    height: 150px;
+                    height: 250px;
                     border: 1px solid white;
                     box-shadow: 1px 1px 10px 1px lighten($color: $darkPrimary, $amount: 10%);
                     padding: 1em;
@@ -95,9 +95,15 @@
                         color: white;
                         margin-right: 0.7em;
                     }
-
+                    
                     input[type="range"] {
-                        flex-grow: 1;
+                        background: linear-gradient(to right, $accesoryColorOrange 0%, $accesoryColorYellow 100%);
+                        border: solid 1px $accesoryColorYellow;
+                        border-radius: 8px;
+                        height: 7px;
+                        width: 356px;
+                        outline: none;
+                        -webkit-appearance: none;
                     }
                 }
             }
@@ -111,9 +117,12 @@
             background: $accesoryColor1;
             border: none;
             border-radius: 0.2em;
+            color: white;
+            border: 1px solid transparent;
 
             &:hover {
-                color: white;
+                color: $accesoryColorOrange;
+                border: 1px solid $accesoryColorOrange;
             }
 
             @include redimensionar(medium) {
@@ -143,13 +152,6 @@
                     .card-text {
                         flex-direction: row;
 
-                        .botones {
-                            position: static !important;
-
-                            * {
-                                margin: 1em
-                            }
-                        }
                     }
                 }
             }

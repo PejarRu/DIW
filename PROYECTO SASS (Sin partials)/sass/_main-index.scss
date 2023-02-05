@@ -1,18 +1,27 @@
 &.index {
     width: 100%;
 
-    .noticias {
-        width: 100%;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .scrolable-container {
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overflow-x: scroll;
         display: flex;
         flex-direction: row;
         grid-gap: 1rem;
-        padding-bottom: 1rem;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
+    }
+
+    .noticias {
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @extend .scrolable-container;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
         scroll-behavior: smooth;
 
-
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         @include redimensionar(medium) {
             flex-direction: column;
@@ -21,7 +30,11 @@
             .noticia {
                 width: 95%;
 
-                &:not(:nth-child(-n+4)) {
+                &:not(:nth-child(-n+3)) {
+                    display: none;
+                }
+
+                .line {
                     display: none;
                 }
             }
@@ -36,23 +49,27 @@
         }
 
         .noticia {
-            background: linear-gradient(to right, $accesoryColor1, $darkSecondary);
-            cursor: grab;
+            min-width: calc(90% - .5rem);
 
-            min-width: calc(70% - .5rem);
-            border-radius: 0.5em;
-
+            background: linear-gradient(to right, $darkSecondary, $darkPrimary);
+            border-radius: 0.2em;
+            margin: 0 5%;
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            position: relative;
             @include transicionar(all);
 
             &:hover {
+                background: linear-gradient(to left, $darkSecondary, $darkPrimary);
                 transform: scale(1.01);
+                box-shadow: 0px 0px 1em darken($color: $darkSecondary, $amount: 3);
             }
 
+
+
             @include redimensionar(small) {
+                min-width: 400px;
 
                 &,
                 &:hover *,
@@ -69,50 +86,49 @@
                 color: $white;
             }
 
-            h2,
             h3 {
-                font-size: 1.5em;
                 text-align: center;
                 margin: 1em;
-
-                &:hover {
-                    text-decoration: underline;
-                    color: $lightPrimary;
-                }
+                color: $accesoryColorOrange;
+                text-transform: uppercase;
             }
 
             .flip-card {
-                width: 75%;
-                margin: 1em;
+
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 2em;
                 position: relative;
+                max-height: 450px;
+                max-width: 800px;
 
                 img {
+                    margin: 0.5em auto;
                     width: 100%;
+                    max-height: 400px;
+                    max-width: 1000px;
                     border-radius: 10px;
                     object-fit: cover;
                 }
 
+
                 p {
-
-
+                    font-size: 2vh;
+                    color: white;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-
+                    padding: 0.5em;
+                    line-height: 20px;
+                    word-spacing: 10px;
+                    align-items: center;
+                    text-align: center;
+                    border: lighten($color: $accesoryColorOrange, $amount: 20%) 1px solid;
                     opacity: 0;
                     z-index: -1;
-                    border: $white 1px solid;
-                    line-height: 200%;
-
-
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-
-
                 }
+
 
                 @include redimensionar(small) {
 
@@ -126,7 +142,6 @@
                         z-index: 1;
                         border: none;
                         transform: none;
-                        margin: 1em;
                         filter: none;
                         transition: none;
                     }
@@ -135,11 +150,9 @@
                 @include redimensionar(from-medium) {
 
                     &:hover {
-                        transform-style: preserve-3d;
-
                         img {
+                            transform-style: preserve-3d;
                             @include transicionar(all);
-
                             -webkit-user-drag: none;
                             filter: brightness(0%);
                             transform: rotateY(180deg);
@@ -147,42 +160,80 @@
                         }
 
                         p {
-                            @include transicionar(all, 0.5s, ease-in);
-
+                            @include transicionar(all, 0.1s);
                             z-index: 1;
                             opacity: 1;
-
-                            text-transform: uppercase;
                         }
 
                     }
                 }
             }
+
+            .line {
+                position: absolute;
+                bottom: 10px;
+                @extend .line;
+                width: 70% !important;
+                height: 10px !important;
+                box-sizing: content-box;
+                margin: 1em auto;
+                margin-top: 2em;
+                border-radius: 5px;
+                box-sizing: content-box;
+                cursor: grab;
+
+                &:hover {
+                    border: 1px white solid;
+
+                }
+            }
+        }
+    }
+
+    .line-separation {
+        @include redimensionar(small) {
+            display: none;
+            margin: 0em auto;
         }
     }
 
     .popular {
+        h2 {
+            font-size: 4vh;
+        }
+
+        @include redimensionar(small) {
+            display: none;
+        }
 
         .tab-content {
-            width: 100%;
+            @extend %cards-container;
             flex-wrap: nowrap !important;
             justify-content: center;
-            @extend %cards-container;
+            width: 90%;
             padding: 1em;
+            margin: 0 auto;
 
             &#rentals {
-                overflow-x: scroll;
-                scroll-snap-align: center;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
-
-                .card {
-
+                margin: 0 auto;
+                padding-top: 3em;
+                overflow: visible;
+                >.card {
                     @extend %propertie-card-rent;
+                    width: 50% !important;
+
+                    @include redimensionar(medium) {
+                        width: 100% !important;
+                        &:not(:nth-child(-n+1)) {
+                            display: none;
+                        }
+                    }
                 }
             }
 
             &#sales {
+                margin: 0 auto;
+
                 .card {
                     @extend %propertie-card-buy;
 
@@ -190,8 +241,17 @@
 
                     @include redimensionar(only-large) {
                         flex-direction: row !important;
-
                     }
+                }
+            }
+
+            .card {
+                box-shadow: 1px 1px 1em 5px $accesoryColorOrange !important;
+                $more-dark: darken($accesoryColorOrange, 30%);
+
+                &:hover {
+                    box-shadow: 1px 1px 50px 5px $more-dark !important;
+
                 }
             }
         }

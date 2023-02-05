@@ -10,6 +10,8 @@ $darkSecondary : #30456b;
 $lightPrimary : #1b9eee;
 $lightSecondary : #0f81c7;
 $accesoryColor1: #0b6298;
+$accesoryColorOrange: rgba(255, 175, 46, 0.845);
+$accesoryColorYellow: rgb(212, 212, 20);
 $gray: #444444;
 $lightGray: #888;
 $white: #ffffff;
@@ -29,7 +31,8 @@ body {
     min-height: 100%;
     width: 100%;
     position: relative;
-
+    min-width: 500px;
+    
 }
 
 

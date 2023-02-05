@@ -71,128 +71,151 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
 }
 
 /* PLACEHOLDERs */
+%button-base {
+  background-color: darken($accesoryColor1, 20%);
+  color: $white;
+  border: 1px solid transparent;
+  color: white;
+
+  &:hover {
+    color: $accesoryColorOrange;
+    border: 1px solid $accesoryColorOrange;
+    background-color: darken($accesoryColor1, 50%);
+  }
+}
 
 %button-block {
+  @extend %button-base;
   box-sizing: border-box;
-  width: 100%;
   padding: 5px 10px;
   @include bordear(5px);
-  border: 1px solid transparent;
-  cursor: pointer
+  @include transicionar(all, 0.1s);
+
+
 }
 
 %button-type-1 {
-  color: $white;
-  margin: 1em;
+  @extend %button-base;
   font-size: 14px;
   font-weight: bold;
-
   padding: 10px 40px;
-  background: $accesoryColor1;
   @extend %hover-shadow;
 }
 
-%simple-hover1 {
+
+%hover-shadow {
+  filter: drop-shadow(5px 5px 5px 5px $darkPrimary);
+
   &:hover {
-    border: 2px solid $lightGray;
+    filter: drop-shadow(9px 10px 8px 5px $lightPrimary);
   }
 }
 
-%hover-shadow {
-  filter: drop-shadow(5px 5px 5px $darkPrimary);
+%cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5em;
+  margin-bottom: 0;
 
-  &:hover {
-    filter: drop-shadow(9px 10px 8px$lightPrimary);
-
-  }
+  gap: 1em;
+  max-width: calc(100% - 2em);
 }
 
 %propertie-card {
-  min-width: 302px;
-  border-radius: 0.5em;
-  background: linear-gradient(to left, $accesoryColor1, $darkSecondary);
+  min-width: 352px;
   display: flex;
+  flex-direction: column;
+  background: linear-gradient(to left, $accesoryColor1, $darkSecondary);
+  border-radius: 0.5em;
   position: relative;
   @include transicionar(all);
 
   &:hover {
     transform: scale(1.01);
-    box-shadow: 1px 1px 50px 10px black;
+    box-shadow: 1px 1px 50px 10px $accesoryColorOrange;
+  }
+
+  h3 {
+    color: lighten($color: $accesoryColorOrange, $amount: 20%);
+    margin: 10px;
+    font-size: 3.5vh;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    &:hover {
+      color: $accesoryColorOrange;
+    }
   }
 
   img {
     margin: 1em auto;
-    max-height: 550px;
+    max-height: 250px;
     max-width: 95%;
     object-fit: cover;
-    border-radius: 10px 10px;
+    border-radius: 10px;
+
+    &:hover {
+      filter: saturate(2);
+      max-width: 99%;
+    }
   }
 
-  $altura-botones: 160px;
+  $altura-botones: 110px;
 
   .card-text {
     width: 100%;
-    padding-top: 3em;
+    padding: 1em 6px;
     padding-bottom: $altura-botones;
 
-    * {
-      color: white;
-    }
-
-    h3 {
-      margin: 10px;
-      font-size: 1.1em;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
+    color: white;
 
     p {
+      font-size: 2vh;
+      padding: 0.5em 0;
+      line-height: 25px;
       margin: 10px;
       text-align: justify;
     }
   }
 
+  .botones,
   .button-bottom {
-    align-self: flex-end;
-    width: 100%;
-    height: $altura-botones;
-
-    display: flex;
-    flex-direction: column;
-
     position: absolute;
     right: 0;
     bottom: 0;
+    display: flex;
+  }
 
+  .button-bottom {
+    width: 100%;
+    height: $altura-botones;
+    flex-direction: column;
+    padding: 4px;
+    margin: 4px;
   }
 
   .botones {
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin: 1em;
+    margin: 4px;
 
-    * {
+    button {
+      @extend %button-block;
       margin: 3px;
 
       &:hover {
-        filter: grayscale(1);
-        transform: scale(1.09);
-        text-decoration: underline;
-
+        color: $accesoryColorOrange;
+        border-color: $accesoryColorOrange;
       }
     }
 
-    button {
-      padding: 1em;
-      white-space: nowrap;
-      border-radius: 0.2em;
-      background: $accesoryColor1;
-      cursor: pointer;
+    * {
+      color: white !important;
 
       &:hover {
-        background: $darkPrimary;
+        filter: saturate(2);
+        transform: scale(1.01);
         text-decoration: underline;
       }
     }
@@ -204,21 +227,26 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
   width: calc(30% - 2em);
   flex-direction: column;
   position: relative;
+  margin: 1em;
 
-
+  .botones {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
 
   .valoracion {
-    position: relative;
-    height: 50px;
     @extend .botones;
-    justify-content: center;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 75%;
 
     div {
       &:hover {
         filter: invert(1);
         transform: scale(1.09);
         text-decoration: underline;
-
       }
     }
   }
@@ -228,19 +256,47 @@ $gradient-colors: $darkPrimary, $gray, $darkSecondary;
   @extend %propertie-card;
   flex-direction: row;
   width: calc(100% - 2rem);
+  margin: 1em;
 
-  .card-text {
-    .botones {
-      position: absolute;
-      bottom: 0;
+  img.main {
+    margin: auto;
+    padding: 1em;
+  }
+
+  .botones {
+    right: 5px;
+
+    * {
+      margin: 3px;
+
+      &:hover {
+        filter: saturate(2);
+        transform: scale(1.01);
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      @extend %button-type-1;
+      border: 1px solid $accesoryColorOrange;
     }
   }
 }
 
-%cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1.5em;
-  gap: 1em;
-  max-width: calc(100% - 2em);
+.red {
+  background-color: darkred !important;
+}
+
+.line-separation {
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: wheat;
+  margin: 1em auto;
+}
+
+.line {
+  width: 500px;
+  height: 3px;
+  background-color: $accesoryColorOrange;
 }
