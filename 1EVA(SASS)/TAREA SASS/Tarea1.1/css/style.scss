@@ -1,0 +1,52 @@
+$naranja: #FF8000;
+$verdoso: #2E5F64;
+*{
+    margin: 0;
+    padding: 0;
+}
+//el div debe tener un padding de 20px
+div{
+    padding: 20px;
+    &#primero{
+        //primer div>.destacado: color naranja, un 
+        //tamaño de letra de 1.6 rem,
+        //alineado al centro y un padding de 6px
+        p.destacado{
+            color: $naranja;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 6px;
+        }
+
+    }
+    &#segundo{
+        //Este margin se lo he puesto para que sea
+        //mas parecido al PDF. (No lo pone en 
+        //las instrucciones)
+        margin: 20px;
+
+        //segundo div>.destacado: color verdoso, 
+        //un tamaño de letra de 1.4 rem,
+        //subrayado y un padding de 5px
+        p.destacado{
+            color: $verdoso;
+            font-size: 1.4rem;
+            text-decoration: underline;
+            padding: 5px;
+        }
+        //Además, se ha puesto el tipo de letra 
+        //cursiva a las primeras líneas cuyo
+        //párrafo no sea destacado. 
+        p:not(.destacado)::first-line{
+            font-style: italic;
+        }
+    }
+    
+    //el div que contiene los dos 
+    //párrafos últimos deberá tener 
+    //una alineación a la derecha
+    &#parrafos{
+        text-align: right;
+    }
+
+}
